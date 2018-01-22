@@ -1,0 +1,18 @@
+ PSR Week 1
+ 
+    Accomplishments (Week of Jan 15):
+      Created simple GUI to run on startup to allow a user to choose between work environments (terminal or web browser
+      Began interactive Terminal w/ placeholders for network capture/parse commands
+      Began Flask/Web GUI development
+      Code/Project Version control through Github
+
+    Plans this week (Week of Jan 22):
+      Bug Fixes for above accomplishments
+      Enhancements to above accomplishments
+      Begin Network Development for SDR tools
+
+    Problems & Issues:
+      Deciding best course of action for user experience through GUI mockups
+      
+      
+ PSR Week 2
