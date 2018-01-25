@@ -4,11 +4,12 @@
 #name : main.py
 #purpose :  Allow user to choose between terminal and web browser environments
 #date : 2018.1.20
-#version : 1.0.0
+#version : 1.1.0
 
 from tkinter import *
 import subprocess
-import terminal
+#Call the terminal.py file directly
+#import terminal
 
 #Create window
 root=Tk()
@@ -22,7 +23,8 @@ def closeWindow():
 #Run terminal process
 def runTerminal():
     try:
-        terminal.runTerminalMain()
+        #terminal.runTerminalMain()
+        subprocess.run("x-terminal-emulator -e bash -c './terminal.py' \"$1\"", shell=True, check=True)
         display.configure(text='Success! Running Terminal')
     except:
         display.configure(text='Failure! Running Terminal')

@@ -4,12 +4,15 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminal.py
 #purpose : Foundation for terminal commands and possible GUI linkage
-#date : 2018.1.18
-#version: 1.0.0
+#date : 2018.1.22
+#version: 1.1.0
 
 
 import os
 import sys
+from multiprocessing import Process
+
+#For multiprocessing docs: https://docs.python.org/3/library/multiprocessing.html
 
 #Check that the file exists. If so open the file and check for longest length
 def CheckInputFile():
@@ -62,8 +65,14 @@ def runTerminalMain():
                         #String successfuly parsed
                         #Ready to break the loop
                         break
+##
 
-#Enable during standalone testing       
-#runTerminalMain()
+if __name__ == "__main__":
+        runTerminalMain()
+        """
+        p = Process(target=runTerminalMain)
+        p.start()
+        p.join()
+        """
 
 
