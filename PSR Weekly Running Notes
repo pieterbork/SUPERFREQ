@@ -16,3 +16,19 @@
       
       
  PSR Week 2
+
+    Accomplishments (Week of Jan 22):
+      Settled on browser GUI design and begun home page/navigation development
+      Begun looking at gr-ieee802.11 codebase
+      Begun Test Design Review Paper
+      Looked into 802.11 variants and their corresponding MAC info (e.g. timing)
+      
+
+    Plans this week (Week of Jan 29):
+      Present individual 802.11 findings (e.g. a/b/n...) to each team member in order to better understand Wifi variants
+      Code Review w/ Team members
+      Weekly bug fixes and enhancements
+
+    Problems & Issues:
+      Catching up on wireless protocols since team members don't have deep experience in that field
+      Learning to design and test commands to decode packets.
