@@ -1,11 +1,12 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 
 
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminal.py
 #purpose : Foundation for terminal commands and possible GUI linkage
-#date : 2018.1.18
-#version: 1.0.0
+#date : 2018.1.31
+#version: 1.0.2
+#version notes (latest): Compatible w/ python2
 
 
 import os
@@ -47,7 +48,7 @@ def runTerminalMain():
         while True:
                 try:
                         #Get user string
-                        userKeywordInput = input("Enter keyword: ")
+                        userKeywordInput = raw_input('Enter keyword: ')
                         if(userKeywordInput == 'Echo'):
                                 print("Echo!\n")
                                 continue
