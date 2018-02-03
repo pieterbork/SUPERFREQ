@@ -4,8 +4,9 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminal.py
 #purpose : Foundation for terminal commands and possible GUI linkage
-#date : 2018.1.22
-#version: 1.1.0
+#date : 2018.02.02
+#version: 1.0.2
+#version notes (latest): Optimized for python2/3
 
 
 import os
@@ -50,7 +51,7 @@ def runTerminalMain():
         while True:
                 try:
                         #Get user string
-                        userKeywordInput = input("Enter keyword: ")
+                        userKeywordInput = input('Enter keyword: ')
                         if(userKeywordInput == 'Echo'):
                                 print("Echo!\n")
                                 continue

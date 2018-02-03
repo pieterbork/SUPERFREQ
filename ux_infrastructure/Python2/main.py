@@ -1,12 +1,14 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 
 #author : Kade Cooper kaco0964@colorado.edu
 #name : main.py
 #purpose :  Allow user to choose between terminal and web browser environments
-#date : 2018.1.20
-#version : 1.1.0
+#date : 2018.02.02
+#version : 1.0.3
+#version notes (latest): Compatible w/ python2. Spawns separate shell process
 
-from tkinter import *
+
+from Tkinter import *
 import subprocess
 #Call the terminal.py file directly
 #import terminal
@@ -24,14 +26,19 @@ def closeWindow():
 def runTerminal():
     try:
         #terminal.runTerminalMain()
-        subprocess.run("x-terminal-emulator -e bash -c './terminal.py' \"$1\"", shell=True, check=True)
-        display.configure(text='Success! Running Terminal')
+        #Spawn a new terminal process just in case a user wishes to have a terminal and a web browser open
+        subprocess.call("x-terminal-emulator -e bash -c './terminal.py' \"$1\"", shell=True)
+        display.configure(text='Success Running Terminal!')
     except:
-        display.configure(text='Failure! Running Terminal')
+        display.configure(text='Failure Running Terminal!')
 
 #Run browser process
 def runWebBrowser():
-    display.configure(text='Success! Running Web Browser')
+    try:
+        #terminal.runTerminalMain()
+        display.configure(text='Success Running Web Browser!')
+    except:
+        display.configure(text='Failure Running Web Browser!')
 
 ########################## GUI Setup ########################
 
