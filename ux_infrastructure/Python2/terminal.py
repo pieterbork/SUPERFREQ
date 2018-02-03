@@ -4,19 +4,23 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminal.py
 #purpose : Foundation for terminal commands and possible GUI linkage
-#date : 2018.02.02
+#date : 2018.02.03
 #version: 1.0.2
 #version notes (latest): Compatible w/ python2
 
 
 import os
 import sys
-from multiprocessing import Process
+import terminalFunctions
+#from multiprocessing import Process
 
 #For multiprocessing docs: https://docs.python.org/3/library/multiprocessing.html
 
-#Check that the file exists. If so open the file and check for longest length
+##########      System Level Section (SOME PARTS NOT IMPLEMENTED)  ###########
+
+
 def CheckInputFile():
+        #Check that the file exists. If so open the file and check for longest length
         if not os.path.isfile(sys.argv[1]):
                 print("\nThe MCP has derezzed the file!\n")
                 sys.exit()
@@ -37,35 +41,70 @@ def CheckIfRunnable():
                 return sys.argv[1]
         else:
                 CheckInputFile()
-                
+        
 
-##########      Main Section  #######################
-def runTerminalMain():
+##########      User Input/Display Section      ############
+
+def getUserInput():
+        #Get user string
+        try:
+                user_key_input = raw_input('Enter number or (Q) to Quit: ').lower()
+                return user_key_input
+        except:
+                print("Sorry, input could not be parsed.")
+
+
+def printHelp():
         print("############################################")
         print("####### SUPERFREQ Terminal Interface #######\n############################################")
-        print("####### Version: 1.0.0 #####################\n############################################\n")
-        print("List of common commands:\n")
-        print("\t Echo - Returns another Echo \n")
-        print("\t Quit - Quits the program \n")
+        print("####### Version: 1.0.1 #####################\n############################################\n")
+        print("List of program commands:\n")
+        print("\t 0. Help - Reprint (this) command prompt \n")
+        print("\t 1. Tune Radio - Ensure our antenna is RX Data \n")
+        print("\t 2. Display Network Data - Interactive Graphs & Statistics \n")
+        print("\t 3. Decode Network Data - Scan, capture, parse various network protocols \n")
+        print("\t 4. View Database - View saved network data  \n")
+        print("\t 5. Test Summary - Provide quick network/system checks in an easy to read format \n")
+        print("\t 6. Settings Page - Save user preferences & configurations for network data manipulation \n")
+        print("\t (Q)uit - Quits the program \n")
         print("\n")
-        while True:
-                try:
-                        #Get user string
-                        userKeywordInput = raw_input('Enter keyword: ')
-                        if(userKeywordInput == 'Echo'):
-                                print("Echo!\n")
-                                continue
-                        if(userKeywordInput == 'Quit'):
-                                print("Goodbye!\n")
-                        
-                except ValueError:
-                        print("Sorry, input could not be parsed.")
-                        #Re-ask the user for their input
-                        continue
+                
+
+##########      Main Section    #######################
+        
+def runTerminalMain():
+
+        #Mandatory First print out of commands
+        printHelp()
+
+        #User Loop
+        terminal_on = True
+
+        #Main Program Loop
+        while terminal_on:
+                user_input = getUserInput()
+
+                #User Choice Handle Cases..may want to use dictionary later
+                if(user_input == '0'):
+                        printHelp()
+                elif(user_input == '1'):
+                        terminalFunctions.tuneRadio()
+                elif(user_input == '2'):
+                        terminalFunctions.displayNetworkData()
+                elif(user_input == '3'):
+                        terminalFunctions.decodeNetworkData()
+                elif(user_input == '4'):
+                        terminalFunctions.viewDatabase()
+                elif(user_input == '5'):
+                        terminalFunctions.testSummary()
+                elif(user_input == '6'):
+                        terminalFunctions.settingsPage()
+                elif(user_input == 'q' or user_input == 'quit'):
+                        print("Goodbye!\n")
+                        #Perform a clean exit
+                        sys.exit()
                 else:
-                        #String successfuly parsed
-                        #Ready to break the loop
-                        break
+                        continue
 ##
 
 if __name__ == "__main__":
@@ -75,5 +114,3 @@ if __name__ == "__main__":
         p.start()
         p.join()
         """
-
-
