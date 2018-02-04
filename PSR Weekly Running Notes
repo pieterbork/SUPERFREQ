@@ -32,3 +32,22 @@
     Problems & Issues:
       Catching up on wireless protocols since team members don't have deep experience in that field
       Learning to design and test commands to decode packets.
+
+PSR Week 3
+
+    Accomplishments (Week of Jan 29):
+      Finished introduction of Test Design Review Paper (begun outline for other parts)
+      Integration of gr-ieee80211 package into Pentoo test environment
+      Flask and home navigation setup
+      Begun 4 out of 20 test cases for testing SUPERFREQ app functionality
+      
+ 
+    Plans this week (Week of Feb 05):
+      Continue development on test cases
+      Begin integration of basic HackRF functions into Flask and Terminal units
+      Weekly bug fixes and enhancements on main app
+
+
+    Problems & Issues:
+      OS Environment setup coupled w/ gr-ieee80211 package compiling and debugging
+      Minor problems implementing Bootstrap due to the theme we wish to use
