@@ -1,0 +1,21 @@
+On Pentoo
+----------------
+
+install gr-foo & gr-ieee802-11 from github {make sure to pull master branch '-b master'}
+	follow instructions at https://github.com/bastibl/gr-ieee802-11 (thanks Bastian)
+Setup Environment
+	export PYTHONPATH = /usr/local/lib/python2.7/site-packages (may be different on different distros)
+	export LD_LIBRARY_PATH = /usr/local/lib (may be different, but will be same as above)
+
+
+
+
+On Arch
+---------------
+install pybombs w/ pip (will install GRC, takes about 1.5hrs)
+	follow instrictions at https://www.gnuradio.org/blog/pybombs-the-what-the-how-and-the-why/
+install gr-osmosdr w/ pybombs	(includes packages for bladerf, soapysdr, rtlsdr, osmo-sdr?)
+	copy osmosdr* from prefix/default/share/gnuradio/grc/blocks
+		        to /usr/share/gnuradio/grc/blocks
+	This ensures the blocks are added to gnuradio-companion
+run 'source setup_env.sh' in prefix/default
