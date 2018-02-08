@@ -57,7 +57,7 @@ def getUserInput():
 def printHelp():
         print("############################################")
         print("####### SUPERFREQ Terminal Interface #######\n############################################")
-        print("####### Version: 1.0.1 #####################\n############################################\n")
+        print("####### Version: 1.0.5 #####################\n############################################\n")
         print("List of program commands:\n")
         print("\t 0. Help - Reprint (this) command prompt \n")
         print("\t 1. Tune Radio - Ensure our antenna is RX Data \n")

@@ -3,15 +3,15 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : main.py
 #purpose :  Allow user to choose between terminal and web browser environments
-#date : 2018.02.02
-#version : 1.0.3
+#date : 2018.02.07
+#version : 1.0.4
 #version notes (latest): Compatible w/ python2. Spawns separate shell process
 
 
 from Tkinter import *
 import subprocess
-#Call the terminal.py file directly
-#import terminal
+#Call the terminal.py file within our "app" subdirectory
+#from src.infrastructure import terminal
 
 #Create window
 root=Tk()
@@ -27,7 +27,7 @@ def runTerminal():
     try:
         #terminal.runTerminalMain()
         #Spawn a new terminal process just in case a user wishes to have a terminal and a web browser open
-        subprocess.call("x-terminal-emulator -e bash -c './terminal.py' \"$1\"", shell=True)
+        subprocess.call("x-terminal-emulator -e bash -c 'src/infrastructure/terminal.py' \"$1\"", shell=True)
         display.configure(text='Success Running Terminal!')
     except:
         display.configure(text='Failure Running Terminal!')
