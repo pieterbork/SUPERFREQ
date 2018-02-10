@@ -3,7 +3,7 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminalFunctions.py
 #purpose : File for all teammember to put in modular code. As the file grows we can separate the longer functions into separate files
-#date : 2018.02.07
+#date : 2018.02.10
 #version: 1.0.5
 #version notes (latest): Compatible w/ python2
 
@@ -15,7 +15,6 @@ try:
 except ImportError:
     print ("The GnuRadio dependencies are not present in this app! Talk to Pieter/Carlos...")
 
-#tuneRadio Logic Call
 
 """ 1. Tune Radio - Ensure our antenna is RX Data """
 

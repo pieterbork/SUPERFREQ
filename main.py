@@ -3,8 +3,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : main.py
 #purpose :  Allow user to choose between terminal and web browser environments
-#date : 2018.02.07
-#version : 1.0.4
+#date : 2018.02.10
+#version : 1.1.0
 #version notes (latest): Compatible w/ python2. Spawns separate shell process
 
 
@@ -51,6 +51,13 @@ display.grid(sticky=W)
 #Buttons...use lambda so all buttons do not immediately run once the window starts
 buttonTerminal=Button(root, text="Terminal", command=lambda:runTerminal()).grid(column=1,row=1)
 buttonBrowser=Button(root, text="Web Browser", command=lambda:runWebBrowser()).grid(column=2,row=1)
+'''
+####
+Working on getting images next to text buttons within Tkinter
+####
+buttonTerminal=Button(root, compound=LEFT, image=PhotoImage(file="./src/icons/superfreq_terminal_icon.png"), text="Terminal", command=lambda:runTerminal()).grid(column=1,row=1)
+buttonBrowser=Button(root, compound=LEFT, image=PhotoImage(file="./src/icons/superfreq_flask_icon.png"), text="Web Browser", command=lambda:runWebBrowser()).grid(column=2,row=1)
+'''
 buttonDestroy=Button(root, text="Close Program", command=lambda:closeWindow()).grid(columnspan=3,sticky=N+S+E+W)
 
 """Window Logic"""
