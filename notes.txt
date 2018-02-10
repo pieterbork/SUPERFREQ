@@ -1,1 +1,93 @@
 understanding different frame types: https://mrncciew.com/2014/10/04/my-cwap-study-notes/
+
+
+
+
+
+Example Frames for Pieter:
+new mac frame  (length 383)
+=========================================
+duration: 00 00
+frame control: 00 80 (MANAGEMENT)
+Subtype: Beacon
+SSID: WiFiLab
+seq nr: 1674
+mac 1: ff:ff:ff:ff:ff:ff
+mac 2: 06:8d:cb:84:9b:ff
+mac 3: 06:8d:cb:84:9b:ff
+OOO
+new mac frame  (length 415)
+=========================================
+duration: 00 00
+frame control: 00 80 (MANAGEMENT)
+Subtype: Beacon
+SSID: SOC-LAB
+seq nr: 817
+mac 1: ff:ff:ff:ff:ff:ff
+mac 2: 0e:8d:cb:84:9b:ff
+mac 3: 0e:8d:cb:84:9b:ff
+
+new mac frame  (length 384)
+=========================================
+duration: 00 00
+frame control: 00 80 (MANAGEMENT)
+Subtype: Beacon
+SSID: embedded
+seq nr: 1719
+mac 1: ff:ff:ff:ff:ff:ff
+mac 2: 0a:8d:cb:84:9b:ff
+mac 3: 0a:8d:cb:84:9b:ff
+OO
+new mac frame  (length 383)
+=========================================
+duration: 00 00
+frame control: 00 80 (MANAGEMENT)
+Subtype: Beacon
+SSID: WiFiLab
+seq nr: 1675
+mac 1: ff:ff:ff:ff:ff:ff
+mac 2: 06:8d:cb:84:9b:ff
+mac 3: 06:8d:cb:84:9b:ff
+OOOOOOOO
+new mac frame  (length 415)
+=========================================
+duration: 00 00
+frame control: 00 80 (MANAGEMENT)
+Subtype: Beacon
+SSID: SOC-LAB
+seq nr: 818
+mac 1: ff:ff:ff:ff:ff:ff
+mac 2: 0e:8d:cb:84:9b:ff
+mac 3: 0e:8d:cb:84:9b:ff
+OOO
+new mac frame  (length 384)
+=========================================
+duration: 00 00
+frame control: 00 80 (MANAGEMENT)
+Subtype: Beacon
+SSID: embedded
+seq nr: 1720
+mac 1: ff:ff:ff:ff:ff:ff
+mac 2: 0a:8d:cb:84:9b:ff
+mac 3: 0a:8d:cb:84:9b:ff
+OO
+new mac frame  (length 409)
+=========================================
+duration: 00 3c
+frame control: 00 50 (MANAGEMENT)
+Subtype: Probe Response
+seq nr: 3453
+mac 1: 86:7:4a:3e:5b:a2
+mac 2: 0e:8d:cb:84:9b:ff
+mac 3: 0e:8d:cb:84:9b:ff
+OO
+new mac frame  (length 378)
+=========================================
+duration: 00 3c
+frame control: 08 50 (MANAGEMENT)
+Subtype: Probe Response
+seq nr: 12
+mac 1: 86:7:4a:3e:5b:a2
+mac 2: 0a:8d:cb:84:9b:ff
+mac 3: 0a:8d:cb:84:9b:ff
+OOOO
