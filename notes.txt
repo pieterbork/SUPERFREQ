@@ -91,3 +91,39 @@ mac 1: 86:7:4a:3e:5b:a2
 mac 2: 0a:8d:cb:84:9b:ff
 mac 3: 0a:8d:cb:84:9b:ff
 OOOO
+new mac frame  (length 26)
+=========================================
+duration: 00 3c
+frame control: 11 c8 (DATA)
+Subtype: QoS Null
+seq nr: 0
+mac 1: 0e:8d:cb:84:9b:ff
+mac 2: a4:2:b9:49:d8:3d
+mac 3: 0e:8d:cb:84:9b:ff
+instantaneous fer: 0.999756
+new mac frame  (length 26)
+=========================================
+duration: 00 3c
+frame control: 11 c8 (DATA)
+Subtype: QoS Null
+seq nr: 0
+mac 1: 0e:8d:cb:84:9b:ff
+mac 2: a4:2:b9:49:d8:3d
+mac 3: 0e:8d:cb:84:9b:ff
+instantaneous fer: 0.999756
+OOOOOOOOOOOOOOOOOOOOOOOOOOO
+new mac frame  (length 225)
+=========================================
+duration: 00 00
+frame control: 00 08 (DATA)
+Subtype: Data
+seq nr: 2914
+mac 1: ff:ff:ff:ff:ff:ff
+mac 2: 32:8d:cb:84:9b:ff
+mac 3: 00:0:0:0:0:0
+instantaneous fer: 0.999657
+............6d.................J......Internal AP Rear..SOC-LAB -
+wireless..37.4180951010362..-122.098531723022.
+9b42722717560a78db9a08970918fe7a.
+510783925e41a37eb50d12760f502393..192.168.1.11.. .$...
+OOOOO
