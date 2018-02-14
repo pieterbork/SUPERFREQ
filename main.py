@@ -3,8 +3,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : main.py
 #purpose :  Allow user to choose between terminal and web browser environments
-#date : 2018.02.10
-#version : 1.1.0
+#date : 2018.02.13
+#version : 1.1.05
 #version notes (latest): Compatible w/ python2. Spawns separate shell process
 
 
@@ -35,30 +35,42 @@ def runTerminal():
 #Run browser process
 def runWebBrowser():
     try:
-        #terminal.runTerminalMain()
+        #Spawn a new flask process just in case a user wishes to have a web browser and a terminal open
+        subprocess.call("x-terminal-emulator -e bash -c 'src/infrastructure/flask.py' \"$1\"", shell=True)
         display.configure(text='Success Running Web Browser!')
     except:
         display.configure(text='Failure Running Web Browser!')
 
 ########################## GUI Setup ########################
 
+
+
+#Images for Buttons
+terminalIcon = PhotoImage(file="./src/icons/superfreq_terminal_icon.png")
+flaskIcon = PhotoImage(file="./src/icons/superfreq_flask_icon.png")
+closeIcon = PhotoImage(file="./src/icons/aurora_folder_close_program32_icon.png")
+
 #Grid 1 display
-Label(root, text="Choose Work Environment Below:").grid(columnspan=3, sticky=N)
+Label(root, text="Choose Work Environment Below:", font=("TkTextFont", 18)).grid(columnspan=3, sticky=N)
 #Create empty grid
-display = Label(root, width=40, height=10, text="Status Updates Here")
+display = Label(root, width=40, height=07, text="Status Updates Here")
 display.grid(sticky=W)
 
+
+
+#Non Icon Filled Code Below
+'''
 #Buttons...use lambda so all buttons do not immediately run once the window starts
 buttonTerminal=Button(root, text="Terminal", command=lambda:runTerminal()).grid(column=1,row=1)
 buttonBrowser=Button(root, text="Web Browser", command=lambda:runWebBrowser()).grid(column=2,row=1)
 '''
+
 ####
-Working on getting images next to text buttons within Tkinter
+####Working on getting images next to text buttons within Tkinter
 ####
-buttonTerminal=Button(root, compound=LEFT, image=PhotoImage(file="./src/icons/superfreq_terminal_icon.png"), text="Terminal", command=lambda:runTerminal()).grid(column=1,row=1)
-buttonBrowser=Button(root, compound=LEFT, image=PhotoImage(file="./src/icons/superfreq_flask_icon.png"), text="Web Browser", command=lambda:runWebBrowser()).grid(column=2,row=1)
-'''
-buttonDestroy=Button(root, text="Close Program", command=lambda:closeWindow()).grid(columnspan=3,sticky=N+S+E+W)
+buttonTerminal=Button(root, compound=LEFT, image=terminalIcon, text="Terminal", command=lambda:runTerminal()).grid(column=1,row=1)
+buttonBrowser=Button(root, compound=LEFT, image=flaskIcon, text="Web Browser", command=lambda:runWebBrowser()).grid(column=2,row=1)
+buttonDestroy=Button(root, compound=LEFT, image=closeIcon, text="Close Program", command=lambda:closeWindow()).grid(columnspan=3,sticky=N+S+E+W)
 
 """Window Logic"""
 root.grid_columnconfigure(0,weight=1) #Dynamically resize the widget in the window
