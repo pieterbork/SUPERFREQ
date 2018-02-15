@@ -3,8 +3,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : main.py
 #purpose :  Allow user to choose between terminal and web browser environments
-#date : 2018.02.13
-#version : 1.1.05
+#date : 2018.02.14
+#version : 1.1.07
 #version notes (latest): Compatible w/ python2. Spawns separate shell process
 
 
@@ -36,7 +36,7 @@ def runTerminal():
 def runWebBrowser():
     try:
         #Spawn a new flask process just in case a user wishes to have a web browser and a terminal open
-        subprocess.call("x-terminal-emulator -e bash -c 'src/infrastructure/flask.py' \"$1\"", shell=True)
+        subprocess.call("x-terminal-emulator -e bash -c 'src/Flask/Flask.py' \"$1\"", shell=True)
         display.configure(text='Success Running Web Browser!')
     except:
         display.configure(text='Failure Running Web Browser!')
