@@ -73,3 +73,23 @@ PSR Week 4
       Streamlining os enivronment setup for our HackRF integration
 
 PSR Week 5
+
+    Accomplishments (Week of Feb 12):
+      Flask and Terminal Units: scan, parse, and display information back to the user
+      SQLite DB chosen and setup
+      Graphical additions in Flask layout and features
+      Graphical additions to "main" app and cleaned up terminal code
+      
+ 
+    Plans this week (Week of Feb 19):
+      Begin work on capturing and parsing Zigbee technology
+      Fine tune parsing valuable data in csv files from packet captures
+      Weekly bug fixes and enhancements on main app
+      Continue development on test cases
+
+
+    Problems & Issues:
+      Beautfiying Website and Temrinal output slows down our development process
+      Packaging HackRF dependencies into app environment
+
+PSR Week 6
