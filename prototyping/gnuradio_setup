@@ -1,0 +1,32 @@
+git clone https://github.com/bastibl/gr-foo.git -b master
+cd gr-foo
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo ldconfig
+cd ../..
+
+git clone https://github.com/pieterbork/gr-ieee802-11
+cd gr-ieee802-11
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo ldconfig
+cd ../..
+
+git clone https://github.com/rftap/gr-rftap
+cd gr-rftap
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo ldconfig
+cd ../..
+
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
+export LD_LIBRARY_PATH=/usr/local/lib/
