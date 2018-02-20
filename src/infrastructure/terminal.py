@@ -4,8 +4,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminal.py
 #purpose : Foundation for terminal commands and possible GUI linkage
-#date : 2018.02.10
-#version: 1.1.0
+#date : 2018.02.19
+#version: 1.1.01
 #version notes (latest): Compatible w/ python2
 
 
@@ -34,7 +34,7 @@ def printHelp():
         ############################################
         List of program commands:\n
         \t 0. Help - Reprint (this) command prompt \n
-        \t 1. Tune Radio - Ensure our antenna is RX Data \n
+        \t 1. Scan Network - Ensure our antenna can RX (receive) Data \n
         \t 2. Display Network Data - Interactive Graphs & Statistics \n
         \t 3. Decode Network Data - Scan, capture, parse various network protocols \n
         \t 4. View Database - View saved network data  \n
@@ -56,7 +56,7 @@ def runTerminalMain():
         #Available number options to execute commands
 
         options = OrderedDict((('0', printHelp),
-                               ('1', terminalFunctions.tuneRadio),
+                               ('1', terminalFunctions.scanNetwork),
                                ('2', terminalFunctions.displayNetworkData),
                                ('3', terminalFunctions.decodeNetworkData),
                                ('4', terminalFunctions.viewDatabase),

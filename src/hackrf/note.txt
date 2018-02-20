@@ -1,0 +1,5 @@
+Carlos and/or Pieter:
+
+For writing any csv output, please place the file in the following path: /src/infrastructure/network_scan_output/
+
+Thanks!

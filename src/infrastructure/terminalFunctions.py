@@ -3,12 +3,19 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminalFunctions.py
 #purpose : File for all teammember to put in modular code. As the file grows we can separate the longer functions into separate files
-#date : 2018.02.10
-#version: 1.0.5
+#date : 2018.02.19
+#version: 1.0.8
 #version notes (latest): Compatible w/ python2
 
-
+#Native Python Modules
+import os
+import sys
+import time
+#import thread
 import subprocess
+import csv
+from multiprocessing import Process
+
 #This will alert the end tester that the build environment for the hackrf is not present
 try:
     from sdr_modules.wifi_rx_rftap import tuneWifi
@@ -16,14 +23,27 @@ except ImportError:
     print ("The GnuRadio dependencies are not present in this app! Talk to Pieter/Carlos...")
 
 
-""" 1. Tune Radio - Ensure our antenna is RX Data """
+""" 1. Scan Network - Ensure our antenna can RX Data """
 
-def tuneRadio():
-    print("\t Hello World of Radio's \n")
+def scanNetwork():
+
+    #Emulate Scan Function
+    print("\n\t Running Network Scan w/ HackRF... \n")
+    print("\n\t If you wish to quit, press Ctrl C or ^C... \n")
     try:
-        tuneWifi.main()
-    except:
-        print("tuneRadio: You didn't say the magic words!!!")
+        #Below is the actual function to run the HackRF
+        #tuneWifi.main()
+        cli_process = Process(target=cli_progress, args=(101, 20))
+        cli_process.start()
+        scan_process = Process(target=check_csv_file)
+        scan_process.start()
+        #Wait until finished
+        scan_process.join()
+        cli_process.join()
+        
+        print("\n\t Results saved locally! Can be accessed by Option 2 on the command line... \n")
+    except KeyboardInterrupt:
+        print("\nscanNetwork: User stopped scan!!! Partial Data saved. Press enter to return to main program.")
     
 
 """ 2. Display Network Data - Interactive Graphs & Statistics """
@@ -80,3 +100,30 @@ def testSummary():
 
 def settingsPage():
     print("\t ;)  \n")
+
+
+"""###########################################
+########## SYSTEM OUTPUT SECTION ##########
+###############################################"""
+
+def check_csv_file():
+    if not os.path.isfile('./network_scan_output/hackRFTestOutput.csv'):
+        print("\n The MCP has derezzed the file!\n")
+        sys.exit()
+    else:
+        with open('./network_scan_output/hackRFTestOutput.csv') as csvFile:
+            #Use csv parser
+            reader = csv.reader(csvFile, delimiter=',')
+            for row in reader:
+                print(row)
+
+def cli_progress(end_val, bar_length):
+    for i in xrange(0, end_val):
+        percent = float(i) / end_val
+        hashes = '#' * int(round(percent * bar_length))
+        spaces = ' ' * (bar_length - len(hashes))
+        #Emulate progress...
+        time.sleep(0.1)
+        sys.stdout.write("\rPercent: [{0}] {1}%".format(hashes + spaces, int(round(percent * 100))))
+        sys.stdout.flush()
+    print("\n")
