@@ -4,8 +4,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminal.py
 #purpose : Foundation for terminal commands and possible GUI linkage
-#date : 2018.02.19
-#version: 1.1.01
+#date : 2018.02.20
+#version: 1.1.02
 #version notes (latest): Compatible w/ python2
 
 
@@ -70,13 +70,16 @@ def runTerminalMain():
 
         #Main Program Loop
         while terminal_on:
-                #Get user string
-                user_key_input = raw_input('Enter number or (Q) to Quit: ').upper()
-                if user_key_input in options:
-                        action = options[user_key_input]
-                        action()
-                else:
-                        print 'Unknown User Input! Try Again!'
+                try:
+                        #Get user string
+                        user_key_input = raw_input('Enter number or (Q) to Quit: ').upper()
+                        if user_key_input in options:
+                                action = options[user_key_input]
+                                action()
+                        else:
+                                print 'Unknown User Input! Try Again!'
+                except:
+                        sys.exit()
 
                         
 ##

@@ -9,13 +9,20 @@ All functions which are successfully working here can be integrated into the "ma
 Comment out sections that are no longer needing to be tested.
 Clean this file after all terminal functions are done.
 """
-#date : 2018.02.06
+#date : 2018.02.20
 #version : 1.0.0
 #version notes (latest): Compatible w/ python2.
-
+import os
 import subprocess
 import shlex
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import cm
 
+dir = os.path.dirname(__file__)
+print (dir)
+
+"""
 #Ping Common (8.8.8.8; Google) Network address
 #Can be automated or we pass in user input
 try:
@@ -37,3 +44,5 @@ try:
 except:
     #Mark test a failure
     print("FAILED to connect to {}".format(hexVar))
+
+"""

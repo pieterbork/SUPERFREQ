@@ -3,8 +3,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminalFunctions.py
 #purpose : File for all teammember to put in modular code. As the file grows we can separate the longer functions into separate files
-#date : 2018.02.19
-#version: 1.0.8
+#date : 2018.02.20
+#version: 1.0.10
 #version notes (latest): Compatible w/ python2
 
 #Native Python Modules
@@ -14,7 +14,11 @@ import time
 #import thread
 import subprocess
 import csv
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import cm
 from multiprocessing import Process
+
 
 #This will alert the end tester that the build environment for the hackrf is not present
 try:
@@ -38,8 +42,8 @@ def scanNetwork():
         scan_process = Process(target=check_csv_file)
         scan_process.start()
         #Wait until finished
-        scan_process.join()
         cli_process.join()
+        scan_process.join()
         
         print("\n\t Results saved locally! Can be accessed by Option 2 on the command line... \n")
     except KeyboardInterrupt:
@@ -49,7 +53,50 @@ def scanNetwork():
 """ 2. Display Network Data - Interactive Graphs & Statistics """
 
 def displayNetworkData():
-    print("\t Graphs Here \n")
+    print("\t Reading CSV File and Generating Graph... \n")
+
+    dir = os.path.dirname(__file__)
+    csvPathToFile = os.path.join(dir, 'network_scan_output', 'hackRFTestOutput.csv')
+    
+    """Below is for testing...."""
+    #Original File Output is based off of - out.csv
+
+    #Create lists
+    labels=[]
+    perc=[]
+
+    #Format of csv: Duration,Frame Control,Subtype,SSID,seq nr,mac 1, mac occurence
+    #Color scheme
+    a = np.random.random(40)
+    cs = cm.Set1(np.arange(40)/40.)
+
+    #Check csv file
+    if not os.path.isfile(csvPathToFile):
+        print("\n The MCP has derezzed the file!\n")
+        sys.exit()
+    else:
+        with open(csvPathToFile) as csvFile:
+            #Use csv parser
+            reader = csv.reader(csvFile, delimiter=',')
+            for row in reader:
+                labels.append(row[3]+"-"+row[6])
+                perc.append(float(row[7]))
+                
+        #Add data to plot
+        plt.pie(perc, labels=labels, autopct='%1.1f%%', colors=cs, shadow=True, startangle=90)
+
+        #Use for changing font colors
+        """   _, _, autotexts = plt.pie(perc, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
+        for autotext in autotexts:
+            autotext.set_color('grey')
+        """
+
+        #Rounds plot
+        plt.axis('equal')
+        plt.title("Frequency of MAC Addresses\n")
+
+        #Create Image
+        plt.show()   
 
 """ 3. Decode Network Data - Scan, capture, parse various network protocols """
 
@@ -107,11 +154,17 @@ def settingsPage():
 ###############################################"""
 
 def check_csv_file():
-    if not os.path.isfile('./network_scan_output/hackRFTestOutput.csv'):
+
+    #Temp fix for anyone running it...need to think about production
+    dir = os.path.dirname(__file__)
+    csvPathToFile = os.path.join(dir, 'network_scan_output', 'hackRFTestOutput.csv')
+    #print(csvFile)
+    
+    if not os.path.isfile(csvPathToFile):
         print("\n The MCP has derezzed the file!\n")
         sys.exit()
     else:
-        with open('./network_scan_output/hackRFTestOutput.csv') as csvFile:
+        with open(csvPathToFile) as csvFile:
             #Use csv parser
             reader = csv.reader(csvFile, delimiter=',')
             for row in reader:
