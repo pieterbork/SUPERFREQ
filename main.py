@@ -3,8 +3,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : main.py
 #purpose :  Allow user to choose between terminal and web browser environments
-#date : 2018.02.14
-#version : 1.1.07
+#date : 2018.02.21
+#version : 1.1.09
 #version notes (latest): Compatible w/ python2. Spawns separate shell process
 
 
@@ -15,6 +15,10 @@ import subprocess
 
 #Create window
 root=Tk()
+
+#Attach Icon to Program
+programIcon = PhotoImage(file="./src/icons/hackrf_48_icon.png")
+root.tk.call('wm', 'iconphoto', root._w, programIcon)
 
 ########################## Functions ##########################
 
