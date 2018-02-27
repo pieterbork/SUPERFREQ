@@ -9,18 +9,59 @@ All functions which are successfully working here can be integrated into the "ma
 Comment out sections that are no longer needing to be tested.
 Clean this file after all terminal functions are done.
 """
-#date : 2018.02.20
+#date : 2018.02.26
 #version : 1.0.0
 #version notes (latest): Compatible w/ python2.
 import os
-import subprocess
-import shlex
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import cm
+#import pkg_resources
+#import subprocess
+#import shlex
+#import numpy as np
+#import matplotlib.pyplot as plt
+#from matplotlib import cm
+#from functools import partial
+from collections import OrderedDict
 
+#print pkg_resources.resource_filename('src.infrastructure', 'terminal.py')
+
+fileNumber = 0
+
+file_list = []
+
+#List contents of directory
+for file_in_dir in os.listdir("."):
+    print str(fileNumber) + ". " + file_in_dir
+    #myOrderedDictionary = OrderDict((fileNumber,file_in_dir) for file_in_dir in files)
+    #print myOrderedDictionary
+    numberAndFile = {str(fileNumber): file_in_dir}
+    file_list.append(numberAndFile)
+    fileNumber+=1
+    #Get user input...
+
+print file_list
+
+"""
+
+#Tell the system where we currently are
+cwd = os.getcwd()
+print cwd
+#Tell the system the root of our app is before 'src'
+separator= 'src/'
+#Remove everything after and including 'src/'
+rootPath = cwd.split(separator, 1)[0]
+print rootPath
+#Add path to file we wish to execute
+rootPath += 'src/infrastructure/'
+print rootPath
+os.chdir(rootPath)
+print os.getcwd()
+
+"""
+
+"""
 dir = os.path.dirname(__file__)
 print (dir)
+"""
 
 """
 #Ping Common (8.8.8.8; Google) Network address

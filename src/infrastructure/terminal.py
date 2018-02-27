@@ -4,8 +4,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminal.py
 #purpose : Foundation for terminal commands and possible GUI linkage
-#date : 2018.02.20
-#version: 1.1.02
+#date : 2018.02.25
+#version: 1.1.03
 #version notes (latest): Compatible w/ python2
 
 
@@ -35,11 +35,10 @@ def printHelp():
         List of program commands:\n
         \t 0. Help - Reprint (this) command prompt \n
         \t 1. Scan Network - Ensure our antenna can RX (receive) Data \n
-        \t 2. Display Network Data - Interactive Graphs & Statistics \n
-        \t 3. Decode Network Data - Scan, capture, parse various network protocols \n
-        \t 4. View Database - View saved network data  \n
-        \t 5. Test Summary - Provide quick network/system checks in an easy to read format \n
-        \t 6. Settings Page - Save user preferences & configurations for network data manipulation \n
+        \t 2. Display Network Data - Interactive Graphs & Statistics \n        
+        \t 3. View Database - View saved network data  \n
+        \t 4. Test Summary - Provide quick network/system checks in an easy to read format \n
+        \t 5. Settings Page - Save user preferences & configurations for network data manipulation \n
         \t (Q)uit - Quits the program \n
         \n
         """
@@ -58,10 +57,9 @@ def runTerminalMain():
         options = OrderedDict((('0', printHelp),
                                ('1', terminalFunctions.scanNetwork),
                                ('2', terminalFunctions.displayNetworkData),
-                               ('3', terminalFunctions.decodeNetworkData),
-                               ('4', terminalFunctions.viewDatabase),
-                               ('5', terminalFunctions.testSummary),
-                               ('6', terminalFunctions.settingsPage),
+                               ('3', terminalFunctions.viewDatabase),
+                               ('4', terminalFunctions.testSummary),
+                               ('5', terminalFunctions.settingsPage),
                                ('Q', quitTerminal)))
                                
 

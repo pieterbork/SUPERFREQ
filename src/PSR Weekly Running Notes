@@ -93,3 +93,22 @@ PSR Week 5
       Packaging HackRF dependencies into app environment
 
 PSR Week 6
+
+    Accomplishments (Week of Feb 19):
+      Flask and Terminal Units gained: Import, Export, and choose table information from database functionality
+      Graphical additions in Flask layout and features
+      Multi-processing functionality added for "work progress" bar and executing background scripts in the terminal
+      
+ 
+    Plans this week (Week of Feb 26):
+      Begin investigation into Docker container over AppImage technology for greater portability and setup
+      Continue work in parsing Zigbee packets
+      Weekly bug fixes and enhancements in Flask and terminal portions by focusing on user interaction
+      Use Python library - unittest - for automation of hardware test cases
+
+
+    Problems & Issues:
+      GSM/LTE technology may or may not make it into the final product
+      Simplifying user work flow to import multiple csv files into the database via terminal and flask interfaces 
+
+PSR Week 7
