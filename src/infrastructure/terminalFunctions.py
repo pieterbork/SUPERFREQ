@@ -3,8 +3,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminalFunctions.py
 #purpose : File for all teammember to put in modular code. As the file grows we can separate the longer functions into separate files
-#date : 2018.02.26
-#version: 1.0.15
+#date : 2018.02.27
+#version: 1.0.20
 #version notes (latest): Compatible w/ python2
 
 #Native Python Modules
@@ -59,37 +59,36 @@ def displayNetworkData():
     #dir = os.path.dirname(__file__)
     #csvPathToFile = os.path.join(dir, 'network_scan_output', 'hackRFTestOutput.csv')
 
-    """ LOCAL VARIABLE """
+    """ LOCAL VARIABLES FOR DIRECTORY LISTING """
     #"Locate" our data directory from anywhere
-    directory_List = getSourceDir()
+    directory_list = getSourceDir()
     
     #Add path to file we wish to execute
-    directory_List += 'src/infrastructure/network_scan_output/'
-
-    #Set loop variables
-    dir_Number = 0
-    dir_list = []
-
-    """ """
+    directory_list += 'src/infrastructure/network_scan_output/'
     
-    print("\t Listing Available Data Directories to Choose From... \n")
+
+    """ LET USER CHOOSE DIRECTORY """
+
+    #Call our directory lister
+    folder_user_opened = getSelectedDir(directory_list)
+
+    #Append folder to full path, so files in the path can be listed
+    directory_list = ''.join((directory_list,'/', folder_user_opened))
     
-    #List contents of directory
-    for dirs_in_dir in os.listdir(directory_List):
-        print str(dir_Number) + ". " + dirs_in_dir
-        numberAndDir = {str(dir_Number): dirs_in_dir}
-        dir_list.append(numberAndDir)
-        dir_Number+=1
-        print dir_list
-        #Get user input...and assign it to selectedDir
-        files_in_user_chosen_dir = directory_List += selectedDir
 
-    #Allow user to select from list of files within the chosen directory
-    userDesiredCSV = chooseFile(files_in_user_chosen_dir)
+    """ LET USER CHOOSE FILE TO GET ADDITIONAL OPTIONS """
+    
+    #Call our file lister
+    file_user_chose = getSelectedFile(directory_list)
 
 
+    """ DISPLAY OPTIONS ON USER SELECTED FILE """
+
+    #Add file to full directory path
+    directory_list = ''.join((directory_list,'/', file_user_chose))
+    
     #See if user wants to output, create a graph or choose a different directory
-    displayNetworkGraphOptions(userDesiredCSV)
+    displayNetworkGraphOptions(directory_list)
     
        
 
@@ -182,9 +181,9 @@ def createGraph(userSelectedCSV):
         #Create Image
         plt.show()
 
-def importCSV():
+#def importCSV():
 
-def exportCSV():
+#def exportCSV():
 
 
 """
@@ -250,19 +249,71 @@ def getSourceDir():
     #print rootPath
     return rootPath
 
+def getSelectedDir(directory_list):
 
-def chooseFile(files_in_user_chosen_dir):
+    #Set loop variables
+    dir_number = 0
+    dir_list = []
+    dir_loop_on = TRUE
 
-    fileNumber = 0
+    print("\t Listing Available Data Directories to Choose From... \n")
     
     #List contents of directory
-    for file_in_dir in os.listdir(files_in_user_chosen_dir):
-        print str(fileNumber) + ". " + file_in_dir
-        fileNumber+=1
-        #Get user input...
+    for dirs_in_dir in os.listdir(directory_list):
+        print str(dir_number) + ". " + dirs_in_dir
+        #Pass in lists (arrays)
+        number_and_dir = [str(dir_number), dirs_in_dir]
+        dir_list.append(number_and_dir)
+        dir_number+=1
+        #print dir_list
 
-    #return user_file
+    dir_list = OrderedDict(dir_list)
+    #print dir_list
 
+    while dir_loop_on:
+        try:
+            #Get user string
+            user_key_input = raw_input('Enter number or (Q) to Quit: ').upper()
+            if user_key_input in dir_list:
+                folder_to_open = dir_list[user_key_input]
+                #print folder_to_open
+                return folder_to_open
+            elif user_key_input == 'Q':
+                break
+            else:
+                print 'Unknown User Input! Try Again!'
+        except:
+            break
+
+
+def getSelectedFile(directory_list):
+
+    #Set loop variables
+    file_number = 0
+    file_list = []
+    file_loop_on = TRUE
+    
+    #List contents of directory
+    for file_in_dir in os.listdir("."):
+        print str(file_number) + ". " + file_in_dir
+        number_and_file = [str(file_number), file_in_dir]
+        file_list.append(number_and_file)
+        file_number+=1
+
+    while file_loop_on:
+        try:
+            #Get user string
+            user_key_input = raw_input('Enter number or (Q) to Quit: ').upper()
+            if user_key_input in file_list:
+                file_selected = file_list[user_key_input]
+                #print file_selected
+                return file_selected
+            elif user_key_input == 'Q':
+                break
+            else:
+                print 'Unknown User Input! Try Again!'
+        except:
+            break
 
 def readCsvFile(userSelectedFile):
 

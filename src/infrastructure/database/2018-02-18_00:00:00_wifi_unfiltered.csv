@@ -1,0 +1,7 @@
+00 00,00 94,Block ACK,N/A,CTL,0:e1:b0:10:10:12,2.46Ghz,0.0526
+00 00,00 94,Block ACK,N/A,CTL,9c:e3:3f:5:49:c9,2.46Ghz,0.2631
+00 00,00 80,Beacon,SOC-LAB,672,ff:ff:ff:ff:ff:ff,5.18Ghz,0.1578
+00 00,00 80,Beacon,SOC-MGMT,2659,1e:8d:cb:84:9b:ff,5.18Ghz,0.1052
+00 00,00 80,Beacon,LTE-Lab,700,2:8d:cb:84:9b:ff,5.18Ghz,0.1578
+00 00,00 80,Beacon,embedded,2728,a:8d:cb:84:9b:ff,5.18Ghz,0.2105
+00 00,00 80,Beacon,WiFiLab,2728,6:8d:cb:84:9b:ff,5.18Ghz,0.0530

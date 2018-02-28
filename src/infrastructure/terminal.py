@@ -4,8 +4,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminal.py
 #purpose : Foundation for terminal commands and possible GUI linkage
-#date : 2018.02.25
-#version: 1.1.03
+#date : 2018.02.27
+#version: 1.2.03
 #version notes (latest): Compatible w/ python2
 
 
@@ -29,8 +29,8 @@ def quitTerminal():
 def printHelp():
         list_commands = """
         ############################################
-        ####### SUPERFREQ Terminal Interface ###################################################
-        ####### Version: 1.1.0 #################################################################
+        ####### SUPERFREQ Terminal Interface #######
+        ####### Version: 1.2.03 #####################
         ############################################
         List of program commands:\n
         \t 0. Help - Reprint (this) command prompt \n

@@ -24,6 +24,9 @@ from collections import OrderedDict
 
 #print pkg_resources.resource_filename('src.infrastructure', 'terminal.py')
 
+#User Loop
+level1_on = True
+
 fileNumber = 0
 
 file_list = []
@@ -33,12 +36,31 @@ for file_in_dir in os.listdir("."):
     print str(fileNumber) + ". " + file_in_dir
     #myOrderedDictionary = OrderDict((fileNumber,file_in_dir) for file_in_dir in files)
     #print myOrderedDictionary
-    numberAndFile = {str(fileNumber): file_in_dir}
+    numberAndFile = [str(fileNumber), file_in_dir]
     file_list.append(numberAndFile)
     fileNumber+=1
-    #Get user input...
 
+
+file_list = OrderedDict(file_list)
 print file_list
+
+while level1_on:
+    try:
+        #Get user string
+        user_key_input = raw_input('Enter number or (Q) to Quit: ').upper()
+        if user_key_input in file_list:
+            folder_to_open = file_list[user_key_input]
+            print folder_to_open
+            return folder_to_open
+            #print 
+            #action = options[user_key_input]
+            #action()
+        elif user_key_input == 'Q':
+            sys.exit()
+        else:
+            print 'Unknown User Input! Try Again!'
+    except:
+        break
 
 """
 

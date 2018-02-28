@@ -19,6 +19,8 @@ In doing this project, we felt the need to document Python Libraries that are no
    - Installed by: `pip install flask`
 2. Matplotlib
    - Installed by: `python2.7 -m pip install -U matplotlib` or `sudo apt-get install python-matplotlib`
+3. SQLITE
+   - Installed by: `sudo apt-get install sqlite3 libsqlite3-dev`
 
 
 If you are running into errors, try the below troubleshooting:
