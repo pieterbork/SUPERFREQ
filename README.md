@@ -5,6 +5,35 @@ Below you will find a wide range of documentation
 
 ## HackRF Code Development
 
+The goal was to make building and deploying this application as easy as possible, and only using a pentoo installation to use gnuradio was getting to be a pain...so we decided to go with docker.
+
+Integration is still in progress, but here's the basics of getting set up.
+
+1. Install docker (easily available from most package managers)
+
+2. Obtain a copy of the gnuradio:latest docker image by either
+   
+   a) Building gnuradio:latest using [this](https://github.com/pieterbork/docker-gnuradio) Dockerfile (This takes a decent amount of time).
+   
+   b) Pulling from a docker repository (currently only Pieter's computer).
+   
+3. Build the [docker-superfreq image](https://github.com/pieterbork/docker-superfreq)
+   
+Using the docker run commands given in the docker-superfreq documentation, you should end up with a bash shell inside of the superfreq docker container. 
+
+Let's test some things, and then we'll run some actual code!
+
+First, plug in the hackrf run `hackrf_info` - you should see information about your hackrf board.
+
+If you see errors complaining about connecting to X servers, you probably aren't passing your display through which I explain in the docker-supfreq docs.
+
+Next, cd your way to `SUPERFREQ/src/hackrf/SDR_Testing/` and try running `python wifi_rx_rftap_nogrc.py`.
+
+If you see a gray box appear with no information and things printing out in your terminal - that's awesome!
+
+Check `/tmp/out_frames` and you may see some decoded Wifi metadata information. 
+  
+
 ###### HackRF Library Dependencies on ???? 
 
 ## Python Code Development
