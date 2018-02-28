@@ -32,9 +32,6 @@ Next, cd your way to `SUPERFREQ/src/hackrf/SDR_Testing/` and try running `python
 If you see a gray box appear with no information and things printing out in your terminal - that's awesome!
 
 Check `/tmp/out_frames` and you may see some decoded Wifi metadata information. 
-  
-
-###### HackRF Library Dependencies on ???? 
 
 ## Python Code Development
 
