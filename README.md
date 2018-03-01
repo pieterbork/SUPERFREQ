@@ -37,6 +37,22 @@ Check `/tmp/out_frames` and you may see some decoded Wifi metadata information.
 
 Please run the following command on any Debian/Ubuntu system to ensure your work environment is clean: `sudo apt-get install python-pip python-dev`
 
+
+###### Building the Docker Image on Raspbian
+
+To develop for this project on Raspbian the following steps must be taken
+
+1. Download the docker image: curl -sSL https://get.docker.com | sh
+   - Debugging error issue: N: Skipping acquire of configured file 'edge/binary-i386/Packages' as repository 'https://download.docker.com/linux/debian stretch InRelease' doesn't support architecture 'i386'
+     - Solution: cd `/etc/apt/sources.list.d/docker.list` and change the docker.list file to: "deb [arch=amd64] https://download.docker.com/linux/debian stretch edge" the important thing here is to change arch to `amd64`
+2. Install the docker image
+   - Run `sudo apt-get update`
+   - Run `sudo apt-get install docker-ce`
+3. Check install
+   - `sudo docker run hello-world`
+
+Sources: https://docs.docker.com/install/linux/docker-ce/debian/#install-docker-ce-1
+
 ###### Python Library Dependencies on Debian/Ubuntu
 
 In doing this project, we felt the need to document Python Libraries that are not included into a default Python installation. Thus, our project includes:
