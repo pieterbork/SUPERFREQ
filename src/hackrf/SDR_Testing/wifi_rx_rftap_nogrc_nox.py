@@ -22,7 +22,7 @@ import time
 class wifi_rx_rftap_nogrc_nox(gr.top_block):
 
 	def __init__(self):
-			gr.top_block.__init__(self, "Wifi Rx Rftap Nogrc Nox")
+		gr.top_block.__init__(self, "Wifi Rx Rftap Nogrc Nox")
 
 		##################################################
 		# Variables
