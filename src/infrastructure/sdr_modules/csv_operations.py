@@ -3,11 +3,11 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : csv_operations.py
 #purpose : Allow the user to easily traverse our app structure and have options in relation to csv data. May or may not merge with database file
-#date : 2018.03.01
+#date : 2018.03.05
 #version: 1.0.25
 #version notes (latest): Compatible w/ python2
 
-
+import sys
 import os
 import csv
 import numpy as np
@@ -31,6 +31,15 @@ def getSourceDir():
     #print rootPath
     return rootPath
 
+def runTerminalInfraDir():
+
+    infra_dir = getSourceDir()
+    infra_dir += 'src/infrastructure/'
+    sys.path.insert(0, infra_dir)
+    import terminal
+    terminal.runTerminal()
+    
+
 def getSelectedDir(directory_list):
 
     #Set loop variables
@@ -38,11 +47,11 @@ def getSelectedDir(directory_list):
     dir_list = []
     dir_loop_on = True
 
-    print("\t Listing Available Data Directories to Choose From... \n")
+    print("\n\tListing Available Data Directories to Choose From... \n")
     
     #List contents of directory
     for dirs_in_dir in os.listdir(directory_list):
-        print str(dir_number) + ". " + dirs_in_dir
+        print "\t\t" + str(dir_number) + ". " + dirs_in_dir
         #Pass in lists (arrays)
         number_and_dir = [str(dir_number), dirs_in_dir]
         dir_list.append(number_and_dir)
@@ -54,16 +63,17 @@ def getSelectedDir(directory_list):
     while dir_loop_on:
         try:
             #Get user string
-            user_key_input = raw_input('\nEnter number or (Q) to Quit: ').upper()
+            user_key_input = raw_input('\nEnter a number or (Q) to Quit: ').upper()
             if user_key_input in dir_list:
                 folder_to_open = dir_list[user_key_input]
                 return folder_to_open
             elif user_key_input == 'Q':
-                return
+                dir_loop_on = False
+                runTerminalInfraDir()
             else:
-                print '\nUnknown User Input! Try Again!\n'
+                print '\n\nUnknown User Input! Try Again!\n'
         except:
-            return
+            break
 
 
 def getSelectedFile(directory_list):
@@ -72,10 +82,12 @@ def getSelectedFile(directory_list):
     file_number = 0
     file_list = []
     file_loop_on = True
+
+    print("\n\tListing Available Files to Choose From... \n")
     
     #List contents of directory
     for file_in_dir in os.listdir(directory_list):
-        print str(file_number) + ". " + file_in_dir
+        print "\t\t" + str(file_number) + ". " + file_in_dir
         number_and_file = [str(file_number), file_in_dir]
         file_list.append(number_and_file)
         file_number+=1
@@ -86,20 +98,22 @@ def getSelectedFile(directory_list):
     while file_loop_on:
         try:
             #Get user string
-            user_key_input = raw_input('\nEnter number or (Q) to Quit: ').upper()
+            user_key_input = raw_input('\nEnter a number or (Q) to Quit: ').upper()
             if user_key_input in file_list:
                 file_selected = file_list[user_key_input]
                 return file_selected
             elif user_key_input == 'Q':
-                break
+                file_loop_on = False
+                csvOperations()
             else:
-                print '\nUnknown User Input! Try Again!\n'
+                print '\n\nUnknown User Input! Try Again!\n'
         except:
             break
 
 def displayCsvOptions(userCSV):
 
     def exitNetworkOptions():
+        display_on = False
         csvOperations()
 
     list_commands = """
@@ -122,7 +136,8 @@ def displayCsvOptions(userCSV):
     options = OrderedDict((('0', partial(readCsvFile, userCSV)),
                            ('1', partial(createGraph, userCSV)),
                            ('2', partial(removeCsvFile, userCSV)),
-                           ('Q', exitNetworkOptions)))
+                           ('Q', exitNetworkOptions),
+                           ('q', exitNetworkOptions)))
                            
 
     #Mandatory First print out of commands
@@ -132,7 +147,7 @@ def displayCsvOptions(userCSV):
     while display_on:
             try:
                     #Get user string
-                    user_key_input = raw_input('Enter number or (Q) to Quit: ').upper()
+                    user_key_input = raw_input('Enter a number or (Q) to Quit: ').upper()
                     if user_key_input in options:
                             action = options[user_key_input]
                             action()
