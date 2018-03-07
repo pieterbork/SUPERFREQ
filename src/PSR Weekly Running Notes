@@ -112,3 +112,22 @@ PSR Week 6
       Simplifying user work flow to import multiple csv files into the database via terminal and flask interfaces 
 
 PSR Week 7
+
+    Accomplishments (Week of Feb 26):
+      Application has been integrated into a Docker environment
+      90% of terminal functionality is in place; last 10% is centered around database functionality
+      Added interactive graphs through Web UI by using Chartjs
+      
+ 
+    Plans this week (Week of Mar 05):
+      Test application features and workflows for a "complete" docker container
+      Finalize all test cases to be written and automated within Python
+      Weekly bug fixes and enhancements in Flask/terminal portions by focusing on user interaction
+      Make additions to IEEE draft and create an ER diagram for our database
+      
+
+    Problems & Issues:
+       Concerns of GSM/LTE technology integration into app linger
+       Deciding whether to bring in Windows and macOS into list of supported platforms because of docker functionality
+
+PSR Week 8
