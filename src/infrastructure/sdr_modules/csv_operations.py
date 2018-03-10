@@ -3,8 +3,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : csv_operations.py
 #purpose : Allow the user to easily traverse our app structure and have options in relation to csv data. May or may not merge with database file
-#date : 2018.03.05
-#version: 1.0.25
+#date : 2018.03.10
+#version: 1.0.30
 #version notes (latest): Compatible w/ python2
 
 import sys
@@ -112,7 +112,7 @@ def getSelectedFile(directory_list):
 
 def displayCsvOptions(userCSV):
 
-    def exitNetworkOptions():
+    def exitCsvOptions():
         display_on = False
         csvOperations()
 
@@ -136,8 +136,8 @@ def displayCsvOptions(userCSV):
     options = OrderedDict((('0', partial(readCsvFile, userCSV)),
                            ('1', partial(createGraph, userCSV)),
                            ('2', partial(removeCsvFile, userCSV)),
-                           ('Q', exitNetworkOptions),
-                           ('q', exitNetworkOptions)))
+                           ('Q', exitCsvOptions),
+                           ('q', exitCsvOptions)))
                            
 
     #Mandatory First print out of commands

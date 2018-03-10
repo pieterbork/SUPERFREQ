@@ -131,3 +131,22 @@ PSR Week 7
        Deciding whether to bring in Windows and macOS into list of supported platforms because of docker functionality
 
 PSR Week 8
+
+    Accomplishments (Week of Mar 05):
+      TRR Presentation and enchancements to existing code base
+      Implemented remaining database functionality
+      Flask (Web GUI) calls custom modules for traversing app directory structure
+      
+ 
+    Plans this week (Week of Mar 12):
+      Write code for 90% of automated test cases
+      Weekly bug fixes and enhancements in Flask/terminal portions by focusing on user interaction
+      Continue IEEE draft additions
+      Continue Zigbee development      
+
+
+    Problems & Issues:
+      Slow Zigbee development due to C libraries
+      Code refactoring for csv and database operations
+
+PSR Week 9
