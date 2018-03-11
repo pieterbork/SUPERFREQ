@@ -39,7 +39,7 @@ def printHelp():
         ############################################\n
         List of program commands:\n
         \t 0. Help - Reprint (this) command prompt \n
-        \t 1. Radio Options - Choose different radio frequencies (e.g. wifi) to capture packets that will automatically be saved to a csv file(s) \n
+        \t 1. Scan Options - Choose different radio frequencies (e.g. wifi) to capture packets that will automatically be saved to a csv file(s) \n
         \t 2. CSV Operations - Choose to read, remove or generate graphs from csv files \n        
         \t 3. Database Operations - Import CSV's into the DB or just view all saved data \n
         \t 4. Automated Test Summary - Provide quick network/system checks in an easy to read format \n
