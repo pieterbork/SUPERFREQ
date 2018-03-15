@@ -124,7 +124,7 @@ class zigbee_rftap(grc_wxgui.top_block_gui):
         self.foo_wireshark_connector_0 = foo.wireshark_connector(195, False)
         self.epy_block_0 = blk()
         self.blocks_socket_pdu_0 = blocks.socket_pdu("UDP_CLIENT", "127.0.0.1", "52001", 10000, False)
-        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, "/tmp/sensor.pcap", False)
+        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, "/tmp/zigbee.pcap", False)
         self.blocks_file_sink_0.set_unbuffered(True)
 
         ##################################################

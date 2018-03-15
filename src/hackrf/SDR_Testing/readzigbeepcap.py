@@ -110,7 +110,7 @@ if __name__ == '__main__':
 	layer_count = {}
 	for l in ZB_Layers:
 		layer_count[ZB_Layers_Names[ZB_Layers.index(l)]] = 0
-	zb_file = "/tmp/sensor.pcap"
+	zb_file = "/tmp/zigbee.pcap"
 	packets = kbrdpcap(zb_file)
 	for pkt in packets:
 		for l in ZB_Layers:
