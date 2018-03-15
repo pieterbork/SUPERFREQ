@@ -7,45 +7,98 @@
 #version : 1.0.1
 #version notes (latest): Compatible w/ python2. 
 
-
 from flask import Flask
 from flask import render_template
 from flask import url_for
 from flask import request
-import thread
-import webbrowser
+import os
+import sys
+import csv
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import cm
+from multiprocessing import Process
 
 app = Flask(__name__)
-
-#Create thread for our webpage
-def homePageThread():
-    #Web Browser url will change...leave for testing
-    webbrowser.open_new_tab('http://127.0.0.1:7721')
 
 #Create a User home page and check our app flask is operational
 @app.route('/')
 def index():
     return render_template('index.html')
 
+@app.route('/scan')
+def scanNetwork():
+    return render_template('scan.html')
+
+@app.route('/database')
+def viewDatabase():
+    return render_template('database.html')
+
+@app.route('/images')
+def images():
+    fig=displayNetworkData()
+    img = StringIO()
+    fig.savefig(img)
+    img.seek(0)
+    return send_file(img, mimetype='image/png')
+
+""" 2. Display Network Data - Interactive Graphs & Statistics """
+
+def displayNetworkData():
+    print("\t Reading CSV File and Generating Graph... \n")
+
+    
+    """Below is for testing...."""
+    #Original File Output is based off of - out.csv
+
+    #Create lists
+    labels=[]
+    perc=[]
+
+    #Format of csv: Duration,Frame Control,Subtype,SSID,seq nr,mac 1, mac occurence
+    #Color scheme
+    a = np.random.random(40)
+    cs = cm.Set1(np.arange(40)/40.)
+
+    #Check csv file
+    if not os.path.isfile('hackRFTestOutput.csv'):
+        print("\n The MCP has derezzed the file!\n")
+        sys.exit()
+    else:
+        with open('hackRFTestOutput.csv') as csvFile:
+            #Use csv parser
+            reader = csv.reader(csvFile, delimiter=',')
+            for row in reader:
+                labels.append(row[3]+"-"+row[6])
+                perc.append(float(row[7]))
+                
+        #Add data to plot
+        plt.pie(perc, labels=labels, autopct='%1.1f%%', colors=cs, shadow=True, startangle=90)
+
+        #Use for changing font colors
+        """   _, _, autotexts = plt.pie(perc, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
+        for autotext in autotexts:
+            autotext.set_color('grey')
+        """
+
+        #Rounds plot
+        plt.axis('equal')
+        plt.title("Frequency of MAC Addresses\n")
+
+        #Create Image
+        plt.show()   
+    
 #Error handling function
 @app.errorhandler(400)
 @app.errorhandler(404)
 @app.errorhandler(500)
 def errorpage(e):
-    return("Move along...nothing to see here :)")
+    return("something going wrong here")
 
-#Run main program
+    #Run main program
 if __name__ == '__main__':
-    #Turn debugging off when code is ready for production :)
     app.debug = True
     try:
-        #Test Environment code
-        #thread.start_new_thread(homePageThread, ())
         app.run(host='127.0.0.1', port=7721)
-        #Production environment code
-        '''
-        thread.start_new_thread(homePageThread, ())
-        app.run(host='127.0.0.1', port=7721, reloader=False)
-        '''
     except:
         print("Host on 127.0.0.1, Port: 7721, is currently unavailable.")
