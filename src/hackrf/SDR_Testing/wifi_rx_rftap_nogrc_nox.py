@@ -19,7 +19,7 @@ import rftap
 import time
 
 
-class wifi_rx_rftap_nogrc_nox(gr.top_block):
+class wifi_rx_rftap(gr.top_block):
 
 	def __init__(self):
 		gr.top_block.__init__(self, "Wifi Rx Rftap Nogrc Nox")
@@ -135,28 +135,15 @@ class wifi_rx_rftap_nogrc_nox(gr.top_block):
 		self.ieee802_11_frame_equalizer_0.set_algorithm(self.chan_est)
 
 
-def main(top_block_cls=wifi_rx_rftap_nogrc_nox, options=None):
+def main(top_block_cls=wifi_rx_rftap, options=None):
 	doteleven_freqs = [2.412e9, 2.417e9, 2.422e9, 2.427e9, 2.432e9, 2.437e9, 2.442e9, 2.447e9, 2.452e9, 2.457e9, 2.462e9, 5.035e9, 5.040e9, 5.045e9, 5.055e9, 5.060e9, 5.080e9, 5.170e9, 5.180e9, 5.190e9, 5.200e9, 5.210e9, 5.220e9, 5.230e9, 5.240e9, 5.250e9, 5.260e9, 5.270e9, 5.280e9, 5.290e9, 5.300e9, 5.310e9, 5.320e9, 5.500e9, 5.510e9, 5.520e9, 5.530e9, 5.540e9, 5.550e9, 5.560e9, 5.570e9, 5.580e9, 5.590e9, 5.600e9, 5.610e9, 5.620e9, 5.630e9, 5.640e9, 5.660e9, 5.670e9, 5.680e9, 5.690e9, 5.700e9, 5.710e9, 5.720e9, 5.745e9, 5.755e9, 5.765e9, 5.775e9, 5.785e9, 5.795e9, 5.805e9, 5.825e9]
 
-	scanner1 = top_block_cls()
-	scanner2 = top_block_cls()
-	scanner3 = top_block_cls()
-	scanner4 = top_block_cls()
-	for i in range(0, len(doteleven_freqs), 4):
+	tb = top_block_cls()
+	for freq in doteleven_freqs:
 		print("\nSetting scanner1 frequency to {} GHz".format(doteleven_freqs[i]/1e9))
-		scanner1.set_freq(doteleven_freqs[i])
-		try:
-			print("\nSetting scanner2 frequency to {} GHz".format(doteleven_freqs[i+1]/1e9))
-			scanner2.set_freq(doteleven_freqs[i+1])
-			print("\nSetting scanner3 frequency to {} GHz".format(doteleven_freqs[i+2]/1e9))
-			scanner3.set_freq(doteleven_freqs[i+2])
-			print("\nSetting scanner4 frequency to {} GHz".format(doteleven_freqs[i+3]/1e9))
-			scanner4.set_freq(doteleven_freqs[i+3])
-		except IndexError:
-			pass
+		tb.set_freq(freq)
 		time.sleep(1)
-	scanner1.stop()
-	scanner2.stop()
+	tb.stop()
 
 
 if __name__ == '__main__':
