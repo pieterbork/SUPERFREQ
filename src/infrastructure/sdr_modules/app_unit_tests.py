@@ -4,31 +4,49 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : app_unit_tests.py
 #purpose : Run automated tests for terminal and flask environments. REWORK in progress
-#date : 2018.03.11
+#date : 2018.03.14
 #version: 1.5.0
 #version notes (latest): Compatible w/ python2
 
 import unittest
 import subprocess
-import re
-#import csv_operations
+import database_operations
+
 
 class TestNetworkDevices(unittest.TestCase):
 
     def test_if_wireless_on(self):
+        #DB info
+        rowid = int(2)
+        signal = 'wifi'
+
+        #Run Test and record within the database
         test_directory = "./Shell_UnitTests/wifi_status.bash"
         return_code = subprocess.call(test_directory)
         if return_code == 0:
+            boolean_value = int(1)
+            database_operations.statusTest(rowid, signal, boolean_value)
             assert True
         else:
+            boolean_value = int(0)
+            database_operations.statusTest(rowid, signal, boolean_value)
             assert False
 
     def test_if_bluetooth_on(self):
+        #DB info
+        rowid = int(4)
+        signal = 'bluetooth'
+
+        #Run Test and record within the database
         test_directory = "./Shell_UnitTests/bluetooth_status.bash"
         return_code = subprocess.call(test_directory)
         if return_code == 0:
+            boolean_value = int(1)
+            database_operations.statusTest(rowid, signal, boolean_value)
             assert True
         else:
+            boolean_value = int(0)
+            database_operations.statusTest(rowid, signal, boolean_value)
             assert False
 
     def test_bluetooth_external_devices_exist(self):
@@ -58,10 +76,21 @@ class TestNetworkDevices(unittest.TestCase):
 class TestSdrHardware(unittest.TestCase):
 
     def test_usb(self):
-        device_re = re.compile("Bus\s+(?P<bus>\d+)\s+Device\s+(?P<device>\d+).+ID\s(?P<id>\w+:\w+)\s(?P<tag>.+)$", re.I)
-        df = subprocess.check_output("lsusb")
-        #If matches HackRf signature, then test passes
-        pass
+        #DB info
+        rowid = int(1)
+        signal = 'HackRF'
+
+        #Run Test and record within the database
+        test_directory = "./Shell_UnitTests/usb_status.bash"
+        return_code = subprocess.call(test_directory)
+        if return_code == 0:
+            boolean_value = int(1)
+            database_operations.statusTest(rowid, signal, boolean_value)
+            assert True
+        else:
+            boolean_value = int(0)
+            database_operations.statusTest(rowid, signal, boolean_value)
+            assert False
 
     def test_sdr_rx(self):
         pass
@@ -80,6 +109,7 @@ class TestInternalSystems(unittest.TestCase):
 
     def test_import(self):
         pass
+
 
 """
 #Python library unittest will go here
@@ -125,7 +155,7 @@ def testSummary():
 if __name__ == '__main__':
     # Run only the tests in the specified classes
 
-    test_classes_to_run = [TestNetworkDevices, TestSdrHardware, TestInternalSystems]
+    test_classes_to_run = [TestSdrHardware, TestNetworkDevices, TestInternalSystems]
 
     loader = unittest.TestLoader()
 
