@@ -4,7 +4,7 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : app_unit_tests.py
 #purpose : Run automated tests for terminal and flask environments. REWORK in progress
-#date : 2018.03.14
+#date : 2018.03.15
 #version: 1.5.0
 #version notes (latest): Compatible w/ python2
 
@@ -15,10 +15,10 @@ import database_operations
 
 class TestNetworkDevices(unittest.TestCase):
 
-    def test_if_wireless_on(self):
+    def test_if_system_wireless_on(self):
         #DB info
         rowid = int(2)
-        signal = 'wifi'
+        signal = 'wifi_system'
 
         #Run Test and record within the database
         test_directory = "./Shell_UnitTests/wifi_status.bash"
@@ -32,10 +32,28 @@ class TestNetworkDevices(unittest.TestCase):
             database_operations.statusTest(rowid, signal, boolean_value)
             assert False
 
-    def test_if_bluetooth_on(self):
+    def test_if_wireless_external_devices_exist(self):
+        #DB info
+        rowid = int(3)
+        signal = 'wifi_devices'
+
+        #Run Test and record within the database
+        test_directory = "./Shell_UnitTests/wifi_nearby_devices.bash"
+        return_code = subprocess.call(test_directory)
+        if return_code == 0:
+            boolean_value = int(1)
+            database_operations.statusTest(rowid, signal, boolean_value)
+            assert True
+        else:
+            boolean_value = int(0)
+            database_operations.statusTest(rowid, signal, boolean_value)
+            assert False
+        
+
+    def test_if_system_bluetooth_on(self):
         #DB info
         rowid = int(4)
-        signal = 'bluetooth'
+        signal = 'bluetooth_system'
 
         #Run Test and record within the database
         test_directory = "./Shell_UnitTests/bluetooth_status.bash"
@@ -49,28 +67,47 @@ class TestNetworkDevices(unittest.TestCase):
             database_operations.statusTest(rowid, signal, boolean_value)
             assert False
 
-    def test_bluetooth_external_devices_exist(self):
+    def test_if_bluetooth_external_devices_exist(self):
+        #DB info
+        rowid = int(5)
+        signal = 'bluetooth_devices'
+
+        #Run Test and record within the database
         test_directory = "./Shell_UnitTests/bluetooth_nearby_devices.bash"
         return_code = subprocess.call(test_directory)
         if return_code == 0:
+            boolean_value = int(1)
+            database_operations.statusTest(rowid, signal, boolean_value)
             assert True
         else:
+            boolean_value = int(0)
+            database_operations.statusTest(rowid, signal, boolean_value)
             assert False
-    
-    def test_zigbee(self):
+
+    #Note zigbee and xbee devices are virtually the same
+    def test_if_zigbee_external_devices_exist(self):
         #TODO
         pass
 
-    def test_lte(self):
+    def test_if_lte_external_devices_exist(self):
         #TODO
         pass
 
     def test_internet_connectivity(self):
+        #DB info
+        rowid = int(8)
+        signal = 'ww_internet'
+
+        #Run Test and record within the database
         test_directory = "./Shell_UnitTests/internet_status.bash"
         return_code = subprocess.call(test_directory)
         if return_code == 0:
+            boolean_value = int(1)
+            database_operations.statusTest(rowid, signal, boolean_value)
             assert True
         else:
+            boolean_value = int(0)
+            database_operations.statusTest(rowid, signal, boolean_value)
             assert False
     
 class TestSdrHardware(unittest.TestCase):
@@ -155,7 +192,7 @@ def testSummary():
 if __name__ == '__main__':
     # Run only the tests in the specified classes
 
-    test_classes_to_run = [TestSdrHardware, TestNetworkDevices, TestInternalSystems]
+    test_classes_to_run = [TestInternalSystems, TestSdrHardware, TestNetworkDevices]
 
     loader = unittest.TestLoader()
 

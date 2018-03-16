@@ -14,7 +14,7 @@ import sqlite3, csv
 try:
     db=sqlite3.connect('./SUPERFREQ.db')
     cursor = db.cursor()
-    cursor.execute('''CREATE TABLE IF NOT EXISTS DeviceStatus(id INTEGER PRIMARY KEY, signal VARCHAR(15), status INTEGER(1))''')
+    cursor.execute('''CREATE TABLE IF NOT EXISTS DeviceStatus(id INTEGER PRIMARY KEY, signal VARCHAR(30), status INTEGER(1))''')
     db.commit()
     print "Database successfully setup!"
 except:
