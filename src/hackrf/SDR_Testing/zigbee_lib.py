@@ -106,7 +106,7 @@ def detect_layer(pkt,layer):
     return True
 ###############################
 
-if __name__ == '__main__':
+def parse_zigbee_scan():
 	layer_count = {}
 	for l in ZB_Layers:
 		layer_count[ZB_Layers_Names[ZB_Layers.index(l)]] = 0

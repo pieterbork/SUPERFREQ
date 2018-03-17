@@ -11,7 +11,7 @@ args = parser.parse_args()
 print(args.w, args.z, args.t)
 
 if args.w:
-	from wifi_rx_rftap_nox import wifi_rx_rftap_nox
+	from wifi_rx_rftap_nox import wifi_rx_rftap_nox		#import must be here to reset SDR for multiple scans
 	doteleven_channels = [2.412e9, 2.417e9, 2.422e9, 2.427e9, 2.432e9, 2.437e9, 2.442e9, 2.447e9, 2.452e9, 2.457e9, 2.462e9, 5.035e9, 5.040e9, 5.045e9, 5.055e9, 5.060e9, 5.080e9, 5.170e9, 5.180e9, 5.190e9, 5.200e9, 5.210e9, 5.220e9, 5.230e9, 5.240e9, 5.250e9, 5.260e9, 5.270e9, 5.280e9, 5.290e9, 5.300e9, 5.310e9, 5.320e9, 5.500e9, 5.510e9, 5.520e9, 5.530e9, 5.540e9, 5.550e9, 5.560e9, 5.570e9, 5.580e9, 5.590e9, 5.600e9, 5.610e9, 5.620e9, 5.630e9, 5.640e9, 5.660e9, 5.670e9, 5.680e9, 5.690e9, 5.700e9, 5.710e9, 5.720e9, 5.745e9, 5.755e9, 5.765e9, 5.775e9, 5.785e9, 5.795e9, 5.805e9, 5.825e9]
 	tb = wifi_rx_rftap_nox()
 	tb.start()
@@ -23,7 +23,8 @@ if args.w:
 	tb.wait()
 
 if args.z:
-	from zigbee_rftap_nox import zigbee_rftap_nox
+	from zigbee_rftap_nox import zigbee_rftap_nox		#import must be here to reset SDR for multiple scans
+	from zigbee_lib import parse_zigbee_scan
 	zb_channels = [1000000 * (2400 + 5 * (i - 10)) for i in range(11, 27)]
 	tb = zigbee_rftap_nox()
 	tb.start()
@@ -33,24 +34,7 @@ if args.z:
 		time.sleep(float(args.t)/len(zb_channels))
 	tb.stop()
 	tb.wait()
-
-	layer_count = {}
-	for l in ZB_Layers:
-		layer_count[ZB_Layers_Names[ZB_Layers.index(l)]] = 0
-		zb_file = "/tmp/sensor.pcap"
-		packets = kbrdpcap(zb_file)
-		for pkt in packets:
-			for l in ZB_Layers:
-				if detect_layer(pkt,l):
-				print(str(ZB_Layers_Names[ZB_Layers.index(l)]) + " " + str(pkt.getlayer(l).fields))
-				layer_count[ZB_Layers_Names[ZB_Layers.index(l)]] += 1
-				if 'ext_src' in pkt.getlayer(l).fields:
-					print("----------------------------")
-					print(pkt.summary())
-					print("SOURCE: " + ':'.join(x.encode('hex') for x in struct.pack('>Q',pkt.getlayer(l).fields['ext_src'])))
-					print("DEST: " + ':'.join(x.encode('hex') for x in struct.pack('>Q',pkt.getlayer(l).fields['ext_dst'])))
-	print(layer_count)
-
+	parse_zigbee_scan()
 
 
 def cleanup():
