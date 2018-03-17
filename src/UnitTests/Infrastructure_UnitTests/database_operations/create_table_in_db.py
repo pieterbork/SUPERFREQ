@@ -2,23 +2,24 @@
 
 
 #author : Kade Cooper kaco0964@colorado.edu
-#name : createDB.py
-#purpose : Playground to quickly setup database tables for testing
-#date : 2018.03.14
+#name : create_table_in_db.py
+#purpose : Create table in db for testing
+#date : 2018.03.16
 #version: 1.0.1
 #version notes (latest): Compatible w/ python2
 
-import sqlite3, csv
+import sqlite3
 
 #Note when storing boolean values in SQLite they follow these rules: 0 (false) and 1 (true)
 try:
     db=sqlite3.connect('./SUPERFREQ.db')
     cursor = db.cursor()
-    cursor.execute('''CREATE TABLE IF NOT EXISTS DeviceStatus(id INTEGER PRIMARY KEY, signal VARCHAR(30), status INTEGER(1))''')
+    cursor.execute('''CREATE TABLE IF NOT EXISTS TestsSummary(id INTEGER PRIMARY KEY, test VARCHAR(30), status INTEGER(1))''')
     db.commit()
-    print "Database successfully setup!"
+    db.close()
+    print "Table successfully created!"
 except:
-    print "Error when creating the DeviceStatus Table (Parent)"
+    print "Error when creating the TestsSummary Table"
 
 """
 try:
