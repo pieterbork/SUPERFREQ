@@ -22,7 +22,6 @@ import foo
 import ieee802_15_4
 import osmosdr
 import rftap
-import time
 
 
 class zigbee_rftap_nox(gr.top_block):
@@ -92,23 +91,3 @@ class zigbee_rftap_nox(gr.top_block):
     def set_freq(self, freq):
         self.freq = freq
         self.osmosdr_source_0.set_center_freq(self.freq, 0)
-
-
-def main(top_block_cls=zigbee_rftap_nox, options=None):
-    if gr.enable_realtime_scheduling() != gr.RT_OK:
-        print "Error: failed to enable real-time scheduling."
-
-    zb_channels = [1000000 * (2400 + 5 * (i - 10)) for i in range(11, 27)]
-    print(zb_channels)
-    tb = top_block_cls()
-    tb.start()
-    for freq in zb_channels:
-        print("\nSetting frequency to {} GHz".format(freq/1e9))
-        tb.set_freq(freq)
-        time.sleep(10)
-    tb.stop()
-    tb.wait()
-
-
-if __name__ == '__main__':
-    main()

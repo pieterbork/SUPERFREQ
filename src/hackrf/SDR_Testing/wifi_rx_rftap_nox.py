@@ -17,7 +17,6 @@ from optparse import OptionParser
 import ieee802_11
 import osmosdr
 import rftap
-import time
 
 
 class wifi_rx_rftap_nox(gr.top_block):
@@ -53,7 +52,7 @@ class wifi_rx_rftap_nox(gr.top_block):
           
         self.ieee802_11_sync_short_0 = ieee802_11.sync_short(0.56, 2, False, False)
         self.ieee802_11_sync_long_0 = ieee802_11.sync_long(sync_length, False, False)
-        self.ieee802_11_parse_mac_0 = ieee802_11.parse_mac(freq, True, True)
+        self.ieee802_11_parse_mac_0 = ieee802_11.parse_mac(self.freq, True, False)
         self.ieee802_11_moving_average_xx_1 = ieee802_11.moving_average_ff(window_size + 16)
         self.ieee802_11_moving_average_xx_0 = ieee802_11.moving_average_cc(window_size)
         self.ieee802_11_frame_equalizer_0 = ieee802_11.frame_equalizer(chan_est, freq, samp_rate, False, False)
@@ -134,18 +133,3 @@ class wifi_rx_rftap_nox(gr.top_block):
         self.chan_est = chan_est
         self.ieee802_11_frame_equalizer_0.set_algorithm(self.chan_est)
 
-
-def main(top_block_cls=wifi_rx_rftap_nox, options=None):
-    doteleven_freqs = [2.412e9, 2.417e9, 2.422e9, 2.427e9, 2.432e9, 2.437e9, 2.442e9, 2.447e9, 2.452e9, 2.457e9, 2.462e9, 5.035e9, 5.040e9, 5.045e9, 5.055e9, 5.060e9, 5.080e9, 5.170e9, 5.180e9, 5.190e9, 5.200e9, 5.210e9, 5.220e9, 5.230e9, 5.240e9, 5.250e9, 5.260e9, 5.270e9, 5.280e9, 5.290e9, 5.300e9, 5.310e9, 5.320e9, 5.500e9, 5.510e9, 5.520e9, 5.530e9, 5.540e9, 5.550e9, 5.560e9, 5.570e9, 5.580e9, 5.590e9, 5.600e9, 5.610e9, 5.620e9, 5.630e9, 5.640e9, 5.660e9, 5.670e9, 5.680e9, 5.690e9, 5.700e9, 5.710e9, 5.720e9, 5.745e9, 5.755e9, 5.765e9, 5.775e9, 5.785e9, 5.795e9, 5.805e9, 5.825e9]
-    tb = top_block_cls()
-    tb.start()
-    for freq in doteleven_freqs:
-        print("\nSetting frequency to {} GHz".format(freq/1e9))
-        tb.set_freq(freq)
-        time.sleep(1)
-    tb.stop()
-    tb.wait()
-
-
-if __name__ == '__main__':
-    main()

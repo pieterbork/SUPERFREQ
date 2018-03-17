@@ -110,11 +110,12 @@ if __name__ == '__main__':
 	layer_count = {}
 	for l in ZB_Layers:
 		layer_count[ZB_Layers_Names[ZB_Layers.index(l)]] = 0
-	zb_file = "/tmp/zigbee.pcap"
+	zb_file = "/tmp/sensor.pcap"
 	packets = kbrdpcap(zb_file)
 	for pkt in packets:
 		for l in ZB_Layers:
 			if detect_layer(pkt,l):
+				print(str(ZB_Layers_Names[ZB_Layers.index(l)]) + " " + str(pkt.getlayer(l).fields))
 				layer_count[ZB_Layers_Names[ZB_Layers.index(l)]] += 1
 				if 'ext_src' in pkt.getlayer(l).fields:
 					print("----------------------------")
