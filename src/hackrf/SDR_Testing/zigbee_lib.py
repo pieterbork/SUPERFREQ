@@ -113,48 +113,43 @@ def parse_zigbee_scan():
 	zb_file = "/tmp/sensor.pcap"
 	packets = kbrdpcap(zb_file)
 	for pkt in packets:
+		out_str_li = []
+		if detect_layer(pkt, ZigbeeNWK):
+			pkt_nwk = pkt.getlayer(ZigbeeNWK).fields
+			print(pkt_nwk)
+			out_str_li.append("src: {}".format(pkt_nwk['source']))
+			out_str_li.append("dst: {}".format(pkt_nwk['destination']))
+			if "ext_src" in pkt_nwk:
+				out_str_li.append("ext_src: {}".format(':'.join(x.encode('hex') for x in struct.pack('>Q',pkt_nwk['ext_src']))))
+			else:
+				out_str_li.append("ext_src: XX:XX:XX:XX:XX:XX:XX:XX")
+			if "ext_dst" in pkt_nwk:
+				out_str_li.append("ext_dst: {}".format(':'.join(x.encode('hex') for x in struct.pack('>Q',pkt_nwk['ext_dst']))))
+			else:
+				out_str_li.append("ext_dst: XX:XX:XX:XX:XX:XX:XX:XX")
+
+		if detect_layer(pkt, ZigbeeSecurityHeader):
+			pkt_nwk = pkt.getlayer(ZigbeeSecurityHeader).fields
+			if "source" in pkt_nwk:
+				out_str_li.append("sec_src: {}".format(':'.join(x.encode('hex') for x in struct.pack('>Q',pkt_nwk['source']))))
+			else:
+				out_str_li.append("sec_src: XX:XX:XX:XX:XX:XX:XX:XX")
+			if "destination" in pkt_nwk:
+				out_str_li.append("sec_dst: {}".format(':'.join(x.encode('hex') for x in struct.pack('>Q',pkt_nwk['destination']))))
+			else:
+				out_str_li.append("sec_dst: XX:XX:XX:XX:XX:XX:XX:XX")
+		print(out_str_li)
+			
+			
 		for l in ZB_Layers:
 			if detect_layer(pkt,l):
 				print(str(ZB_Layers_Names[ZB_Layers.index(l)]) + " " + str(pkt.getlayer(l).fields))
 				layer_count[ZB_Layers_Names[ZB_Layers.index(l)]] += 1
-				if 'ext_src' in pkt.getlayer(l).fields:
-					print("----------------------------")
-					print(pkt.summary())
-                                	print("SOURCE: " + ':'.join(x.encode('hex') for x in struct.pack('>Q',pkt.getlayer(l).fields['ext_src'])))
-                                	print("DEST: " + ':'.join(x.encode('hex') for x in struct.pack('>Q',pkt.getlayer(l).fields['ext_dst'])))
+#				if 'ext_src' in pkt.getlayer(l).fields:
+#					print("----------------------------")
+#					print(pkt.summary())
+#                                	print("SOURCE: " + ':'.join(x.encode('hex') for x in struct.pack('>Q',pkt.getlayer(l).fields['ext_src'])))
+#                                	print("DEST: " + ':'.join(x.encode('hex') for x in struct.pack('>Q',pkt.getlayer(l).fields['ext_dst'])))
 	print(len(packets))
 	print(layer_count)
-
-
-
-#    if DEBUG: print "\nProcessing files:",zb_files,"\n"
-#    for zb_file in zb_files:
-#        if DEBUG: print "\nProcessing file:",zb_file,"\n"
-#        #print "\nProcessing file:",zb_file,"\n"
-#        data = kbrdpcap(zb_file)
-#        num_pkts = len(data)
-#
-#        # Detect Layers
-#        if DEBUG: print indent + "Detecting ZigBee Layers"
-#        for e in range(num_pkts):
-#	    print("\n\nPacket #{0}".format(e))
-#            if DEBUG: print indent + "Packet " + str(e),data[e].summary()
-#
-#            for l in ZB_Layers:
-#                if detect_layer(data[e],l): 
-#                    print indent*2 + ZB_Layers_Names[ZB_Layers.index(l)]
-#                    fields = data[e].getlayer(l).fields
-#                    if DEBUG: print indent*3 + "Fields:",fields
-#                    for a in addr_names:
-#                        if fields.has_key(a) and fields[a]: 
-#                            val = fields[a]
-#                            # If this is an extended address then we have to split
-#                            if val > 0xffff:
-#                                print indent*3 + a + ":",':'.join(x.encode('hex') for x in struct.pack('>Q',val))
-#                            else:
-#                                print indent*3 + a + ":",hex(val)
-#
-#        print ""
-
-
 
