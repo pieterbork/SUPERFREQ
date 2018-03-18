@@ -9,7 +9,7 @@ All functions which are successfully working here can be integrated into the "ma
 Comment out sections that are no longer needing to be tested.
 Clean this file after all terminal functions are done.
 """
-#date : 2018.02.26
+#date : 2018.03.18
 #version : 1.0.0
 #version notes (latest): Compatible w/ python2.
 import os
@@ -22,6 +22,7 @@ import os
 #from functools import partial
 from collections import OrderedDict
 
+"""
 #print pkg_resources.resource_filename('src.infrastructure', 'terminal.py')
 
 #User Loop
@@ -64,6 +65,8 @@ while level1_on:
 
 """
 
+
+
 #Tell the system where we currently are
 cwd = os.getcwd()
 print cwd
@@ -78,7 +81,7 @@ print rootPath
 os.chdir(rootPath)
 print os.getcwd()
 
-"""
+
 
 """
 dir = os.path.dirname(__file__)

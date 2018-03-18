@@ -2,20 +2,20 @@
 
 
 #author : Kade Cooper kaco0964@colorado.edu
-#name : query_db.py
-#purpose : Query for testing
-#date : 2018.03.16
+#name : export_csv_from_db.py
+#purpose : Try to import a csv into our db
+#date : 2018.03.17
 #version: 1.0.1
 #version notes (latest): Compatible w/ python2
 
 import sys
 import os
 import sqlite3
-import create_table_in_db
+import csv
 
 #Note when storing boolean values in SQLite they follow these rules: 0 (false) and 1 (true)
 try:
-    db=sqlite3.connect(create_table_in_db.db_path)
+    db=sqlite3.connect('./SUPERFREQ.db')
     cursor = db.cursor()
     cursor.execute('''SELECT * FROM TestsSummary''')
 

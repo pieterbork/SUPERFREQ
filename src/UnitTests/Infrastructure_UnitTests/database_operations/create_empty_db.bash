@@ -6,8 +6,8 @@
 #date : 2018.03.16
 #version: 1.0.0
 
-#Run SQLite3 create database command
-sqlite3 SUPERFREQ_Test.db
+#Run SQLite3 create database command..TO BE Verified!
+sqlite3 SUPERFREQ_Test.db ".empty"
 
 #Check status code to be passed on
 if [ $? -eq 0 ]; then

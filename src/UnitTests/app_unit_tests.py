@@ -4,10 +4,11 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : app_unit_tests.py
 #purpose : Run automated tests for terminal and flask environments. REWORK in progress
-#date : 2018.03.16
-#version: 1.5.0
+#date : 2018.03.18
+#version: 1.5.10
 #version notes (latest): Compatible w/ python2
 
+import os
 import unittest
 import subprocess
 import lib_for_unit_tests
@@ -21,8 +22,8 @@ class TestNetworkDevices(unittest.TestCase):
         test = 'wifi_onboard'
 
         #Run Test and record within the database
-        test_directory = "./Network_Devices_UnitTests/wifi_status.bash"
-        return_code = subprocess.call(test_directory)
+        test_file = lib_for_unit_tests.wifi_onboard_path
+        return_code = subprocess.call(test_file)
         if return_code == 0:
             boolean_value = int(1)
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
@@ -38,8 +39,8 @@ class TestNetworkDevices(unittest.TestCase):
         test = 'wifi_external_devices'
 
         #Run Test and record within the database
-        test_directory = "./Network_Devices_UnitTests/wifi_nearby_devices.bash"
-        return_code = subprocess.call(test_directory)
+        test_file = lib_for_unit_tests.wifi_external_devices_path
+        return_code = subprocess.call(test_file)
         if return_code == 0:
             boolean_value = int(1)
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
@@ -56,8 +57,8 @@ class TestNetworkDevices(unittest.TestCase):
         test = 'bluetooth_onboard'
 
         #Run Test and record within the database
-        test_directory = "./Network_Devices_UnitTests/bluetooth_status.bash"
-        return_code = subprocess.call(test_directory)
+        test_file = lib_for_unit_tests.bluetooth_onboard_path
+        return_code = subprocess.call(test_file)
         if return_code == 0:
             boolean_value = int(1)
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
@@ -73,8 +74,8 @@ class TestNetworkDevices(unittest.TestCase):
         test = 'bluetooth_external_devices'
 
         #Run Test and record within the database
-        test_directory = "./Network_Devices_UnitTests/bluetooth_nearby_devices.bash"
-        return_code = subprocess.call(test_directory)
+        test_file = lib_for_unit_tests.bluetooth_external_devices_path
+        return_code = subprocess.call(test_file)
         if return_code == 0:
             boolean_value = int(1)
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
@@ -123,8 +124,8 @@ class TestNetworkDevices(unittest.TestCase):
         test = 'ww_internet'
 
         #Run Test and record within the database
-        test_directory = "./Network_Devices_UnitTests/internet_status.bash"
-        return_code = subprocess.call(test_directory)
+        test_file = lib_for_unit_tests.ww_internet_path
+        return_code = subprocess.call(test_file)
         if return_code == 0:
             boolean_value = int(1)
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
@@ -142,8 +143,8 @@ class TestSdrHardware(unittest.TestCase):
         test = 'hackrf_usb'
 
         #Run Test and record within the database
-        test_directory = "./SDR_UnitTests/usb_status.bash"
-        return_code = subprocess.call(test_directory)
+        test_file = lib_for_unit_tests.hackrf_usb_path
+        return_code = subprocess.call(test_file)
         if return_code == 0:
             boolean_value = int(1)
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
@@ -173,25 +174,70 @@ class TestInternalSystems(unittest.TestCase):
         #DB info
         rowid = int(12)
         test = 'read_csv'
-        pass
+
+        #Run Test and record within the database
+        test_file = lib_for_unit_tests.read_csv_path
+        return_code = subprocess.call(test_file)
+        if return_code == 0:
+            boolean_value = int(1)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert True
+        else:
+            boolean_value = int(0)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert False
+
 
     def test_copy_delete_csv(self):
         #DB info
         rowid = int(13)
         test = 'copy_delete_csv'
-        pass
+
+        #Run Test and record within the database
+        test_file = lib_for_unit_tests.copy_delete_csv_path
+        return_code = subprocess.call(test_file)
+        if return_code == 0:
+            boolean_value = int(1)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert True
+        else:
+            boolean_value = int(0)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert False
 
     def test_filter_csv(self):
         #DB info
         rowid = int(14)
         test = 'filter_csv'
-        pass
+
+        #Run Test and record within the database
+        test_file = lib_for_unit_tests.csv_filter_path
+        return_code = subprocess.call(test_file)
+        if return_code == 0:
+            boolean_value = int(1)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert True
+        else:
+            boolean_value = int(0)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert False
 
     def test_generate_graph(self):
         #DB info
         rowid = int(15)
         test = 'generate_graph'
-        pass
+
+        #Run Test and record within the database
+        test_file = lib_for_unit_tests.generate_graph_path
+        return_code = subprocess.call(test_file)
+        if return_code == 0:
+            boolean_value = int(1)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert True
+        else:
+            boolean_value = int(0)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert False
 
     def test_create_db(self):
         #DB info
@@ -199,8 +245,8 @@ class TestInternalSystems(unittest.TestCase):
         test = 'create_db'
         
         #Run Test and record within the database
-        test_directory = "./Infrastructure_UnitTests/database_operations/create_empty_db.bash"
-        return_code = subprocess.call(test_directory)
+        test_file = lib_for_unit_tests.create_empty_db_path
+        return_code = subprocess.call(test_file)
         if return_code == 0:
             boolean_value = int(1)
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
@@ -216,8 +262,8 @@ class TestInternalSystems(unittest.TestCase):
         test = 'create_table_in_db'
 
         #Run Test and record within the database
-        test_directory = "./Infrastructure_UnitTests/database_operations/create_table_in_db.py"
-        return_code = subprocess.call(test_directory)
+        test_file = lib_for_unit_tests.create_table_in_db_path
+        return_code = subprocess.call(test_file)
         if return_code == 0:
             boolean_value = int(1)
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
@@ -233,8 +279,8 @@ class TestInternalSystems(unittest.TestCase):
         test = 'query_db'
 
         #Run Test and record within the database
-        test_directory = "./Infrastructure_UnitTests/database_operations/query_db.py"
-        return_code = subprocess.call(test_directory)
+        test_file = lib_for_unit_tests.query_db_path
+        return_code = subprocess.call(test_file)
         if return_code == 0:
             boolean_value = int(1)
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
@@ -248,26 +294,70 @@ class TestInternalSystems(unittest.TestCase):
         #DB info
         rowid = int(19)
         test = 'import_csv_to_db'
-        pass
+
+        #Run Test and record within the database
+        test_file = lib_for_unit_tests.import_csv_to_db_path
+        return_code = subprocess.call(test_file)
+        if return_code == 0:
+            boolean_value = int(1)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert True
+        else:
+            boolean_value = int(0)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert False
 
     def test_export_csv_from_db(self):
         #DB info
         rowid = int(20)
         test = 'export_csv_from_db'
-        pass
+
+        #Run Test and record within the database
+        test_file = lib_for_unit_tests.export_csv_from_db_path
+        return_code = subprocess.call(test_file)
+        if return_code == 0:
+            boolean_value = int(1)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert True
+        else:
+            boolean_value = int(0)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert False
 
     def test_tkinter(self):
         #DB info
         rowid = int(21)
         test = 'tkinter'
-        pass
+
+        #Run Test and record within the database
+        test_file = lib_for_unit_tests.tkinter_run_path
+        return_code = subprocess.call(test_file)
+        if return_code == 0:
+            boolean_value = int(1)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert True
+        else:
+            boolean_value = int(0)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert False
 
     def test_flask(self):
         #DB info
         rowid = int(22)
         test = 'flask'
         #See here for more test cases: https://damyanon.net/post/flask-series-testing/
-        pass
+
+        #Run Test and record within the database
+        test_file = lib_for_unit_tests.flask_run_path
+        return_code = subprocess.call(test_file)
+        if return_code == 0:
+            boolean_value = int(1)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert True
+        else:
+            boolean_value = int(0)
+            lib_for_unit_tests.statusTest(rowid, test, boolean_value)
+            assert False
 
 
 """
@@ -312,8 +402,13 @@ def testSummary():
 ##
 """
 if __name__ == '__main__':
-    # Run only the tests in the specified classes
 
+    #21/23 Tests cases done!
+
+    #First check if every bash, python file exists!
+    lib_for_unit_tests.fileCheck()
+
+    #Run our unit tests
     test_classes_to_run = [TestInternalSystems, TestSdrHardware, TestNetworkDevices]
 
     loader = unittest.TestLoader()

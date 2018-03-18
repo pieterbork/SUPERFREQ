@@ -150,3 +150,22 @@ PSR Week 8
       Code refactoring for csv and database operations
 
 PSR Week 9
+
+    Accomplishments (Week of Mar 12):
+      Finished work on decoding and capturing zigbee packets
+      Finished work for 21/23 test cases (we expect very few additions to the number of test cases)
+      Flask (Web GUI) page navigation and content enhancements
+
+
+    Plans this week (Week of Mar 19):
+      Begin work on bluetooth packet captures
+      Go through our Docker documentation and see if we can get our environment easily up and running on a clean machine
+      Go through Flask portion and begin testing functionality for each scan
+      Integrate test cases into main app to disable or enable functionality (e.g. scan, graph generation, etc.)
+
+
+    Problems & Issues:
+      Null terminating values captured in HackRF output throw off live scan/test results
+      Testing possibility for the last two remaining test cases to automate sending and receiving packets from the HackRF
+
+PSR Week 10

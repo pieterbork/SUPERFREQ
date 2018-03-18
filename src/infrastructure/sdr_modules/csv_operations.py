@@ -3,7 +3,7 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : csv_operations.py
 #purpose : Allow the user to easily traverse our app structure and have options in relation to csv data. May or may not merge with database file
-#date : 2018.03.10
+#date : 2018.03.17
 #version: 1.0.30
 #version notes (latest): Compatible w/ python2
 
@@ -159,10 +159,6 @@ def displayCsvOptions(userCSV):
 
 def readCsvFile(file_path):
 
-    #Temp fix for anyone running it...need to think about production
-    #dir = os.path.dirname(__file__)
-    #csvPathToFile = os.path.join(dir, 'network_scan_output', 'hackRFTestOutput.csv')
-    #print(csvFile)
     if not os.path.isfile(file_path):
         print("\n The MCP has derezzed the file!\n")
         sys.exit()
