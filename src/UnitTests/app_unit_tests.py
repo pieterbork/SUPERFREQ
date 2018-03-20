@@ -406,7 +406,7 @@ if __name__ == '__main__':
     #21/23 Tests cases done!
 
     #First check if every bash, python file exists!
-    lib_for_unit_tests.fileCheck()
+    lib_for_unit_tests.fileCheckListCaller()
 
     #Run our unit tests
     test_classes_to_run = [TestInternalSystems, TestSdrHardware, TestNetworkDevices]
