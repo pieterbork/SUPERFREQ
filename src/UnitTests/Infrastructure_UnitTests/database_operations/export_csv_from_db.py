@@ -4,8 +4,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : export_csv_from_db.py
 #purpose : Try to import a csv into our db
-#date : 2018.03.19
-#version: 1.0.1
+#date : 2018.03.20
+#version: 1.0.10
 #version notes (latest): Compatible w/ python2
 
 import os

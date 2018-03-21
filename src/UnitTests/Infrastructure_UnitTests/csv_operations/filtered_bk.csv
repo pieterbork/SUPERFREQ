@@ -1,3 +1,4 @@
+duration,frame,subtype,ssid,seq_nr,mac_address,frequency,percentage
 00 00,00 94,Block ACK,N/A,CTL,0:e1:b0:10:10:12,2.46Ghz,0.0526
 00 00,00 94,Block ACK,N/A,CTL,9c:e3:3f:5:49:c9,2.46Ghz,0.2631
 00 00,00 80,Beacon,SOC-LAB,672,ff:ff:ff:ff:ff:ff,5.18Ghz,0.1578
