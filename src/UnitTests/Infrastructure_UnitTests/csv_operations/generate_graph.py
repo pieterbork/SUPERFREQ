@@ -15,8 +15,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
 
-#
-
 #Create lists
 labels=[]
 perc=[]
@@ -26,12 +24,14 @@ perc=[]
 a = np.random.random(40)
 cs = cm.Set1(np.arange(40)/40.)
 
+sample_csv = cp_rm.src_file
+
 #Check csv file
-if not os.path.isfile(cp_rm.src_file):
+if not os.path.isfile(sample_csv):
     print("\n The MCP has derezzed the file!\n")
     sys.exit()
 else:
-    with open(cp_rm.src_file) as csvFile:
+    with open(sample_csv) as csvFile:
         #Use csv parser
         reader = csv.reader(csvFile, delimiter=',')
         for row in reader:
