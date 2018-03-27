@@ -27,14 +27,7 @@ from scapy.all import *
 from killerbee import * 
 from killerbee.scapy_extensions import *
 
-import argparse,time,atexit
 from collections import OrderedDict
-
-parser = argparse.ArgumentParser(description="Run SUPERFREQ zigbee scans")
-parser.add_argument("--ch", default="", help="A comma separated list of zigbee channel numbers, default is all channels, unknown channels will be ignored")
-parser.add_argument("-t", default=30, type=float, help="Total scan time in seconds, default is 30 seconds")
-args = parser.parse_args()
-
 
 zb_file = "/tmp/zigbee.pcap"
 
@@ -195,12 +188,12 @@ def parse_zigbee_scan():
 				f.write(", ".join(pkt) + "\n")
 
 
-if __name__ == "__main__":
+def run_zigbee_scan(user_channels=[], send_updates=False, scan_time=30):
 	scan_channels = OrderedDict()
-	if (args.ch == ""):
+	if (len(user_channels) < 1):
 		scan_channels = default_zigbee_freqs
 	else:
-		for ch in args.ch.split(","):
+		for ch in user_channels:
 			try:
 				scan_channels[ch] = default_zigbee_freqs[ch]
 			except:
@@ -209,9 +202,12 @@ if __name__ == "__main__":
 		zb_tb = zigbee_rftap_nox()
 		zb_tb.start()
 		for ch in scan_channels:
-			print("\nSetting radio to Zigbee - Ch {}".format(ch))
+			if send_updates:
+				socketio.emit('update', {'msg':"Zigbee - Ch {}".format(ch)})
+			else:
+				print("\nSetting radio to Zigbee - Ch {}".format(ch))
 			zb_tb.set_freq(scan_channels[ch])
-			time.sleep(float(args.t)/len(scan_channels))
+			time.sleep(float(scan_time)/len(scan_channels))
 		zb_tb.stop()
 		zb_tb.wait()
 		parse_zigbee_scan()
