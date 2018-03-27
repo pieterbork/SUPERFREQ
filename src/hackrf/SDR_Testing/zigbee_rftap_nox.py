@@ -90,4 +90,4 @@ class zigbee_rftap_nox(gr.top_block):
 
     def set_freq(self, freq):
         self.freq = freq
-        self.osmosdr_source_0.set_center_freq(self.freq, 0)
+        self.osmosdr_source_0.set_center_freq(freq, 0)

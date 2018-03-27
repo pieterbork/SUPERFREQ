@@ -141,15 +141,4 @@ def parse_zigbee_scan():
 		print(out_str_li)
 			
 			
-		for l in ZB_Layers:
-			if detect_layer(pkt,l):
-				print(str(ZB_Layers_Names[ZB_Layers.index(l)]) + " " + str(pkt.getlayer(l).fields))
-				layer_count[ZB_Layers_Names[ZB_Layers.index(l)]] += 1
-#				if 'ext_src' in pkt.getlayer(l).fields:
-#					print("----------------------------")
-#					print(pkt.summary())
-#                                	print("SOURCE: " + ':'.join(x.encode('hex') for x in struct.pack('>Q',pkt.getlayer(l).fields['ext_src'])))
-#                                	print("DEST: " + ':'.join(x.encode('hex') for x in struct.pack('>Q',pkt.getlayer(l).fields['ext_dst'])))
-	print(len(packets))
-	print(layer_count)
 
