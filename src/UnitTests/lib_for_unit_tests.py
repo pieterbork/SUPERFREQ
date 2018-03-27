@@ -142,9 +142,10 @@ def cleanUpTestDir():
 
         #Check if these file exist
         #fileCheck(files_to_remove)
-        
+
+        #Will not work if one of the tests fail
         if all([os.path.isfile(f) for f in files_to_remove]):
-            print "Removing file: " + f
+            #print "Removing file: " + f
             os.remove(f)
         else:
             print "Could not remove test files!"

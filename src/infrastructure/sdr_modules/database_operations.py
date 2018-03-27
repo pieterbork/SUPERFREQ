@@ -4,7 +4,7 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : database_operations.py
 #purpose : Allow user interaction with SQlite Database
-#date : 2018.03.24
+#date : 2018.03.26
 #version: 1.0.10
 #version notes (latest): Compatible w/ python2
 
@@ -12,7 +12,7 @@ import sqlite3
 import system_module_operations
 
 #Hacky for right now...setup path to the database (final DB and its path to be determined later)
-db_path = csv_operations.getSourceDir()
+db_path = system_module_operations.getSourceDir()
 db_path += 'src/infrastructure/database/SUPERFREQ.db'
 #print db_path
 
@@ -130,8 +130,8 @@ def displayDatabaseOptions(userCSV):
 
 
 def databaseOperations():
-    
-        """ LOCAL VARIABLES FOR DIRECTORY LISTING """
+
+    """ LOCAL VARIABLES FOR DIRECTORY LISTING """
     #"Locate" our data directory from anywhere
     directory_list = system_module_operations.getSourceDir()
     

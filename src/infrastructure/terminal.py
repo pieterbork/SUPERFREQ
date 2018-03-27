@@ -4,21 +4,37 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminal.py
 #purpose : Foundation for terminal commands and possible GUI linkage
-#date : 2018.03.05
-#version: 1.2.10
+#date : 2018.03.26
+#version: 1.2.15
 #version notes (latest): Compatible w/ python2
 
+#Test fails when called from main app citing no module app_unit_tests
 
 import os
 import sys
 from collections import OrderedDict
 
+#Get our UnitTests
+cwd = os.getcwd()
+
+#Tell the system the root of our app is before 'src'
+separator= 'src/'
+#Remove everything after and including 'src/'
+unit_test_path = cwd.split(separator, 1)[0]
+unit_test_path += 'src/UnitTests/'
+sys.path.insert(0, unit_test_path)
+#Add UnitTests to Path
+from app_unit_tests import unitTestSummary
+
 #SDR Module Calls
 from sdr_modules.network_operations import networkOptions
 from sdr_modules.csv_operations import csvOperations
 from sdr_modules.database_operations import databaseOperations
-from sdr_modules.app_unit_tests import testSummary
+#from sdr_modules.app_unit_tests import unitTestSummary
+#from .UnitTests.app_unit_tests import unitTestSummary
 from sdr_modules.settings import settingsPage
+
+
 
 #For multiprocessing docs: https://docs.python.org/3/library/multiprocessing.html
 
@@ -63,7 +79,7 @@ def runTerminal():
                                ('1', networkOptions),
                                ('2', csvOperations),
                                ('3', databaseOperations),
-                               ('4', testSummary),
+                               ('4', unitTestSummary),
                                ('5', settingsPage),
                                ('Q', quitTerminal),
                                ('q', quitTerminal)))

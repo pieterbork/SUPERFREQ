@@ -381,30 +381,8 @@ def sdrBluetoothTests():
 
 """ 4. Automated Test Summary - Provide quick network/system checks in an easy to read format. Calls functions in sdr_module to increase file clarity """
 
-"""
-def testSummary():
 
-    passedCheck = "Off"
-    
-    print("SDR Hardware Check: \n")
-    sdrWifiTests(passedCheck)
-    sdrBluetoothTests(passedCheck)
-    print("\t ZigBee: {} \n".format(passedCheck))
-    print("\t GSM: {} \n".format(passedCheck))
-    print("Systems Check: \n")
-    print("\t Antenna RX: {} \n".format(passedCheck))
-    print("\t Antenna TX: {} \n".format(passedCheck))
-    print("\t Sample Packet Decode: {} \n".format(passedCheck))
-    
-
-    print("System Hardware Check: \n")
-    print("\t Wifi: {} \n".format(passedCheck))
-    print("\t Bluetooth: {} \n".format(passedCheck))
-    print("\t Database: {} \n".format(passedCheck))
-
-##
-"""
-if __name__ == '__main__':
+def unitTestSummary():
 
     #21/23 Tests cases done!
 
@@ -428,6 +406,12 @@ if __name__ == '__main__':
 
     #Run cleanup function
     lib_for_unit_tests.cleanUpTestDir()
+
+##
+
+if __name__ == '__main__':
+    unitTestSummary()
+    
 
 #For handling multiple classes see: https://stackoverflow.com/questions/5360833/how-to-run-multiple-classes-in-single-test-suite-in-python-unit-testing
        
