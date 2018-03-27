@@ -36,6 +36,8 @@ parser.add_argument("-t", default=30, type=float, help="Total scan time in secon
 args = parser.parse_args()
 
 
+zb_file = "/tmp/zigbee.pcap"
+
 default_zigbee_freqs = OrderedDict([("11", 2.405e9), ("12", 2.410e9), ("13", 2.415e9), ("14", 2.420e9), ("15", 2.425e9), ("16", 2.430e9), ("17", 2.435e9), ("18", 2.440e9), ("19", 2.445e9), ("20", 2.450e9), ("21", 2.455e9), ("22", 2.460e9), ("23", 2.465e9), ("24", 2.470e9), ("25", 2.475e9), ("26", 2.480e9)])
 
 ZB_Layers = [ \
@@ -116,7 +118,7 @@ class zigbee_rftap_nox(gr.top_block):
         self.epy_block_0 = blk()
         self.blocks_socket_pdu_0 = blocks.socket_pdu("UDP_CLIENT", "127.0.0.1", "52001", 10000, False)
         self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_gr_complex*1)
-        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, "/tmp/sensor.pcap", False)
+        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, zb_file, False)
         self.blocks_file_sink_0.set_unbuffered(True)
 
         ##################################################
@@ -159,13 +161,12 @@ def parse_zigbee_scan():
 	layer_count = {}
 	for l in ZB_Layers:
 		layer_count[ZB_Layers_Names[ZB_Layers.index(l)]] = 0
-	zb_file = "/tmp/sensor.pcap"
 	packets = kbrdpcap(zb_file)
+	pkt_info = []
 	for pkt in packets:
 		out_str_li = []
 		if detect_layer(pkt, ZigbeeNWK):
 			pkt_nwk = pkt.getlayer(ZigbeeNWK).fields
-			print(pkt_nwk)
 			out_str_li.append("src: {}".format(pkt_nwk['source']))
 			out_str_li.append("dst: {}".format(pkt_nwk['destination']))
 			if "ext_src" in pkt_nwk:
@@ -187,15 +188,19 @@ def parse_zigbee_scan():
 				out_str_li.append("sec_dst: {}".format(':'.join(x.encode('hex') for x in struct.pack('>Q',pkt_nwk['destination']))))
 			else:
 				out_str_li.append("sec_dst: XX:XX:XX:XX:XX:XX:XX:XX")
-		print(out_str_li)
+		pkt_info.append(out_str_li)
+	with open("/tmp/zb_frames", "a") as f:
+		for pkt in pkt_info:
+			if (len(pkt) > 0):
+				f.write(", ".join(pkt) + "\n")
 
 
 if __name__ == "__main__":
 	scan_channels = OrderedDict()
-	if (args.zch == ""):
+	if (args.ch == ""):
 		scan_channels = default_zigbee_freqs
 	else:
-		for ch in args.zch.split(","):
+		for ch in args.ch.split(","):
 			try:
 				scan_channels[ch] = default_zigbee_freqs[ch]
 			except:
