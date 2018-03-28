@@ -7,14 +7,14 @@
 	<div class="scan_button_copy_container">
 		<input type="submit" value="Scan" class="scan_button_copy">
 	</div>
-	<div class="outer_ring_container">
+	<div id="outer_ring_container" class="outer_ring_container">
 		<div class="ring_container">
 			<div id="r1" class="ring"></div>
 			<div id="r2" class="ring"></div>
 		</div>
 	</div>
 	<div class="status_container">
-		<div class="status">
+		<div id="status" class="status">
 			<span id="scan_status" class="status_text">
 				Starting Scan...
 			</span>
@@ -32,6 +32,8 @@
 			if (data.msg == "Done") {
 				$('#scan_status')[0].innerHTML = "<h2>Done</h2>";
 				$('#results_link')[0].style.display = "block";
+				$('#outer_ring_container')[0].style.opacity = 0;
+				$('#status')[0].style.background = "#55bb55";
 			} else {
 				$('#scan_status')[0].innerHTML = data.msg;
 			}

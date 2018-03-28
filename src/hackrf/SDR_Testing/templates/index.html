@@ -16,40 +16,49 @@
 					</tr>
 					<tr>
 						<td rowspan=2>
-							<h4>2.4 GHz</h4>
-							{% for freq in default_wifi_freqs %}
-							{% if "_" in freq %}
-								{% set tmp = freq.split("_") %}
-								{% if tmp[1] == "24" %}
-									<input type="checkbox" name="wifi_freq" value="{{ freq }}">{{ tmp[0] }}</input>
-								{% endif %}
-							{% elif freq|int < 11 %}
-								<input type="checkbox" name="wifi_freq" value="{{ freq }}">{{ freq }}</input>
-							{% endif %}
-							{% endfor %}
-							<br>
-							<h4>5 GHz</h4>
-							{% for freq in default_wifi_freqs %}
-							{% if "_" in freq %}
-								{% set tmp = freq.split("_") %}
-								{% if tmp[1] == "5" %}
-									<input type="checkbox" name="wifi_freq" value="{{ freq }}">{{ tmp[0] }}</input>
-								{% endif %}
-							{% elif freq|int > 11 %}
-								<input type="checkbox" name="wifi_freq" value="{{ freq }}">{{ freq }}</input>
-							{% endif %}
-							{% endfor %}
+							<div class="flex-container">
+								<div class="flex-child">
+									<h4>2.4 GHz</h4>
+									<select name="wifi_freq" multiple size="10">
+									{% for freq in default_wifi_freqs %}
+									{% if "_" in freq %}
+										{% set tmp = freq.split("_") %}
+										{% if tmp[1] == "24" %}
+											<option value="{{ freq }}">Channel {{ tmp[0] }}</option>
+										{% endif %}
+									{% elif freq|int < 11 %}
+										<option value="{{ freq }}">Channel {{ freq }}</option>
+									{% endif %}
+									{% endfor %}
+									</select>
+								</div>
+								<div class="flex-child">
+									<h4>5 GHz</h4>
+									<select name="wifi_freq" multiple size="15">
+									{% for freq in default_wifi_freqs %}
+									{% if "_" in freq %}
+										{% set tmp = freq.split("_") %}
+										{% if tmp[1] == "5" %}
+											<option value="{{ freq }}">Channel {{ tmp[0] }}</option>
+										{% endif %}
+									{% elif freq|int > 11 %}
+										<option value="{{ freq }}">Channel {{ freq }}</option>
+									{% endif %}
+									{% endfor %}
+									</select>
+								</div>
+							</div>
 						</td>
 					</tr>
 					<tr>
-						<td colspan=2>
-							Scan Time: <input type="number" name="time" value="60">
+						<td colspan=2 style="position:relative;">
+							<div class="time_container">
+								Scan Time: <input type="number" name="time" value="60">
+							</div>
 						</td>
 					</tr>
 				</table>
 			</form>
-			Option 1<br>
-			Option 2<br>
 		</div>
 	</div>
 	<script>
