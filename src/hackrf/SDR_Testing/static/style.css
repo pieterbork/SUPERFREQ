@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	width: 100%;
 	overflow: hidden;
+	background-color: #e0ebff;
 }
 
 a {
@@ -15,15 +16,24 @@ a {
 	text-align: center;
 }
 
+.scan_button_container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+}
+
 .scan_button {
 	height: 80px;
 	width: 80px;
 	border: 1px black;
 	border-radius: 40px;
 	box-shadow: 0 0 10px 0 black;
-	margin: 50px;
 	border: 0;
 	font-size: x-large;
+	position: relative;
+	top: -40px;
+	left: -40px;
+	margin-top: 90px;
 }
 
 .scan_button::-moz-focus-inner {
@@ -44,13 +54,30 @@ a {
 	border-radius: 10px;
 	width: 80%;
 	margin: auto;
+	margin-top: 200px;
 	box-shadow: 0 0 4px -2px #888;
+	background-color: #f5f5f5;
 }
 
 .status_container {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	animation-name: status-container-appear;
+	animation-duration: 3s;
+	animation-timing-function: ease-in;
+}
+
+@keyframes status-container-appear {
+	from {
+		opacity: 0;
+	}
+	80% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 .status {
@@ -63,6 +90,7 @@ a {
 	position: relative;
 	top: -77px;
 	left: -77px;
+	box-shadow: 0 0 10px 0 black;
 }
 
 .status_text {
@@ -91,6 +119,7 @@ a {
 	border-radius: 50%;
 	position: absolute;
 	background-color: transparent;
+	z-index: -1;
 	-webkit-animation-name: ani; 
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: cubic-bezier(.55,.04,.4,.99);
@@ -99,8 +128,8 @@ a {
 
 @-webkit-keyframes ani {
 	0% {-webkit-transform: scale(0.1); opacity: 0;}
-	10% {-webkit-transform: scale(0.1); opacity: 1;}
-	90% {-webkit-transform: scale(1); opacity: 1;}
+	10% {-webkit-transform: scale(0.1); opacity: .75;}
+	90% {-webkit-transform: scale(1); opacity: .75;}
 	100% {-webkit-transform: scale(1); opacity: 0;}
 }
 
@@ -115,3 +144,91 @@ a {
 	-webkit-animation-delay: 5s;
 }
 
+.scan_button_copy_container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	animation-name: scan-button-slide-down;
+	animation-duration: 1.75s;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes scan-button-slide-down {
+	from {
+		top: 90px;
+	}
+	to {
+		top: 50%;
+	}
+}
+
+.scan_button_copy {
+	height: 150px;
+	width: 150px;
+	border: 1px black;
+	border-radius: 50%;
+	box-shadow: 0 0 10px 0 black;
+	border: 0;
+	font-size: x-large;
+	position: relative;
+	top: -75px;
+	left: -75px;
+	z-index: 10;
+	opacity: 0;
+	color: #aaa;
+	background-color: #aaa;
+	animation-name: scan-button-dissappear;
+	animation-duration: 3s;
+	animation-timing-function: cubic-bezier(.86,.22,1,1);
+}
+
+@keyframes scan-button-dissappear {
+	from {
+		height: 80px;
+		width: 80px;
+		top: -40px;
+		left: -40px;
+		opacity: 1;
+		color: black;
+		background-color: #e8e8e7;
+	}
+	40% {
+		height: 80px;
+		width: 80px;
+		top: -40px;
+		left: -40px;
+		color: black;
+		background-color: #e8e8e7;
+	}
+	80% {
+		height: 150px;
+		width: 150px;
+		top: -75px;
+		left: -75px;
+		opacity: 1;
+		color: #aaa;
+		background-color: #aaa;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.results_link {
+	height: 70px;
+	width: 134px;
+	display: none;
+	position: relative;
+	top: -35px;
+	left: -67px;
+}
+
+.results_link_container {
+	position: absolute;
+	bottom: -40px;
+	left: 50%;
+}
+
+input[type=checkbox] {
+	margin: 10px;
+}

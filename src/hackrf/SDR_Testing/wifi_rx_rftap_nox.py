@@ -178,6 +178,8 @@ def run_wifi_scan(socketio=None, user_channels=[], send_updates=False, scan_time
 	if(len(scan_channels) > 0):
 		wifi_tb = wifi_rx_rftap_nox()
 		wifi_tb.start()
+		if send_updates:
+			sleep(4)
 		for ch in scan_channels:
 			if send_updates:
 				socketio.emit('update', {'msg':display_wifi_channel(ch)})
