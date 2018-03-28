@@ -1,0 +1,6 @@
+ssid,latency,mac_address,frequency,percentage
+SOC-LAB,672,ff:ff:ff:ff:ff:ff,5.18Ghz,0.1578
+SOC-MGMT,2659,1e:8d:cb:84:9b:ff,5.18Ghz,0.1052
+LTE-Lab,700,2:8d:cb:84:9b:ff,5.18Ghz,0.1578
+embedded,2728,a:8d:cb:84:9b:ff,5.18Ghz,0.2105
+WiFiLab,2728,6:8d:cb:84:9b:ff,5.18Ghz,0.0530
