@@ -164,7 +164,7 @@ def display_wifi_channel(ch):
 	return "WiFi - {0} GHz Channel {1}".format(ghz, channel_num)
 
 
-def run_wifi_scan(user_channels=[], send_updates=False, scan_time=30):
+def run_wifi_scan(socketio=None, user_channels=[], send_updates=False, scan_time=120):
 	scan_channels = OrderedDict()
 	if(len(user_channels) < 1):
 		scan_channels = default_wifi_freqs

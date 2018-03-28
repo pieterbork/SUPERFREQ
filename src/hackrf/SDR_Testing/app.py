@@ -12,7 +12,7 @@ def index():
 
 @app.route('/scan')
 def scan():
-	thread.start_new_thread(run_wifi_scan, (), {"send_updates":True})
+	thread.start_new_thread(run_wifi_scan, (), {"socketio":socketio,"send_updates":True})
 	return render_template("scan.html")
 	
 
