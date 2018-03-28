@@ -13,9 +13,8 @@ def index():
 @app.route('/scan', methods=["POST"])
 def scan():
 	user_wifi_channels = []
-	if (request.form['wifi_freq']):
-		for freq in request.form.getlist('wifi_freq'):
-			user_wifi_channels.append(freq)
+	for freq in request.form.getlist('wifi_freq'):
+		user_wifi_channels.append(freq)
 	if len(user_wifi_channels) > 0:
 		kwargs = {"socketio":socketio,
 							"send_updates":True,

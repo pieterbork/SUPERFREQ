@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<script src="{{url_for('static', filename='jquery.min.js')}}"></script>
-<script src="{{url_for('static', filename='socket.io.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/socket.io.min.js')}}"></script>
 <div class="content">
 	<div class="scan_button_copy_container">
 		<input type="submit" value="Scan" class="scan_button_copy">
@@ -20,8 +20,8 @@
 			</span>
 		</div>
 	</div>
-	<div class="results_link_container">
-		<a href="/results" id="results_link" class="results_link"><h2>See Results &gt;</h2></a>
+	<div id="results_link_container" class="results_link_container">
+		<a href="/results" id="results_link" class="results_link"><h2>See Results<span class="fa fa-angle-double-right" style="margin-left: 20px;"></span></h2></a>
 	</div>
 </div>
 <script type="text/javascript" charset="utf-8">
@@ -31,7 +31,7 @@
 		socket.on('update', function(data) {
 			if (data.msg == "Done") {
 				$('#scan_status')[0].innerHTML = "<h2>Done</h2>";
-				$('#results_link')[0].style.display = "block";
+				$('#results_link_container')[0].style.bottom = "-40px";
 				$('#outer_ring_container')[0].style.opacity = 0;
 				$('#status')[0].style.background = "#55bb55";
 			} else {
