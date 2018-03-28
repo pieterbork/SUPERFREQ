@@ -25,6 +25,7 @@ a = np.random.random(40)
 cs = cm.Set1(np.arange(40)/40.)
 
 sample_csv = cp_rm.src_file
+print sample_csv
 
 #Check csv file
 if not os.path.isfile(sample_csv):
