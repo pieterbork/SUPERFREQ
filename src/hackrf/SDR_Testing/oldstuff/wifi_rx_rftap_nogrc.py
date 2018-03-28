@@ -189,7 +189,7 @@ def main(top_block_cls=wifi_rx_rftap, options=None):
     for freq in doteleven_freqs:
         print("\nSetting frequency to {} GHz".format(freq/1e9))
         tb.set_freq(freq)
-        time.sleep(15)
+        time.sleep(1)
     tb.stop()
 
 
