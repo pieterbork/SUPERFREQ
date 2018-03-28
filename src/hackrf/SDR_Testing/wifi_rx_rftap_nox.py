@@ -165,7 +165,6 @@ def display_wifi_channel(ch):
 
 
 def run_wifi_scan(socketio=None, user_channels=[], send_updates=False, scan_time=120):
-	print(socketio, user_channels, send_updates)
 	scan_channels = OrderedDict()
 	if(len(user_channels) < 1):
 		scan_channels = default_wifi_freqs
@@ -175,11 +174,10 @@ def run_wifi_scan(socketio=None, user_channels=[], send_updates=False, scan_time
 				scan_channels[ch] = default_wifi_freqs[ch]
 			except KeyError:
 				pass
+	print(scan_channels)
 	if(len(scan_channels) > 0):
 		wifi_tb = wifi_rx_rftap_nox()
 		wifi_tb.start()
-		if send_updates:
-			sleep(4)
 		for ch in scan_channels:
 			if send_updates:
 				socketio.emit('update', {'msg':display_wifi_channel(ch)})
@@ -187,8 +185,6 @@ def run_wifi_scan(socketio=None, user_channels=[], send_updates=False, scan_time
 				print("\n\nSetting radio to {}".format(display_wifi_channel(ch)))
 			wifi_tb.set_freq(scan_channels[ch])
 			sleep(float(scan_time)/len(scan_channels))
-		if send_updates:
-			socketio.emit('update', {'msg':"Done"})
 		wifi_tb.stop()
 		wifi_tb.wait()
 

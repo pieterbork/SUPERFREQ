@@ -188,7 +188,7 @@ def parse_zigbee_scan():
 				f.write(", ".join(pkt) + "\n")
 
 
-def run_zigbee_scan(user_channels=[], send_updates=False, scan_time=30):
+def run_zigbee_scan(user_channels=[], socketio=None, send_updates=False, scan_time=30):
 	scan_channels = OrderedDict()
 	if (len(user_channels) < 1):
 		scan_channels = default_zigbee_freqs
