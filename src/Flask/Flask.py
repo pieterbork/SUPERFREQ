@@ -21,6 +21,14 @@ from multiprocessing import Process
 
 app = Flask(__name__)
 
+cwd = os.getcwd()
+separator = 'src/'
+root_path = cwd.split(separator, 1)[0]
+
+#Unit Test Database
+DATABASE = root_path + "src/infrastructure/database/SUPERFREQ.db"
+
+
 #Create a User home page and check our app flask is operational
 @app.route('/')
 def index():
@@ -30,9 +38,21 @@ def index():
 def scanNetwork():
     return render_template('scan.html')
 
+@app.route('/image')
+def scanImage():
+    return render_template('image.html')
+
 @app.route('/database')
 def viewDatabase():
     return render_template('database.html')
+
+app.route('/importCSV')
+def importCSV():
+    return render_template('importCSV.html')
+
+app.route('/tests')
+def runTests():
+    return render_template('tests.html')
 
 @app.route('/images')
 def images():
