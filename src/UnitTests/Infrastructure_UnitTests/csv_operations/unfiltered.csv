@@ -1,0 +1,854 @@
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 0:e1:b0:10:10:12, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 8c:85:90:d:4:ab, mac 2: 88:75:56:c7:f9:40, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:3e:73:c0, mac 2: 9c:e3:3f:5:49:c9, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 01 58, Frame Control: 11 48, Subtype: Null, SSID: N/A, seq nr: 2743, mac 1: 1c:e6:c7:3e:73:c0, mac 2: 9c:e3:3f:5:49:c9, mac 3: 1c:e6:c7:3e:73:c0, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:3e:73:c0, mac 2: 9c:e3:3f:5:49:c9, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 9c:e3:3f:5:49:c9, mac 2: 1c:e6:c7:3e:73:c0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.412000
+Duration: 00 00, Frame Control: 00 40, Subtype: Probe Request, SSID: UNKNOWN, seq nr: 331, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 64:80:99:c3:6d:97, mac 3: ff:ff:ff:ff:ff:ff, freq: 2.432000
+Duration: 00 00, Frame Control: 00 40, Subtype: Probe Request, SSID: UNKNOWN, seq nr: 332, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 64:80:99:c3:6d:97, mac 3: ff:ff:ff:ff:ff:ff, freq: 2.432000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:d7:af:5:ea:7a, mac 2: 1c:e6:c7:d:d:b0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:d7:af:5:ea:7a, mac 2: 1c:e6:c7:d:d:b0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4032, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4033, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:d7:af:5:ea:7a, mac 2: 1c:e6:c7:d:d:b0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:d7:af:5:ea:7a, mac 2: 1c:e6:c7:d:d:b0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4041, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:d7:af:5:ea:7a, mac 2: 1c:e6:c7:d:d:b0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4042, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:d7:af:5:ea:7a, mac 2: 1c:e6:c7:d:d:b0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4043, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:d7:af:5:ea:7a, mac 2: 1c:e6:c7:d:d:b0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4044, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:d7:af:5:ea:7a, mac 2: 1c:e6:c7:d:d:b0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4045, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:d7:af:5:ea:7a, mac 2: 1c:e6:c7:d:d:b0, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4050, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4052, mac 1: b8:27:eb:b4:4e:2c, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4052, mac 1: b8:27:eb:b4:4e:2c, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4052, mac 1: b8:27:eb:b4:4e:2c, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4054, mac 1: b8:27:eb:b4:4e:2c, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4058, mac 1: e:8d:fb:17:f8:19, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4058, mac 1: e:8d:fb:17:f8:19, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4060, mac 1: b8:27:eb:98:fb:7b, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4060, mac 1: b8:27:eb:98:fb:7b, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4061, mac 1: b8:27:eb:98:fb:7b, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4061, mac 1: b8:27:eb:98:fb:7b, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4063, mac 1: e:8d:fb:84:9b:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4063, mac 1: e:8d:fb:84:9b:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4063, mac 1: e:8d:fb:84:9b:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4064, mac 1: b8:27:eb:98:fb:7b, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4064, mac 1: b8:27:eb:98:fb:7b, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4068, mac 1: b8:27:eb:98:fb:7b, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4069, mac 1: b8:27:eb:98:fb:7b, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4070, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4072, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4079, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4080, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4083, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4084, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4086, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4087, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4088, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4089, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4091, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4092, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 4093, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4094, mac 1: b8:27:eb:9b:4c:10, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4094, mac 1: b8:27:eb:9b:4c:10, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4094, mac 1: b8:27:eb:9b:4c:10, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4094, mac 1: b8:27:eb:9b:4c:10, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4095, mac 1: b8:27:eb:9b:4c:10, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4095, mac 1: b8:27:eb:9b:4c:10, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 0, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 1, mac 1: b8:27:eb:9b:4c:10, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 1, mac 1: b8:27:eb:9b:4c:10, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 1, mac 1: b8:27:eb:9b:4c:10, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4, mac 1: b8:27:eb:9b:4c:10, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 4, mac 1: b8:27:eb:9b:4c:10, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 6, mac 1: b8:27:eb:fe:fd:b1, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 6, mac 1: b8:27:eb:fe:fd:b1, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 10, mac 1: b8:27:eb:fe:fd:b1, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 10, mac 1: b8:27:eb:fe:fd:b1, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 11, mac 1: b8:27:eb:fe:fd:b1, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 13, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 14, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 15, mac 1: b8:27:eb:fe:fd:b1, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 15, mac 1: b8:27:eb:fe:fd:b1, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 18, mac 1: b8:27:eb:9e:71:71, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 18, mac 1: b8:27:eb:9e:71:71, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 18, mac 1: b8:27:eb:9e:71:71, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 20, mac 1: b8:27:eb:9e:71:71, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 21, mac 1: b8:27:eb:9e:71:71, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 22, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 25, mac 1: b8:27:eb:9e:71:71, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 25, mac 1: b8:27:eb:9e:71:71, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 26, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 27, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 28, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 29, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 33, mac 1: b8:27:eb:d8:cb:82, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 34, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 35, mac 1: b8:27:eb:d8:cb:82, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 35, mac 1: b8:27:eb:d8:cb:82, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 38, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 45, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 46, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 47, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 49, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 50, mac 1: 94:65:9c:79:1b:66, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 52, mac 1: 94:65:9c:79:1b:66, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 52, mac 1: 94:65:9c:79:1b:66, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 52, mac 1: 94:65:9c:79:1b:66, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 54, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 56, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 59, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 60, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 62, mac 1: e:8d:fb:17:f8:19, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 62, mac 1: e:8d:fb:17:f8:19, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 64, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 65, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 66, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 67, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 68, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 70, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 71, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 73, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 74, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 75, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 76, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 77, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 78, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 82, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 83, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 2c, Frame Control: 11 48, Subtype: Null, SSID: N/A, seq nr: 2776, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: 1c:e6:c7:d:d:b0, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 86, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 87, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 88, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 89, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 90, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 93, mac 1: 0:24:d7:1e:cf:f4, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 93, mac 1: 0:24:d7:1e:cf:f4, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 2c, Frame Control: 19 48, Subtype: Null, SSID: N/A, seq nr: 2777, mac 1: 1c:e6:c7:d:d:b0, mac 2: b8:d7:af:5:ea:7a, mac 3: 1c:e6:c7:d:d:b0, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 94, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 97, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 98, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 100, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 101, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 102, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 103, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 104, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 105, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 106, mac 1: e:8d:fb:84:9b:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 106, mac 1: e:8d:fb:84:9b:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 106, mac 1: e:8d:fb:84:9b:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 3c, Frame Control: 08 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 106, mac 1: e:8d:fb:84:9b:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 108, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 109, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 112, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 117, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: DIRECT-;J6EADF1, seq nr: 119, mac 1: ff:ff:ff:ff:ff:ff, mac 2: ba:86:87:6e:ad:f1, mac 3: ba:86:87:6e:ad:f1, freq: 2.437000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: Pod9, seq nr: 2631, mac 1: ff:ff:ff:ff:ff:ff, mac 2: d8:b1:90:db:d7:70, mac 3: d8:b1:90:db:d7:70, freq: 2.452000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: Pod9Contractor, seq nr: 3046, mac 1: ff:ff:ff:ff:ff:ff, mac 2: d8:b1:90:db:d7:73, mac 3: d8:b1:90:db:d7:73, freq: 2.452000
+Duration: 00 00, Frame Control: 00 08, Subtype: Data, SSID: N/A, seq nr: 3048, mac 1: da:b1:90:db:d7:70, mac 2: 0:0:0:0:0:0, mac 3: 0:0:0:0:0:0, freq: 2.452000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:fe:fd:b1, mac 2: a:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:fe:fd:b1, mac 2: a:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:b4:4e:2c, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:fe:fd:b1, mac 2: a:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 0c, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:d8:cb:82, mac 2: a:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:d8:cb:82, mac 2: a:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:d8:cb:82, mac 2: a:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:d8:cb:82, mac 2: a:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:9b:4c:10, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:9b:4c:10, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:9b:4c:10, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:9b:4c:10, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:9b:4c:10, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:9b:4c:10, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:9b:4c:10, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:d8:cb:82, mac 2: a:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:d8:cb:82, mac 2: a:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 0c, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:9e:71:71, mac 2: c:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:9e:71:71, mac 2: c:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:9e:71:71, mac 2: c:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:9e:71:71, mac 2: c:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:9e:71:71, mac 2: c:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:9e:71:71, mac 2: c:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:9e:71:71, mac 2: c:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:9e:71:71, mac 2: c:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:9e:71:71, mac 2: c:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:9e:71:71, mac 2: c:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:b4:4e:2c, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:9b:4c:10, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:b4:4e:2c, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:b4:4e:2c, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: c:8d:db:18:2:a2, mac 2: 90:a2:da:f3:12:25, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:b4:4e:2c, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:b4:4e:2c, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 3c, Frame Control: 09 48, Subtype: Null, SSID: N/A, seq nr: 2404, mac 1: a:8d:db:17:f8:19, mac 2: 5c:cf:7f:e3:5a:7f, mac 3: a:8d:db:17:f8:19, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:b4:4e:2c, mac 2: a:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 18, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:9b:4c:10, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 18, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:9b:4c:10, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 18, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:9b:4c:10, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:b4:4e:2c, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:b4:4e:2c, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:d8:cb:82, mac 2: a:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: b8:27:eb:9e:71:71, mac 2: c:8d:db:17:f8:19, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 3c, Frame Control: 11 48, Subtype: Null, SSID: N/A, seq nr: 2409, mac 1: a:8d:db:17:f8:19, mac 2: 5c:cf:7f:e3:5a:7f, mac 3: a:8d:db:17:f8:19, freq: 2.462000
+Duration: 00 0c, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:fe:fd:b1, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 3c, Frame Control: 09 48, Subtype: Null, SSID: N/A, seq nr: 2412, mac 1: a:8d:db:17:f8:19, mac 2: 5c:cf:7f:e3:5a:7f, mac 3: a:8d:db:17:f8:19, freq: 2.462000
+Duration: 00 00, Frame Control: 00 94, Subtype: Block ACK, SSID: N/A, seq nr: CTL, mac 1: a:8d:db:17:f8:19, mac 2: b8:27:eb:b4:4e:2c, mac 3: XX:XX:XX:XX:XX:XX, freq: 2.462000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 667, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2653, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3539, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2653, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2654, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1085, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3540, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2654, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 669, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2655, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3541, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2655, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 08, Subtype: Data, SSID: N/A, seq nr: 3818, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 32:8d:cb:84:9b:ff, mac 3: 0:0:0:0:0:0, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 670, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2656, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3542, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2656, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 671, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2657, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3543, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2657, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 672, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2658, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1089, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3544, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2658, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 673, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2659, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1090, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3545, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2659, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 674, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2660, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1091, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3546, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2660, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 675, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2661, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1092, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3547, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2661, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 676, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2662, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1093, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3548, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2662, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2663, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1094, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3549, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2663, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 678, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2664, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3550, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2664, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 679, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2665, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1096, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3551, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2665, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 680, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1097, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3552, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2666, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 681, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1098, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3553, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2667, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2668, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1099, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3554, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2668, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 683, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2669, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3555, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2669, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 684, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3556, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2670, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 685, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3557, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2671, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2672, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1103, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3558, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2672, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 687, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2673, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1104, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3559, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2673, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 688, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2674, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1105, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3560, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2674, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 689, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2675, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3561, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2675, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 690, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2676, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1107, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3562, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2676, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2677, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1108, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3563, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 692, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3564, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2678, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 693, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2679, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 694, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2680, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3566, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2680, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 695, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2681, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1112, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3567, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2681, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 696, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2682, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1113, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3568, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2682, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 697, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2683, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1114, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3569, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2683, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 698, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2684, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1115, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3570, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2684, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 699, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2685, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1116, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2685, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 700, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2686, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1117, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3572, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2686, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1118, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3573, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2687, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 702, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2688, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1119, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3574, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2688, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 703, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2689, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2689, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 704, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2690, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1121, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3576, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2690, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 705, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2691, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3577, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 706, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3578, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2692, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 707, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2693, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1124, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3579, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2693, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 708, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2694, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1125, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3580, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 709, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2695, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3581, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2695, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 710, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2696, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1127, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2696, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 711, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2697, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1128, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3583, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2697, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 712, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2698, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1129, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3584, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2698, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 08, Subtype: Data, SSID: N/A, seq nr: 3822, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 32:8d:cb:84:9b:ff, mac 3: 0:0:0:0:0:0, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 713, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2699, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3585, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2699, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 714, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2700, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2700, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 715, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2701, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1132, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3587, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 716, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2702, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1133, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3588, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2702, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 717, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2703, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3589, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2703, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3590, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2704, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 719, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2705, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3591, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2705, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 720, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2706, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1137, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3592, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 08, Subtype: Data, SSID: N/A, seq nr: 3824, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 32:8d:cb:84:9b:ff, mac 3: 0:0:0:0:0:0, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 721, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2707, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1138, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3593, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 722, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2708, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1139, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3594, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2708, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 723, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2709, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1140, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2709, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 724, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2710, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1141, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2710, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 725, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2711, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3597, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2711, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2712, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1143, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2712, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 727, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2713, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1144, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3599, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2713, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 728, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1145, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3600, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2714, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 729, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2715, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2715, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 730, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2716, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3602, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2716, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 731, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2717, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3603, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2718, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3604, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 733, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2719, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1150, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3605, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2719, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1151, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3606, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2720, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 735, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2721, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1152, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3607, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2721, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 736, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2722, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3608, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2722, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 08, Subtype: Data, SSID: N/A, seq nr: 3826, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 32:8d:cb:84:9b:ff, mac 3: 0:0:0:0:0:0, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2723, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1154, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3609, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2723, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 3c, Frame Control: 01 c8, Subtype: QoS Null, SSID: N/A, seq nr: 0, mac 1: e:8d:cb:84:9b:ff, mac 2: 34:f6:4b:7e:72:23, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 3c, Frame Control: 41 88, Subtype: QoS Data, SSID: N/A, seq nr: 2608, mac 1: e:8d:cb:84:9b:ff, mac 2: 34:f6:4b:7e:72:23, mac 3: c:8d:db:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 738, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1155, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3610, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 3c, Frame Control: 11 c8, Subtype: QoS Null, SSID: N/A, seq nr: 0, mac 1: e:8d:cb:84:9b:ff, mac 2: 34:f6:4b:7e:72:23, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 739, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2725, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3611, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2725, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 740, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2726, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1157, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3612, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2726, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 741, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2727, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1158, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3613, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2727, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 742, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2728, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1159, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3614, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2728, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 743, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2729, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1160, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3615, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2729, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 744, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2730, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1161, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 745, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1162, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3617, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2731, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 08, Subtype: Data, SSID: N/A, seq nr: 3828, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 32:8d:cb:84:9b:ff, mac 3: 0:0:0:0:0:0, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 746, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2732, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1163, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3618, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2732, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2733, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3619, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2733, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 748, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2734, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1165, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3620, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2734, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 749, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2735, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1166, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2735, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 08, Subtype: Data, SSID: N/A, seq nr: 3829, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 32:8d:cb:84:9b:ff, mac 3: 0:0:0:0:0:0, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 750, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2736, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1167, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3622, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 751, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2737, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1168, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3623, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2737, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 752, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3624, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2738, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 753, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2739, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3625, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2739, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 754, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2740, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1171, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3626, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2740, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 755, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2741, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1172, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3627, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2741, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 756, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2742, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3628, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2742, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 757, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2743, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3629, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2743, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 758, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2744, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1175, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3630, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2744, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 759, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1176, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3631, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2745, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 760, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2746, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1177, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3632, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2746, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3633, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2747, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 762, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2748, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1179, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3634, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 763, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2749, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1180, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 764, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3636, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2750, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 765, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2751, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1182, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3637, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2751, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 766, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2752, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 767, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2753, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1184, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3639, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2753, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 768, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1185, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3640, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2754, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 769, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1186, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2755, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 770, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1187, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3642, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2756, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2757, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1188, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3643, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2757, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 772, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2758, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3644, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2758, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 773, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2759, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1190, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3645, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2759, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 774, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1191, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3646, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2760, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 775, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2761, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1192, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3647, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2761, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 776, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2762, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1193, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3648, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2762, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2763, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1194, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3649, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2763, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 778, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2764, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1195, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3650, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2764, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 779, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2765, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1196, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2765, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2766, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1197, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3652, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2766, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 781, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2767, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1198, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 782, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2768, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1199, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3654, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2768, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 783, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1200, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3655, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2769, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 784, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1201, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 785, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2771, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1202, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3657, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2771, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 786, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2772, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2772, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 787, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1204, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3659, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2773, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 08, Subtype: Data, SSID: N/A, seq nr: 3833, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 32:8d:cb:84:9b:ff, mac 3: 0:0:0:0:0:0, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 788, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2774, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1205, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3660, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2774, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 789, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2775, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1206, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3661, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2775, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 790, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1207, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3662, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2776, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 791, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2777, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3663, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2777, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 792, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2778, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2779, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1210, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3665, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2780, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1211, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3666, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2780, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 795, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2781, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3667, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2781, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 796, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2782, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1213, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3668, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3669, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2784, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1215, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3670, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2784, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2785, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 800, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2786, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1217, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3672, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2786, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 801, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2787, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1218, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3673, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2787, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2788, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1219, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3674, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2788, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 803, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2789, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3675, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 804, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2790, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 805, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2791, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1222, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3677, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 806, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2792, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3678, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2792, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 807, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2793, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1224, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3679, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2793, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 808, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2794, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1225, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3680, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2794, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 809, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2795, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1226, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3681, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2795, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 810, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2796, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1227, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3682, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2796, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 811, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1228, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3683, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2797, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 812, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2798, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1229, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3684, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-MGMT, seq nr: 2798, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 1493, mac 1: 54:27:1e:6b:b7:f1, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 168, mac 1: 54:27:1e:6b:b7:f1, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 112, mac 1: 54:27:1e:6b:b7:f1, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 168, mac 1: 54:27:1e:6b:b7:f1, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 113, mac 1: 54:27:1e:6b:b7:f1, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 1247, mac 1: 54:27:1e:6b:b7:f1, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 3c, Frame Control: 00 50, Subtype: Probe Response, SSID: UNKNOWN, seq nr: 169, mac 1: 54:27:1e:6b:b7:f1, mac 2: 1e:8d:cb:84:9b:ff, mac 3: 1e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: SOC-LAB, seq nr: 815, mac 1: ff:ff:ff:ff:ff:ff, mac 2: e:8d:cb:84:9b:ff, mac 3: e:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: embedded, seq nr: 2801, mac 1: ff:ff:ff:ff:ff:ff, mac 2: a:8d:cb:84:9b:ff, mac 3: a:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: WiFiLab, seq nr: 1232, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 6:8d:cb:84:9b:ff, mac 3: 6:8d:cb:84:9b:ff, freq: 5.180000
+Duration: 00 00, Frame Control: 00 80, Subtype: Beacon, SSID: LTE-Lab, seq nr: 3687, mac 1: ff:ff:ff:ff:ff:ff, mac 2: 2:8d:cb:84:9b:ff, mac 3: 2:8d:cb:84:9b:ff, freq: 5.180000 

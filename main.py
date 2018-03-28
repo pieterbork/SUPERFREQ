@@ -3,15 +3,12 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : main.py
 #purpose :  Allow user to choose between terminal and web browser environments
-#date : 2018.02.21
-#version : 1.1.09
+#date : 2018.03.26
+#version : 1.1.10
 #version notes (latest): Compatible w/ python2. Spawns separate shell process
-
 
 from Tkinter import *
 import subprocess
-#Call the terminal.py file within our "app" subdirectory
-#from src.infrastructure import terminal
 
 #Create window
 root=Tk()
@@ -31,7 +28,7 @@ def runTerminal():
     try:
         #terminal.runTerminalMain()
         #Spawn a new terminal process just in case a user wishes to have a terminal and a web browser open
-        subprocess.call("x-terminal-emulator -e bash -c 'src/infrastructure/terminal.py' \"$1\"", shell=True)
+        subprocess.call("x-terminal-emulator -e bash -c './src/infrastructure/terminal.py' \"$1\"", shell=True)
         display.configure(text='Success Running Terminal!')
     except:
         display.configure(text='Failure Running Terminal!')
@@ -40,7 +37,7 @@ def runTerminal():
 def runWebBrowser():
     try:
         #Spawn a new flask process just in case a user wishes to have a web browser and a terminal open
-        subprocess.call("x-terminal-emulator -e bash -c 'src/Flask/Flask.py' \"$1\"", shell=True)
+        subprocess.call("x-terminal-emulator -e bash -c './src/Flask/Flask.py' \"$1\"", shell=True)
         display.configure(text='Success Running Web Browser!')
     except:
         display.configure(text='Failure Running Web Browser!')

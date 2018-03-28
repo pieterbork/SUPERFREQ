@@ -3,13 +3,14 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : csv_operations.py
 #purpose : Allow the user to easily traverse our app structure and have options in relation to csv data. May or may not merge with database file
-#date : 2018.03.10
+#date : 2018.03.20
 #version: 1.0.30
 #version notes (latest): Compatible w/ python2
 
 import sys
 import os
 import csv
+import system_module_operations
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
@@ -17,152 +18,8 @@ from functools import partial
 from collections import OrderedDict
 
 
-def getSourceDir():
-
-    """ This function exists to help others call the files from anywhere"""
-    
-    #Tell the system where we currently are
-    cwd = os.getcwd()
-    #print cwd
-    #Tell the system the root of our app is before 'src'
-    separator= 'src/'
-    #Remove everything after and including 'src/'
-    rootPath = cwd.split(separator, 1)[0]
-    #print rootPath
-    return rootPath
-
-def runTerminalInfraDir():
-
-    infra_dir = getSourceDir()
-    infra_dir += 'src/infrastructure/'
-    sys.path.insert(0, infra_dir)
-    import terminal
-    terminal.runTerminal()
-    
-
-def getSelectedDir(directory_list):
-
-    #Set loop variables
-    dir_number = 0
-    dir_list = []
-    dir_loop_on = True
-
-    print("\n\tListing Available Data Directories to Choose From... \n")
-    
-    #List contents of directory
-    for dirs_in_dir in os.listdir(directory_list):
-        print "\t\t" + str(dir_number) + ". " + dirs_in_dir
-        #Pass in lists (arrays)
-        number_and_dir = [str(dir_number), dirs_in_dir]
-        dir_list.append(number_and_dir)
-        dir_number+=1
-
-    #Turn our list into an Ordered dictionary (hastable)
-    dir_list = OrderedDict(dir_list)
-
-    while dir_loop_on:
-        try:
-            #Get user string
-            user_key_input = raw_input('\nEnter a number or (Q) to Quit: ').upper()
-            if user_key_input in dir_list:
-                folder_to_open = dir_list[user_key_input]
-                return folder_to_open
-            elif user_key_input == 'Q':
-                dir_loop_on = False
-                runTerminalInfraDir()
-            else:
-                print '\n\nUnknown User Input! Try Again!\n'
-        except:
-            break
-
-
-def getSelectedFile(directory_list):
-
-    #Set loop variables
-    file_number = 0
-    file_list = []
-    file_loop_on = True
-
-    print("\n\tListing Available Files to Choose From... \n")
-    
-    #List contents of directory
-    for file_in_dir in os.listdir(directory_list):
-        print "\t\t" + str(file_number) + ". " + file_in_dir
-        number_and_file = [str(file_number), file_in_dir]
-        file_list.append(number_and_file)
-        file_number+=1
-
-    #Turn our list into an Ordered dictionary (hastable)
-    file_list = OrderedDict(file_list)
-
-    while file_loop_on:
-        try:
-            #Get user string
-            user_key_input = raw_input('\nEnter a number or (Q) to Quit: ').upper()
-            if user_key_input in file_list:
-                file_selected = file_list[user_key_input]
-                return file_selected
-            elif user_key_input == 'Q':
-                file_loop_on = False
-                csvOperations()
-            else:
-                print '\n\nUnknown User Input! Try Again!\n'
-        except:
-            break
-
-def displayCsvOptions(userCSV):
-
-    def exitCsvOptions():
-        display_on = False
-        csvOperations()
-
-    list_commands = """
-    ############################################
-    ####### CSV FILE OPTIONS ####################
-    ############################################\n
-    File Selected: %s\n
-    Program commands:\n
-    \t 0. Read CSV - Output the raw contents of the CSV file \n
-    \t 1. Generate Graph - Take the data held within the csv to create a graph. This graph will automatically pop up in a separate window \n
-    \t 2. Remove CSV File - Remove the selected file\n
-    \t (Q)uit - Quit this screen \n
-    """ % (userCSV)
-
-    #User Loop
-    display_on = True
-
-    #Available number options to execute commands
-
-    options = OrderedDict((('0', partial(readCsvFile, userCSV)),
-                           ('1', partial(createGraph, userCSV)),
-                           ('2', partial(removeCsvFile, userCSV)),
-                           ('Q', exitCsvOptions),
-                           ('q', exitCsvOptions)))
-                           
-
-    #Mandatory First print out of commands
-    print list_commands
-
-    #Main Program Loop
-    while display_on:
-            try:
-                    #Get user string
-                    user_key_input = raw_input('Enter a number or (Q) to Quit: ').upper()
-                    if user_key_input in options:
-                            action = options[user_key_input]
-                            action()
-                    else:
-                            print '\nUnknown User Input! Try Again!\n'
-            except:
-                    break
-
-
 def readCsvFile(file_path):
 
-    #Temp fix for anyone running it...need to think about production
-    #dir = os.path.dirname(__file__)
-    #csvPathToFile = os.path.join(dir, 'network_scan_output', 'hackRFTestOutput.csv')
-    #print(csvFile)
     if not os.path.isfile(file_path):
         print("\n The MCP has derezzed the file!\n")
         sys.exit()
@@ -182,7 +39,7 @@ def removeCsvFile(file_path):
         os.remove(file_path)
         
 
-def createGraph(userSelectedCSV):
+def createGraphFromCsv(userSelectedCSV):
 
     #Create lists
     labels=[]
@@ -221,6 +78,51 @@ def createGraph(userSelectedCSV):
         #Create Image
         plt.show()
 
+def displayCsvOptions(userCSV):
+
+    def exitCsvOptions():
+        display_on = False
+        csvOperations()
+
+    list_commands = """
+    ############################################
+    ####### CSV FILE OPTIONS ####################
+    ############################################\n
+    File Selected: %s\n
+    Program commands:\n
+    \t 0. Read CSV - Output the raw contents of the CSV file \n
+    \t 1. Generate Graph - Take the data held within the csv to create a graph. This graph will automatically pop up in a separate window \n
+    \t 2. Remove CSV File - Remove the selected file\n
+    \t (Q)uit - Quit this screen \n
+    """ % (userCSV)
+
+    #User Loop
+    display_on = True
+
+    #Available number options to execute commands
+
+    options = OrderedDict((('0', partial(readCsvFile, userCSV)),
+                           ('1', partial(createGraphFromCsv, userCSV)),
+                           ('2', partial(removeCsvFile, userCSV)),
+                           ('Q', exitCsvOptions),
+                           ('q', exitCsvOptions)))
+                           
+
+    #Mandatory First print out of commands
+    print list_commands
+
+    #Main Program Loop
+    while display_on:
+            try:
+                    #Get user string
+                    user_key_input = raw_input('Enter a number or (Q) to Quit: ').upper()
+                    if user_key_input in options:
+                            action = options[user_key_input]
+                            action()
+                    else:
+                            print '\nUnknown User Input! Try Again!\n'
+            except:
+                    break
 
 
 """ 2. Display Network Data - Interactive Graphs & Statistics """
@@ -229,7 +131,7 @@ def csvOperations():
 
     """ LOCAL VARIABLES FOR DIRECTORY LISTING """
     #"Locate" our data directory from anywhere
-    directory_list = getSourceDir()
+    directory_list = system_module_operations.getSourceDir()
     
     #Add path to file we wish to execute
     directory_list += 'src/infrastructure/network_scan_output/'
@@ -240,7 +142,7 @@ def csvOperations():
     """ LET USER CHOOSE DIRECTORY """
     
     #Call our directory lister
-    folder_user_opened = getSelectedDir(directory_list)
+    folder_user_opened = system_module_operations.getSelectedDir(directory_list)
     
     
     #Append folder to full path, so files in the path can be listed
@@ -254,7 +156,7 @@ def csvOperations():
 
     """ LET USER CHOOSE FILE TO GET ADDITIONAL OPTIONS """
     #Call our file lister
-    file_user_chose = getSelectedFile(directory_list)
+    file_user_chose = system_module_operations.getSelectedFile(directory_list)
 
 
     """ DISPLAY OPTIONS ON USER SELECTED FILE """
