@@ -1,0 +1,117 @@
+body {
+	margin: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	outline: 0;
+}
+
+.content {
+	width: 100%;
+	text-align: center;
+}
+
+.scan_button {
+	height: 80px;
+	width: 80px;
+	border: 1px black;
+	border-radius: 40px;
+	box-shadow: 0 0 10px 0 black;
+	margin: 50px;
+	border: 0;
+	font-size: x-large;
+}
+
+.scan_button::-moz-focus-inner {
+	border: 0;
+}
+
+.options {
+/*	height: 0px; */
+	overflow: hidden;
+	max-height: 0px;
+	-webkit-transition: max-height 0.5s ease-in-out;
+	-moz-transition: max-height 0.5s ease-in-out;
+	transition: max-height 0.5s ease-in-out;
+}
+
+.options_container {
+	border: 1px solid #eee;
+	border-radius: 10px;
+	width: 80%;
+	margin: auto;
+	box-shadow: 0 0 4px -2px #888;
+}
+
+.status_container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.status {
+	margin: auto;
+	background: #aaa;
+	border: 2px solid black;
+	border-radius: 75px;
+	height: 150px;
+	width: 150px;
+	position: relative;
+	top: -77px;
+	left: -77px;
+}
+
+.status_text {
+	display: block;
+	margin-top: 40%;
+	color: #f3f3f3;
+	font-size: large;
+	font-weight: bold;
+}
+
+.outer_ring_container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.ring_container {
+	position: relative;
+	top: -260px;
+	left: -260px;
+}
+
+.ring {
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	position: absolute;
+	background-color: transparent;
+	-webkit-animation-name: ani; 
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: cubic-bezier(.55,.04,.4,.99);
+	-webkit-animation-duration: 6s;
+}
+
+@-webkit-keyframes ani {
+	0% {-webkit-transform: scale(0.1); opacity: 0;}
+	10% {-webkit-transform: scale(0.1); opacity: 1;}
+	90% {-webkit-transform: scale(1); opacity: 1;}
+	100% {-webkit-transform: scale(1); opacity: 0;}
+}
+
+#r1 {
+	border: 10px solid gold;
+	opacity: 0;
+	-webkit-animation-delay: 2s;
+}
+#r2 {
+	border: 10px solid black;
+	opacity: 0;
+	-webkit-animation-delay: 5s;
+}
+
