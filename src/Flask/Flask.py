@@ -21,12 +21,13 @@ from multiprocessing import Process
 
 app = Flask(__name__)
 
+"""
 cwd = os.getcwd()
 separator = 'src/'
 root_path = cwd.split(separator, 1)[0]
-
+"""
 #Unit Test Database
-DATABASE = root_path + "src/infrastructure/database/SUPERFREQ.db"
+#DATABASE = root_path + "src/infrastructure/database/SUPERFREQ.db"
 
 
 #Create a User home page and check our app flask is operational
@@ -62,7 +63,7 @@ def images():
     img.seek(0)
     return send_file(img, mimetype='image/png')
 
-""" 2. Display Network Data - Interactive Graphs & Statistics """
+""" 2. Display Network Data - Interactive Graphs & Statistics 
 
 def displayNetworkData():
     print("\t Reading CSV File and Generating Graph... \n")
@@ -81,33 +82,50 @@ def displayNetworkData():
     cs = cm.Set1(np.arange(40)/40.)
 
     #Check csv file
-    if not os.path.isfile('hackRFTestOutput.csv'):
+    if not os.path.isfile('WifiTest.csv'):
         print("\n The MCP has derezzed the file!\n")
         sys.exit()
     else:
-        with open('hackRFTestOutput.csv') as csvFile:
+        with open('WifiTest.csv') as csvFile:
             #Use csv parser
             reader = csv.reader(csvFile, delimiter=',')
             for row in reader:
-                labels.append(row[3]+"-"+row[6])
-                perc.append(float(row[7]))
+                labels.append(row[4]+"-"+row[7])
+                perc.append(float(row[8]))
                 
         #Add data to plot
         plt.pie(perc, labels=labels, autopct='%1.1f%%', colors=cs, shadow=True, startangle=90)
 
         #Use for changing font colors
-        """   _, _, autotexts = plt.pie(perc, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
-        for autotext in autotexts:
-            autotext.set_color('grey')
-        """
+        #   _, _, autotexts = plt.pie(perc, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
+        #for autotext in autotexts:
+        #    autotext.set_color('grey')
+        
 
         #Rounds plot
         plt.axis('equal')
         plt.title("Frequency of MAC Addresses\n")
 
         #Create Image
-        plt.show()   
-    
+        plt.show()  
+"""
+
+"""3.Using Chartjs"""
+def chartjs():
+    #Check csv file
+    if not os.path.isfile('WifiTest.csv'):
+        print("\n The MCP has derezzed the file!\n")
+        sys.exit()
+    else:
+        with open('WifiTest.csv') as csvFile:
+            #Use csv parser
+            reader = csv.reader(csvFile, delimiter=',')
+            for row in reader:
+                labels.append(row[3]+"-"+row[6])
+                perc.append(float(row[7]))
+
+
+
 #Error handling function
 @app.errorhandler(400)
 @app.errorhandler(404)
