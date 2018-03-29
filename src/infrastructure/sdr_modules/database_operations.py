@@ -9,6 +9,8 @@
 #version notes (latest): Compatible w/ python2
 
 import sqlite3
+import csv
+import traceback
 import system_module_operations
 
 #Hacky for right now...setup path to the database (final DB and its path to be determined later)
@@ -18,19 +20,19 @@ db_path += 'src/infrastructure/database/SUPERFREQ.db'
 
 #SQLite3 Shortcuts: https://sqlite.org/cli.html
 
-def importCsv(csv_path):
+def importWifiCSV(csv_path):
     
     #Run our import code
     try:
         db = sqlite3.connect(db_path)
         cursor = db.cursor()
-        cursor.execute('''CREATE TABLE IF NOT EXISTS Wifi(ssid VARCHAR(30), latency INTEGER(6), mac_address VARCHAR(120), frequency VARCHAR(10), percentage REAL(10), UNIQUE(ssid, latency, mac_address, frequency, percentage))''')
+        cursor.execute('''CREATE TABLE IF NOT EXISTS Wifi(duration VARCHAR(6), frame VARCHAR(6), subtype VARCHAR(20), ssid VARCHAR(30), seq_nr VARCHAR(10), mac_address_1 VARCHAR(120), mac_address_2 VARCHAR(120), mac_address_3 VARCHAR(120), frequency VARCHAR(10), occurrence REAL(10))''')
 
         with open(csv_path,'rb') as wifi_table:
             dr = csv.DictReader(wifi_table, delimiter=',') #comma is default delimiter
-            to_db = [(i['ssid'], i['latency'], i['mac_address'], i['frequency'], i['percentage']) for i in dr]
+            to_db = [(i['duration'], i['frame'], i['subtype'], i['ssid'], i['seq_nr'], i['mac_address_1'], i['mac_address_2'], i['mac_address_3'], i['frequency'], i['occurrence']) for i in dr]
 
-        cursor.executemany('''INSERT OR IGNORE INTO Wifi(ssid, latency, mac_address, frequency, percentage) VALUES(?,?,?,?,?)''', to_db)
+        cursor.executemany('''INSERT OR IGNORE INTO Wifi(duration, frame, subtype, ssid, seq_nr, mac_address_1, mac_address_2, mac_address_3, frequency, occurrence) VALUES(?,?,?,?,?,?,?,?,?,?)''', to_db)
         db.commit()
         db.close()
         print "Table content from CSV successfully imported!"
@@ -39,6 +41,12 @@ def importCsv(csv_path):
         traceback.print_exc()
         #Import CSV contents into a database
         return
+
+def importBtCSV(csv_path):
+    return
+
+def importXbeeCSV(csv_path):
+    return
 
 #This function may be phased out
 def exportCsv(csv_path):
@@ -91,9 +99,8 @@ def displayDatabaseOptions(userCSV):
     ############################################\n
     File Selected: %s\n
     Program commands:\n
-    \t 0. Import CSV to Database - Add contents of CSV file to a prexisting table in the SQlite database \n
-    \t 1. Export CSV from Database - Take the data held within the csv to create a graph. This graph will automatically pop up in a separate window \n
-    \t 2. Display Table - Show all content held within user chosen Table\n
+    \t 0. Export CSV from Database - Take the data held within the csv to create a graph. This graph will automatically pop up in a separate window \n
+    \t 1. Display Table - Show all content held within user chosen Table\n
     \t (Q)uit - Quit this screen \n
     """ % (userCSV)
 
@@ -102,9 +109,8 @@ def displayDatabaseOptions(userCSV):
 
     #Available number options to execute commands
 
-    options = OrderedDict((('0', partial(importCsv, userCSV)),
-                           ('1', partial(exportCsv, userCSV)),
-                           ('2', partial(displayTable, )),
+    options = OrderedDict((('0', partial(exportCsv, userCSV)),
+                           ('1', displayTable),
                            ('Q', exitCsvOptions),
                            ('q', exitCsvOptions)))
                            
@@ -175,4 +181,6 @@ def databaseOperations():
 ##
 
 if __name__ == "__main__":
-        databaseOperations()
+        #databaseOperations()
+    #Hard code test
+    importWifiCSV('/home/pi/Capstone/SUPERFREQ/src/infrastructure/network_scan_output/wifi/wifi_data_graph_ready.csv')
