@@ -4,7 +4,7 @@
 #name : wifi_csv_filter.bash
 #purpose : Filter csv files to help generate graphs from the terminal application
 #date : 2018.03.29
-#version: 1.1.01
+#version: 1.2.01
 
 CURRENTDIR=`pwd | sed 's/\(src\).*/\1/g'`
 PATHTODB='/UnitTests/Infrastructure_UnitTests/csv_operations/'
@@ -14,8 +14,6 @@ FULLPATH=$CURRENTDIR$PATHTODB
 #Navigate here for test
 cd $FULLPATH
 
-#Detect the latest file to be added
-# ls -1 -t | head -1
 
 #Copy the unfiltered.csv. VERIFIED!
 cp wifi_out.txt tmp_unfiltered.csv
@@ -54,20 +52,22 @@ done <occurences.txt
 #For whole number use below
 paste -d"," cleaned_unique_lines.txt occurences.txt > wifi_filtered.csv
 
-#Remove any lines which do not have the correct number of columns
-awk -F',' 'NF==10' wifi_filtered.csv  > checked_wifi_filtered.csv
+#Remove any lines which do not have the correct number of columns. This will prepare the below file for DB import
+awk -F',' 'NF==10' wifi_filtered.csv  > db_wifi_filtered.csv
 
 
 #After all is said and done, use Vim in Ex mode to add header column to the file for importing into the database
-#ex -sc '1i|duration,frame,subtype,ssid,seq_nr,mac_address_1,mac_address_2,mac_address_3,frequency,percentage' -cx checked_wifi_filtered.csv
-ex -sc '1i|duration,frame,subtype,ssid,seq_nr,mac_address_1,mac_address_2,mac_address_3,frequency,occurrence' -cx checked_wifi_filtered.csv
+#ex -sc '1i|duration,frame,subtype,ssid,seq_nr,mac_address_1,mac_address_2,mac_address_3,frequency,percentage' -cx db_wifi_filtered.csv
+ex -sc '1i|duration,frame,subtype,ssid,seq_nr,mac_address_1,mac_address_2,mac_address_3,frequency,occurrence' -cx db_wifi_filtered.csv
 
 
 #Finally, in order for our graphs to have any meaning, display the top ten occurrences
-sed -n -e '1,21p' checked_wifi_filtered.csv > wifi_data_graph_ready.csv
+sed -n -e '1,21p' db_wifi_filtered.csv > graph_wifi_filtered.csv
 
 #Remove files this script made
-rm tmp_unfiltered.csv occurences.txt unique_lines.txt cleaned_unique_lines.txt percentage.txt wifi_filtered.csv checked_wifi_filtered.csv
+rm tmp_unfiltered.csv occurences.txt unique_lines.txt cleaned_unique_lines.txt percentage.txt wifi_filtered.csv
+
+#NOTE: TWO files db_wifi_filtered.csv & graph_wifi_filtered.csv should exist in each respective directory
 
 #Reset test directory
 cd $CURRENTDIR
