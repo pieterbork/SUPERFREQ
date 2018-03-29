@@ -3,11 +3,13 @@
 
 Below you will find a wide range of documentation
 
-## Supported Systems
+## Major Supported Systems
 
-###### Raspbian
+###### Linux Family: Debian(Raspbian)/Fedora/Arch
 
 ###### Windows
+
+###### macOS
 
 ## HackRF Code Development
 
