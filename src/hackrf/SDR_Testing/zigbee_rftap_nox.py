@@ -28,6 +28,7 @@ from killerbee import *
 from killerbee.scapy_extensions import *
 
 from collections import OrderedDict
+from time import sleep
 
 zb_file = "/tmp/zigbee.pcap"
 
@@ -151,6 +152,7 @@ def detect_layer(pkt,layer):
     return True
 
 def parse_zigbee_scan():
+	global send_packet_updates
 	layer_count = {}
 	for l in ZB_Layers:
 		layer_count[ZB_Layers_Names[ZB_Layers.index(l)]] = 0
@@ -187,8 +189,25 @@ def parse_zigbee_scan():
 			if (len(pkt) > 0):
 				f.write(", ".join(pkt) + "\n")
 
+def sleep_channel(channel_time, socketio, elapsed_time):
+	num_updates = int(channel_time)	* 2		#update every half second
+	leftover_time = channel_time - int(channel_time)
+	while (True):		#always run the update at least once
+		num_packs = len(rdpcap(zb_file))
+		socketio.emit('zigbee_count', {'msg': num_packs})
+		socketio.emit('progress', {'msg': elapsed_time})
+		if num_updates < 1:
+			break
+		else:
+			elapsed_time += 0.5
+			sleep(0.5)
+			num_updates -= 1
+	elapsed_time += leftover_time
+	sleep(leftover_time)
+	return elapsed_time
+	
 
-def run_zigbee_scan(user_channels=[], socketio=None, send_updates=False, scan_time=30):
+def run_zigbee_scan(user_channels=[], socketio=None, send_updates=False, scan_time=30, elapsed_time=0):
 	scan_channels = OrderedDict()
 	if (len(user_channels) < 1):
 		scan_channels = default_zigbee_freqs
@@ -198,17 +217,20 @@ def run_zigbee_scan(user_channels=[], socketio=None, send_updates=False, scan_ti
 				scan_channels[ch] = default_zigbee_freqs[ch]
 			except:
 				pass
+	channel_time = float(scan_time)/len(scan_channels)
 	if(len(scan_channels) > 0):
 		zb_tb = zigbee_rftap_nox()
 		zb_tb.start()
 		for ch in scan_channels:
 			if send_updates:
 				socketio.emit('update', {'msg':"Zigbee - Ch {}".format(ch)})
+				elapsed_time = sleep_channel(channel_time, socketio, elapsed_time)
 			else:
 				print("\nSetting radio to Zigbee - Ch {}".format(ch))
+				sleep(channel_time)
 			zb_tb.set_freq(scan_channels[ch])
-			time.sleep(float(scan_time)/len(scan_channels))
+			parse_zigbee_scan()
 		zb_tb.stop()
 		zb_tb.wait()
-		parse_zigbee_scan()
+
 

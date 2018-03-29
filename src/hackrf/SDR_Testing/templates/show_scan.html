@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block content %}
+<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+<div class="content">
+	<div class="options_container">
+		<h2><a href="javascript:void(0);" onclick="toggleOptions();" class="toggle_bar">Scan Options&nbsp;<span id="caret" class="fa fa-caret-down"></span></a></h2>
+		<div id="options" class="options">
+			<form action="/scan" method="post">
+				<div class="scan_button_container">
+					<input type="submit" value="Scan" class="scan_button">
+				</div>
+				<table width="100%">
+					<tr>
+						<th width="40%">WiFi</th>
+						<th width="30%">Zigbee</th>
+						<th width="30%">Bluetooth</th>
+					</tr>
+					<tr>
+						<td rowspan=2 valign="top">
+							<div style="text-align:center;">
+								<input type="hidden" name="all_wifi" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value" style="margin-left:-5px;">All</input>
+							</div>
+							<div class="flex-container">
+								<div class="flex-child">
+									<h4>2.4 GHz</h4>
+									<input type="hidden" name="wifi_freq" value="">
+									<select name="wifi_freq" multiple size="11">
+									{% for freq in default_wifi_freqs %}
+									{% if "_" in freq %}
+										{% set tmp = freq.split("_") %}
+										{% if tmp[1] == "24" %}
+											<option value="{{ freq }}">Channel {{ tmp[0] }}</option>
+										{% endif %}
+									{% elif freq|int < 11 %}
+										<option value="{{ freq }}">Channel {{ freq }}</option>
+									{% endif %}
+									{% endfor %}
+									</select>
+								</div>
+								<div class="flex-child">
+									<h4>5 GHz</h4>
+									<select name="wifi_freq" multiple size="15">
+									{% for freq in default_wifi_freqs %}
+									{% if "_" in freq %}
+										{% set tmp = freq.split("_") %}
+										{% if tmp[1] == "5" %}
+											<option value="{{ freq }}">Channel {{ tmp[0] }}</option>
+										{% endif %}
+									{% elif freq|int > 11 %}
+										<option value="{{ freq }}">Channel {{ freq }}</option>
+									{% endif %}
+									{% endfor %}
+									</select>
+								</div>
+							</div>
+						</td>
+						<td valign="top">
+							<div style="text-align:center;">
+								<input type="hidden" name="all_zigbee" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value" style="margin-left:-5px;">All</input>
+							</div>
+							<div class="flex-container">
+								<div class="flex-child">
+									<h4>2.4 GHz</h4>
+									<input type="hidden" name="zigbee_freq" value="">
+									<select name="zigbee_freq" multiple size="10">
+									{% for freq in default_zigbee_freqs %}
+										<option value="{{ freq }}">Channel {{ freq }}</option>
+									{% endfor %}
+								</div>
+							</div>
+						</td>
+						<td valign="top">
+							<div class="flex-container">
+								<div class="flex-child">
+									<h4>Freq</h4>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2 style="position:relative;">
+							<div class="time_container">
+								Scan Time: <input type="number" name="time" value="60">
+							</div>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+	<script>
+		function toggleOptions() {
+			optionsDiv = document.getElementById("options");
+			caret = document.getElementById("caret");
+			if (optionsDiv.style.maxHeight == "0px" || !optionsDiv.style.maxHeight) {
+				optionsDiv.style.maxHeight = "600px";
+				caret.classList.remove("fa-caret-down");
+				caret.classList.add("fa-caret-up");
+			} else {
+				optionsDiv.style.maxHeight = "0px";
+				caret.classList.remove("fa-caret-up");
+				caret.classList.add("fa-caret-down");
+			};
+		};
+		$('option').mousedown(function(e) {
+			e.preventDefault();
+			$(this).prop('selected', $(this).prop('selected')? false:true);
+		});
+	</script>
+</div>
+{% endblock %}

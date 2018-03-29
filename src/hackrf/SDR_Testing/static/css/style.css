@@ -1,7 +1,6 @@
 body {
 	margin: 0;
 	width: 100%;
-	overflow: hidden;
 	background-color: #e0ebff;
 }
 
@@ -264,4 +263,66 @@ input[type=checkbox] {
 	padding: 15px;
 	margin-top: -15px;
 	margin-bottom: -15px;
+}
+
+.packet_count_container {
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	text-align: left;
+}
+
+.packet_count {
+}
+
+option {
+	outline: 0;
+}
+
+option::-moz-focus-inner {
+	border: 0;
+}
+
+.progress_bar_container {
+	position: absolute;
+	left: 50%;
+}
+
+.progress_bar_outer {
+	position: relative;
+	width: 600px;
+	left: -300px;
+	background: lightgrey;
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 30px;
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+.progress_bar_inner {
+	background: green;
+	width: 0%;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	border-radius: 3px;
+	-webkit-transition: width 1s ease-in-out;
+	-moz-transition: width 1s ease-in-out;
+	transition: width 1s ease-in-out;
+}
+
+.progress_percent {
+	display: block;
+	position: absolute;
+	left: 48%;
+	padding-top: 7px;
+	color: white;
+	font-weight: bold;
+	height: 12px;
+	overflow: hidden;
+}
+
+.progress_percent::after {
+	content: " %";
 }
