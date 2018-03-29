@@ -1,9 +1,11 @@
 #!/usr/bin/env python2
 
+"""NOTE: THIS WILL NOT RUN IN THE DOCKER CONTAINER BECAUSE OF DISPLAY SETTINGS"""
+
 #author : Kade Cooper kaco0964@colorado.edu
 #name : main.py
 #purpose :  Allow user to choose between terminal and web browser environments
-#date : 2018.03.26
+#date : 2018.03.29
 #version : 1.1.10
 #version notes (latest): Compatible w/ python2. Spawns separate shell process
 

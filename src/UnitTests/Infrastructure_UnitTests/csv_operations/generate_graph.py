@@ -3,7 +3,7 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : generate_graph.py
 #purpose : Test numpy and matplotlib libraries for Python2
-#date : 2018.03.28
+#date : 2018.03.29
 #version: 1.0.0
 #version notes (latest): Compatible w/ python2
 
@@ -16,8 +16,6 @@ import matplotlib.pyplot as plt
 from matplotlib import cm
 
 #Create lists
-#labels=[]
-#perc=[]
 
 xaxis=[]
 yaxis=[]
@@ -29,26 +27,9 @@ cs = cm.Set1(np.arange(40)/40.)
 
 sample_csv = cp_rm.src_file
 
-"""
-#Check csv file
-if not os.path.isfile(sample_csv):
-    print("\n The MCP has derezzed the file!\n")
-    sys.exit()
-else:
-    counter = 0
-    with open(sample_csv) as csvFile:
-        #Use csv parser
-        reader = csv.reader(csvFile, delimiter=',')
-        for row in reader:
-            if counter < 10:
-                labels.append(row[3]+"-"+row[8])
-                perc.append(float(row[9]))
-            counter += 1
-            
-    #Add data to plot
-    plt.pie(perc, labels=labels, autopct='%1.1f%%', colors=cs, shadow=True, startangle=90)
+output_png = cp_rm.root_path + 'src/UnitTests/Infrastructure_UnitTests/csv_operations/test_data.png'
 
-"""
+
 #Check csv file
 if not os.path.isfile(sample_csv):
     print("\n The MCP has derezzed the file!\n")
@@ -77,4 +58,4 @@ else:
     plt.title("Frequency of MAC Addresses\n")
 
     #Save Image
-    plt.savefig('test_data.png', bbox_inches='tight')
+    plt.savefig(output_png, bbox_inches='tight')

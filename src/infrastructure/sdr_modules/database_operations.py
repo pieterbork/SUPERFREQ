@@ -4,7 +4,7 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : database_operations.py
 #purpose : Allow user interaction with SQlite Database
-#date : 2018.03.26
+#date : 2018.03.29
 #version: 1.0.10
 #version notes (latest): Compatible w/ python2
 
