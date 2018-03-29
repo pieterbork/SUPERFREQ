@@ -5,3 +5,5 @@
 *.pyo
 *.egg
 *.egg-info/
+__pycache__/
+
