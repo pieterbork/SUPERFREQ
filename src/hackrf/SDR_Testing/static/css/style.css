@@ -270,6 +270,18 @@ input[type=checkbox] {
 	bottom: 0;
 	left: 10px;
 	text-align: left;
+	animation-name: packet-count-appear;
+	animation-duration: 2s;
+	animation-timing-function: ease-out;
+}
+
+@keyframes packet-count-appear {
+	from {
+		left: -200px;
+	}
+	to {
+		left: 10px;
+	}
 }
 
 .packet_count {
@@ -298,6 +310,18 @@ option::-moz-focus-inner {
 	height: 30px;
 	margin-top: 10px;
 	overflow: hidden;
+	animation-name: progress-bar-appear;
+	animation-duration: 2s;
+	animation-timing-function: ease-out;
+}
+
+@keyframes progress-bar-appear {
+	from {
+		top: -50px;
+	}
+	to {
+		top: 0px;
+	}
 }
 
 .progress_bar_inner {

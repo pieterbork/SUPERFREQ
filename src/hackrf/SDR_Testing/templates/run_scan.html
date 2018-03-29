@@ -62,7 +62,10 @@
 				var percent = Math.round(Number(data.msg) / total_scan_time * 100);
 				if (percent >= 0 && percent <= 100) {
 					$('#progress_percent')[0].innerHTML = percent;
-					$('#progress_bar')[0].style.width = String(percent + 1) + "%";
+					if (percent >= 99) {
+						percent += 1;
+					}
+					$('#progress_bar')[0].style.width = String(percent) + "%";
 				}
 			}
 		});
