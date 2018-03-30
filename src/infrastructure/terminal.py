@@ -18,17 +18,21 @@ from collections import OrderedDict
 #Get our UnitTests
 cwd = os.getcwd()
 
-#Tell the system the root of our app is before 'src'
-separator= 'src/'
-#Remove everything after and including 'src/'
-unit_test_path = cwd.split(separator, 1)[0]
+app_dir_exists = os.path.basename(os.path.normpath(cwd))
 
-unit_test_path += '/src/UnitTests/'
+#Check if we are in a development environment or in the docker container
+if (app_dir_exists == 'infrastructure' or app_dir_exists == 'src'):
+        #Tell the system the root of our app is before 'src'
+        separator= 'src/'
+        #Remove everything after and including 'src/'
+        unit_test_path = cwd.split(separator, 1)[0]
+        unit_test_path += "src/UnitTests/"
 
-#Hard coded path so main know's how to call the file in the docker container IF this ever gets to works
-#unit_test_path = '/SUPERFREQ/src/UnitTests/'
-sys.path.insert(0, unit_test_path)
+else:
+        unit_test_path = '/root/SUPERFREQ/src/UnitTests/'
+
 #Add UnitTests to Path
+sys.path.insert(0, unit_test_path)
 from app_unit_tests import unitTestSummary
 
 
@@ -36,8 +40,6 @@ from app_unit_tests import unitTestSummary
 from sdr_modules.network_operations import networkOptions
 from sdr_modules.csv_operations import csvOperations
 from sdr_modules.database_operations import displayDatabaseOptions
-#from sdr_modules.app_unit_tests import unitTestSummary
-#from .UnitTests.app_unit_tests import unitTestSummary
 from sdr_modules.settings import settingsPage
 
 
@@ -109,7 +111,6 @@ def runTerminal():
                 except:
                         #print "[UNKNOWN ERROR]: Exiting separate terminal process..."
                         break
-                        #terminal_on = False
 ##
 if __name__ == "__main__":
         runTerminal()

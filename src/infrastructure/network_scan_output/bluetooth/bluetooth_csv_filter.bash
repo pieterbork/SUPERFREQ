@@ -33,7 +33,7 @@ sed 's/, \+\| \+,/,/g' -i unique_lines.txt
 sed -e "$(sed 's:.*:s/&//ig:' bluetooth_wordfile.txt)" unique_lines.txt > cleaned_unique_lines.txt
 
 #Cut all lines but the first column. VERIFIED!
-awk  '{$1=$1; print $1}' cleaned_unique_lines.txt > occurences.txt
+awk  '{$1=$1; print $1}' cleaned_unique_lines.txt > occurrences.txt
 
 #Create a shadow copy without the number in a file for sorted.csv. VERIFIED!
 sed -i -r 's/\S+(\s+)?//1' cleaned_unique_lines.txt
@@ -45,29 +45,29 @@ TOTALLINES=$(wc -l tmp_unfiltered.csv | awk '{print $1}')
 #Calculate percentages for each
 while read i; do
   printf '%.4f\n' "$(echo "scale=4;$i/$TOTALLINES" | bc)" >> percentage.txt
-done <occurences.txt
+done <occurrences.txt
 
 
 #Attach percentages to the end of each row in the unique_lines.txt
 #paste -d"," cleaned_unique_lines.txt percentage.txt > bluetooth_filtered.csv
 
 #For whole number use below
-paste -d"," cleaned_unique_lines.txt occurences.txt > bluetooth_filtered.csv
+paste -d"," cleaned_unique_lines.txt occurrences.txt > bluetooth_filtered.csv
 
 #Remove any lines which do not have the correct number of columns
-awk -F',' 'NF==10' bluetooth_filtered.csv  > checked_bluetooth_filtered.csv
+awk -F',' 'NF==3' bluetooth_filtered.csv  > db_bluetooth_filtered.csv
 
 
 #After all is said and done, use Vim in Ex mode to add header column to the file for importing into the database
-#ex -sc '1i|duration,frame,subtype,ssid,seq_nr,mac_address_1,mac_address_2,mac_address_3,frequency,percentage' -cx checked_bluetooth_filtered.csv
-ex -sc '1i|duration,frame,subtype,ssid,seq_nr,mac_address_1,mac_address_2,mac_address_3,frequency,occurrence' -cx checked_bluetooth_filtered.csv
+#ex -sc '1i|channel,mac_address,percentage' -cx db_bluetooth_filtered.csv
+ex -sc '1i|channel,mac_address,occurrence' -cx db_bluetooth_filtered.csv
 
 
 #Finally, in order for our graphs to have any meaning, display the top ten occurrences
-sed -n -e '1,21p' checked_bluetooth_filtered.csv > bluetooth_data_graph_ready.csv
+sed -n -e '1,21p' db_bluetooth_filtered.csv > graph_bluetooth_filtered.csv
 
 #Remove files this script made
-rm tmp_unfiltered.csv occurences.txt unique_lines.txt cleaned_unique_lines.txt percentage.txt bluetooth_filtered.csv checked_bluetooth_filtered.csv
+rm tmp_unfiltered.csv unique_lines.txt cleaned_unique_lines.txt percentage.txt occurrences.txt bluetooth_filtered.csv
 
 #Reset test directory
 cd $CURRENTDIR

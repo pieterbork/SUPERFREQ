@@ -64,7 +64,6 @@ To develop for this project on Raspbian the following steps must be taken
 3. Check install
    - `sudo docker run hello-world`
 
-#Add Pieter's stuff here
 
 To find information on the docker-image
 
@@ -89,6 +88,10 @@ If you are running into errors, try the below troubleshooting:
      - If < 9.0.1 (as of 02/13/2018) run: `pip install --upgrade pip`
    - Else follow the below troubleshooting steps
      - Run: `python -m pip install --upgrade pip setuptools wheel`
+
+###### Troubleshooting HackRF issues
+
+The number one issue for scans not performing as expected is to unplug and plug the HackRF back into the USB port
 
 ###### TO FIX
 

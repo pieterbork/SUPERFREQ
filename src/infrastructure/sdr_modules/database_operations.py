@@ -25,7 +25,6 @@ db_path += 'src/infrastructure/database/SUPERFREQ.db'
 
 def importWifiCSV(csv_path):
     
-    #Run our import code
     try:
         db = sqlite3.connect(db_path)
         cursor = db.cursor()
@@ -38,15 +37,30 @@ def importWifiCSV(csv_path):
         cursor.executemany('''INSERT OR IGNORE INTO Wifi(duration, frame, subtype, ssid, seq_nr, mac_address_1, mac_address_2, mac_address_3, frequency, occurrence) VALUES(?,?,?,?,?,?,?,?,?,?)''', to_db)
         db.commit()
         db.close()
-        print "Table content from CSV successfully imported!"
+        print "Table content from Wifi CSV successfully imported!"
 
     except:
         traceback.print_exc()
-        #Import CSV contents into a database
         return
 
 def importBtCSV(csv_path):
-    return
+    try:
+        db = sqlite3.connect(db_path)
+        cursor = db.cursor()
+        cursor.execute('''CREATE TABLE IF NOT EXISTS Bluetooth(channel INT(2), mac_address VARCHAR(120), occurrence REAL(10))''')
+
+        with open(csv_path,'rb') as wifi_table:
+            dr = csv.DictReader(wifi_table, delimiter=',') #comma is default delimiter
+            to_db = [(i['channel'], i['mac_address'], i['occurrence']) for i in dr]
+
+        cursor.executemany('''INSERT OR IGNORE INTO Bluetooth(channel, mac_address, occurrence) VALUES(?,?,?)''', to_db)
+        db.commit()
+        db.close()
+        print "Table content from Bluetooth CSV successfully imported!"
+
+    except:
+        traceback.print_exc()
+        return
 
 def importXbeeCSV(csv_path):
     return

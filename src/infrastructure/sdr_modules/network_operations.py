@@ -4,9 +4,10 @@
 #name : network_operations.py
 #purpose : Let users choose the following frequencies they wish to capture packets from: wifi, zigbee, bluetooth, lte?
 #date : 2018.03.30
-#version: 1.1.09
+#version: 1.1.15
 #version notes (latest): Compatible w/ python2
 
+import os
 import sys
 import time
 import system_module_operations
@@ -14,15 +15,17 @@ from multiprocessing import Process
 from functools import partial
 from collections import OrderedDict
 
+"""
 #This will alert the end tester that the build environment for the hackrf is not present
 #This may or may not be used...haven't had best of luck with something that should be working
 try:
-    from wifi.wifi_rx_rftap import captureWifi
+    #from wifi.wifi_rx_rftap import captureWifi
     #from bluetooth.bluetooth_rx_rftap import captureBlu
     #from zigbee.zigbee_rx_rftap import captureZigbee
     #from lte.lte_rx_rftap import captureLte
 except ImportError:
     print ("The GnuRadio dependencies are not present in this app! Talk to Pieter/Carlos...")
+"""
 
 """ Special Functions for Network Operations """
 
@@ -36,6 +39,16 @@ def cliProgress(end_val, bar_length):
         sys.stdout.write("\rPercent: [{0}] {1}%".format(hashes + spaces, int(round(percent * 100))))
         sys.stdout.flush()
     print("\n")
+
+def readTimeFile():
+    if not os.path.isfile(src_file):
+        print("\n The MCP has derezzed the file!\n")
+        sys.exit()
+    else:
+        time_file = open("time.txt","r")
+        for time in time_file:
+            scan_length = int(time)
+            return scan_length
 
 """ Network Scans """
 
@@ -76,9 +89,10 @@ def scanOperations(function_path, scan_string):
     try:
         #Below is the actual function to run the HackRF. target=captureWifi function
         scan_process = Process(target=function_path)
-        cli_process = Process(target=cliProgress, args=(101, 20))
-        cli_process.start()
         scan_process.start()
+        bar_length = readTimeFile()
+        cli_process = Process(target=cliProgress, args=(101, bar_length))
+        cli_process.start()
         #Wait until finished
         scan_process.join()
         cli_process.join()
@@ -162,7 +176,7 @@ def networkOptions():
 
     #Setup our "root" directory so anyone can call it
     frequency_options = system_module_operations.getSourceDir()
-    frequency_options += 'src/infrastructure/sdr_modules'
+    frequency_options += 'src/hackrf'
 
     print("\n\tChoose From the List of Available Frequencies... \n")
 
