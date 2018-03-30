@@ -1,4 +1,6 @@
 import sqlite3
+import six
+from collections import Counter
 
 bt_out = "/tmp/bt_out.txt"
 xbee_out = "/tmp/zb_out.txt"
@@ -12,7 +14,7 @@ db_path = '../../infrastructure/database/SUPERFREQ.db'
 
 #Reads wifi_out file, parses records, returns list
 def parse_wifi_records(job_id):
-	records = set()
+	records = []
 	#Indexes in each record for ssid, mac1, mac2, mac3, freq
 	items = [3,5,6,7,8]
 	with open(wifi_out) as fh:
@@ -26,12 +28,13 @@ def parse_wifi_records(job_id):
 				if idx in items:
 					val = item.split(": ")[1].strip()
 					record.append(val)
-			records.add(tuple(record))
-	return records
+			records.append(tuple(record))
+	counts = Counter(records)
+	return [tuple(list(record) + [counts[record]]) for record in set(records)]
 
 #Reads bt_out file, parses records, returns list
 def parse_bt_records(job_id):
-	records = set()
+	records = []
 	with open(bt_out, 'r') as fh:
 		lines = fh.readlines()
 	if lines:
@@ -41,12 +44,13 @@ def parse_bt_records(job_id):
 				continue
 			channel = parts[2].replace("Ch", "")
 			mac = parts[8].replace("AdvA:", "")
-			records.add((job_id, channel, mac))
-	return list(records)
+			records.append((job_id, channel, mac))
+	counts = Counter(records)
+	return [tuple(list(record) + [counts[record]]) for record in set(records)]
 
 #Reads zb_out file, parses records, returns list
 def parse_zb_records(job_id):
-	records = set()
+	records = []
 	with open(xbee_out, 'r') as fh:
 		lines = fh.readlines()
 	if lines:
@@ -55,26 +59,27 @@ def parse_zb_records(job_id):
 			if len(parts) != 12:
 				continue
 			record = (job_id, parts[1], parts[3], parts[5], parts[7], parts[9], parts[11])
-			records.add(record)
-	return list(records)
+			records.append(record)
+	counts = Counter(records)
+	return [tuple(list(record) + [counts[record]]) for record in set(records)]
 
 #Insert list of wifi records with sqlite
 def insert_wifi_records(records):
 	with sqlite3.connect(db_path) as conn:
 		cursor = conn.cursor()
-		cursor.executemany("INSERT INTO Wifi (job_id, ssid, mac1, mac2, mac3, freq) VALUES (?, ?, ?, ?, ?, ?)", records)
+		cursor.executemany("INSERT INTO Wifi (job_id, ssid, mac1, mac2, mac3, freq, count) VALUES (?, ?, ?, ?, ?, ?, ?)", records)
 
 #Insert list of bluetooth records with sqlite
 def insert_bt_records(records):
 	with sqlite3.connect(db_path) as conn:
 		cursor = conn.cursor()
-		cursor.executemany("INSERT INTO Bluetooth (job_id, channel, mac) VALUES (?, ?, ?)", records)
+		cursor.executemany("INSERT INTO Bluetooth (job_id, channel, mac, count) VALUES (?, ?, ?, ?)", records)
 
 #Insert list of zigbee records with sqlite
 def insert_zb_records(records):
 	with sqlite3.connect(db_path) as conn:
 		cursor = conn.cursor()
-		cursor.executemany("INSERT INTO Zigbee (job_id, src, dst, ext_src, ext_dst, sec_src, sec_dst) VALUES (?, ?, ?, ?, ?, ?, ?)", records)
+		cursor.executemany("INSERT INTO Zigbee (job_id, src, dst, ext_src, ext_dst, sec_src, sec_dst, count) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", records)
 
 def insert_job(name):
 	if not get_job_id(name):
@@ -93,6 +98,7 @@ def create_wifi_table():
 				mac2 VARCHAR(120),\
 				mac3 VARCHAR(120),\
 				freq VARCHAR(10),\
+				count INTEGER,\
 				FOREIGN KEY(job_id) REFERENCES Jobs(id))")
 
 def create_bt_table():
@@ -100,9 +106,10 @@ def create_bt_table():
 		cursor = conn.cursor()
 		cursor.execute("CREATE TABLE IF NOT EXISTS\
 			Bluetooth(\
-				job_id integer,\
+				job_id INTEGER,\
 				channel INT(2),\
 				mac VARCHAR(120),\
+				count INTEGER,\
 				FOREIGN KEY(job_id) REFERENCES Jobs(id))")
 
 def create_zb_table():
@@ -117,6 +124,7 @@ def create_zb_table():
 				ext_dst VARCHAR(120),\
 				sec_src VARCHAR(120),\
 				sec_dst VARCHAR(120),\
+				count INTEGER,\
 				FOREIGN KEY(job_id) REFERENCES Jobs(id))")
 
 def create_job_table():
