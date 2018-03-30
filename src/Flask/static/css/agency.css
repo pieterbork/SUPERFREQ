@@ -570,22 +570,57 @@ header.masthead .intro-text .intro-heading {
   }
 }
 
-.team-member {
-  margin-bottom: 50px;
-  text-align: center;
+.jumbotron-billboard .img {
+  margin-bottom: 0px;
+  opacity: 0.2;
+  color: #fff;
+  background: #000 url("https://bootstrapcreative.com/wp-bc/wp-content/uploads/2017/03/learning-story.png") top center no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+}
+.jumbotron h2 {margin-top:0;}
+.jumbotron {
+position:relative;
+padding-top:50px;
+padding-bottom:50px;
+}
+.jumbotron .container {
+position:relative;
+z-index:2;
 }
 
-.team-member img {
-  width: 225px;
-  height: 225px;
-  border: 7px solid #fff;
+@media screen and (max-width: 768px) {
+.jumbotron {
+  padding-top:20px;
+  padding-bottom:20px;
+}
 }
 
-.team-member h4 {
-  margin-top: 25px;
-  margin-bottom: 0;
-  text-transform: none;
+section#team-member {
+  background-color: #fed136;
+  background-image: url("../img/team/test.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
+section#team-member .section-heading {
+  color: #fff;
+}
+
+section#team-member .form-group {
+  margin-bottom: 25px;
+}
+
+section#team-member .form-group input,
+section#team-member .form-group textarea {
+  padding: 20px;
+}
+
 
 .team-member p {
   margin-top: 0;
