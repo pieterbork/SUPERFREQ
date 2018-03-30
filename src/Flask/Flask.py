@@ -11,9 +11,12 @@ from flask import Flask
 from flask import render_template
 from flask import url_for
 from flask import request
+from flask import Markup
 import os
 import sys
 import csv
+import sqlite3
+import traceback
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
@@ -43,10 +46,6 @@ def scanNetwork():
 def scanImage():
     return render_template('image.html')
 
-@app.route('/database')
-def viewDatabase():
-    return render_template('database.html')
-
 app.route('/importCSV')
 def importCSV():
     return render_template('importCSV.html')
@@ -55,75 +54,58 @@ app.route('/tests')
 def runTests():
     return render_template('tests.html')
 
-@app.route('/images')
-def images():
-    fig=displayNetworkData()
-    img = StringIO()
-    fig.savefig(img)
-    img.seek(0)
-    return send_file(img, mimetype='image/png')
-
-""" 2. Display Network Data - Interactive Graphs & Statistics 
-
-def displayNetworkData():
+"""2.Using Chartjs
+@app.route('/image', methods=["GET", "POST"])
+def chart():
     print("\t Reading CSV File and Generating Graph... \n")
-
-    
-    """Below is for testing...."""
-    #Original File Output is based off of - out.csv
-
     #Create lists
     labels=[]
-    perc=[]
-
-    #Format of csv: Duration,Frame Control,Subtype,SSID,seq nr,mac 1, mac occurence
-    #Color scheme
-    a = np.random.random(40)
-    cs = cm.Set1(np.arange(40)/40.)
+    values=[]
 
     #Check csv file
     if not os.path.isfile('WifiTest.csv'):
         print("\n The MCP has derezzed the file!\n")
         sys.exit()
-    else:
-        with open('WifiTest.csv') as csvFile:
-            #Use csv parser
-            reader = csv.reader(csvFile, delimiter=',')
-            for row in reader:
-                labels.append(row[4]+"-"+row[7])
-                perc.append(float(row[8]))
-                
-        #Add data to plot
-        plt.pie(perc, labels=labels, autopct='%1.1f%%', colors=cs, shadow=True, startangle=90)
-
-        #Use for changing font colors
-        #   _, _, autotexts = plt.pie(perc, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
-        #for autotext in autotexts:
-        #    autotext.set_color('grey')
         
+    with open('WifiTest.csv') as csvFile:
+        reader = csv.reader(csvFile, delimiter=',')
+        for row in reader:
+            labels.append(row[3]+"-"+row[6])
+            values.append(float(row[7]))
+        print(labels)
 
-        #Rounds plot
-        plt.axis('equal')
-        plt.title("Frequency of MAC Addresses\n")
+    return render_template('image.html', labels=labels, values=values)"""
 
-        #Create Image
-        plt.show()  
-"""
-
-"""3.Using Chartjs"""
-def chartjs():
-    #Check csv file
-    if not os.path.isfile('WifiTest.csv'):
-        print("\n The MCP has derezzed the file!\n")
-        sys.exit()
+@app.route('/database', methods=["GET", "POST"])
+def chart():
+    db_path="../infrastructure/database/SUPERFREQ.db"
+     
+    if not os.path.isfile(db_path):
+        HTMLoutput = "Unable to connect with SUPERFREQ database! The MCP has derezzed the file!"
     else:
-        with open('WifiTest.csv') as csvFile:
-            #Use csv parser
-            reader = csv.reader(csvFile, delimiter=',')
-            for row in reader:
-                labels.append(row[3]+"-"+row[6])
-                perc.append(float(row[7]))
-
+        try:
+            daba = sqlite3.connect(db_path)
+            query = "SELECT * FROM Wifi"
+            cursor = daba.cursor()
+            cursor.execute(query)
+            rows = cursor.fetchall()
+            headers = ["duration","frame","subtype","ssid","seq_nr","mac_address_1", "mac_address_2", "mac_address_3", "frequency", "occurrence"]
+            headers = ' '.join(item.rjust(20) for item in headers)
+            HTMLformat = [headers]
+            for row in rows:
+                HTMLformat.append(' '.join(str(item).rjust(20) for item in row))
+            HTMLoutput = '\n'.join(HTMLformat)
+        except:
+            HTMLoutput = "Database read error!"
+            traceback.print_exc()    
+                
+        return(render_template('indexBlueprint.html', bodyText=Markup("<pre>"+HTMLoutput+"</pre>")))
+ 
+    """#Create lists
+    labels=[]
+    values=[]
+    db,cur = connection()
+	cur.execute("SELECT name FROM  WHERE " +  + " ")"""
 
 
 #Error handling function
