@@ -1,0 +1,2 @@
+Zigbee RF Explanations (includes WiFi & Zigbee co-existance info)
+	https://www.mobiusconsulting.com/papers/ZigBeeandWiFiInterference.pdf
