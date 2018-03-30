@@ -76,8 +76,35 @@ def chart():
 
     return render_template('image.html', labels=labels, values=values)"""
 
-@app.route('/database', methods=["GET", "POST"])
+"""2. chartjs"""
+@app.route('/image')
 def chart():
+    labels=[]
+    values=[]
+    db_path="../infrastructure/database/SUPERFREQ.db" 
+    if not os.path.isfile(db_path):
+        HTMLoutput = "Unable to connect with SUPERFREQ database! The MCP has derezzed the file!"
+    else:
+        try:
+            daba = sqlite3.connect(db_path)
+            query = "SELECT * FROM Wifi"
+            cursor = daba.cursor()
+            cursor.execute(query)
+            rows = cursor.fetchall()
+            for row in rows:
+                labels.append(str(row[3]+"-"+row[6]))
+                values.append(float(row[9]))
+            print(labels)
+            print(values)
+            cursor.close()
+            return render_template('image.html', labels=labels, values=values)
+        except:
+            HTMLoutput = "Database read error!"
+            traceback.print_exc()   
+
+"""3.view database"""
+@app.route('/database', methods=["GET", "POST"])
+def database():
     db_path="../infrastructure/database/SUPERFREQ.db"
      
     if not os.path.isfile(db_path):
@@ -101,11 +128,6 @@ def chart():
                 
         return(render_template('indexBlueprint.html', bodyText=Markup("<pre>"+HTMLoutput+"</pre>")))
  
-    """#Create lists
-    labels=[]
-    values=[]
-    db,cur = connection()
-	cur.execute("SELECT name FROM  WHERE " +  + " ")"""
 
 
 #Error handling function

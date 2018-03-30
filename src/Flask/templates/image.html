@@ -1,57 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>Chart.js </title>      
-<!-- import plugin script -->
-<script type="text/javascript" src='static/js/Chart.min.js'></script>
+{% block content %}
 
-</head>
-
-<body>
-<h1>WiFi Bar Chart</h1>
-    <!--bar chart canvas element -->
-<canvas id="myChart" width="600" height="400"></canvas>
-
-<script>
-
-// bar chart data
-
-  var barData = {
-  labels : [{% for item in labels %}
-                "{{item}}",
-            {% endfor %}],
-  datasets : [
-    {
-        fillColor: "rgba(151,187,205,0.2)",
-        strokeColor: "rgba(151,187,205,1)",
-        pointColor: "rgba(151,187,205,1)",
-        data : [{% for item in values %}
-                    {{item}},
-                  {% endfor %}]
-    }
-    ]
-  }
-
-  // get bar chart canvas
-  var ctx = document.getElementById("myChart").getContext("2d");
-
-  steps = 10
-  max = 10
-  // draw bar chart
-  new Chart(ctx).Bar(barData, {
-      scaleOverride: true,
-      scaleSteps: steps,
-      scaleStepWidth: Math.ceil(max / steps),
-      scaleStartValue: 0,
-      scaleShowVerticalLines: true,
-      scaleShowGridLines : true,
-      barShowStroke : true,
-      scaleShowLabels: true
-  });
-
-</script>
-</body>
-
-</html>
+  <h1>WiFi Scan Bar Chart</h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <canvas id="myChart" width="1200" height="600"></canvas>
+  <script>
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: "bar",
     
+      // The data for our dataset
+      data: {
+        labels: ['N/A-b8:27:eb:fe:fd:b1', 'N/A-b8:d7:af:5:ea:7a', 'N/A-1c:e6:c7:3e:73:c0', 'N/A-c:8d:db:17:f8:19', 'N/A-1c:e6:c7:d:d:b0', 'N/A-b8:27:eb:b4:4e:2c', 'N/A-b8:27:eb:9b:4c:10', 'N/A-a:8d:db:17:f8:19', 'UNKNOWN-ba:86:87:6e:ad:f1', 'UNKNOWN-ba:86:87:6e:ad:f1', 'UNKNOWN-ba:86:87:6e:ad:f1', 'UNKNOWN-ba:86:87:6e:ad:f1', 'UNKNOWN-ba:86:87:6e:ad:f1', 'UNKNOWN-ba:86:87:6e:ad:f1', 'N/A-b8:27:eb:9b:4c:10', 'N/A-b8:27:eb:fe:fd:b1', 'N/A-a:8d:db:17:f8:19', 'UNKNOWN-ba:86:87:6e:ad:f1', 'UNKNOWN-ba:86:87:6e:ad:f1', 'UNKNOWN-ba:86:87:6e:ad:f1'],
+        datasets: [
+          {
+            label: "Occurrence",
+            backgroundColor: "rgba(151,187,205,2.9)",
+            borderColor: "rgba(151,187,205,2.9)",
+            strokeColor: "rgba(151,187,205,1)",
+            data: [15.0, 15.0, 13.0, 11.0, 9.0, 9.0, 8.0, 7.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0]
+          }
+        ]
+      },
+    
+      // Configuration options go here
+      options: {
+        responsive:false,
+        maintainAspectRatio: false
+      }
+    });
+  </script>
+{% endblock %}
