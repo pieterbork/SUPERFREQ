@@ -11,7 +11,7 @@ Below you will find a wide range of documentation
 
 ###### macOS
 
-## HackRF Code Development
+## HackRF Installation alongside using Flask
 
 The goal was to make building and deploying this application as easy as possible, and only using a pentoo installation to use gnuradio was getting to be a pain...so we decided to go with docker.
 
@@ -43,6 +43,8 @@ There is an example app in the directory: SUPERFREQ/src/hackrf/SDR_Testing/
 After navigating to this directory, just run `python app.py` and visit `127.0.0.1` in your browser.
 
 Check `/tmp/out_frames` and you may see some decoded Wifi metadata information. 
+
+###### If you wish to run solely in the terminal use alias inside docker container `sfterm`
 
 ## Python Code Development
 
@@ -91,5 +93,4 @@ If you are running into errors, try the below troubleshooting:
 ###### TO FIX
 
 Terminal Development
-1. Handling Keyboard interrupts in main app
-2. Fixing Pie Chart coloring
+1. Fixing Pie Chart coloring in Raspbian distributions

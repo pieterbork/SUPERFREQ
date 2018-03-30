@@ -3,7 +3,7 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : csv_operations.py
 #purpose : Allow the user to easily traverse our app structure and have options in relation to csv data. May or may not merge with database file
-#date : 2018.03.20
+#date : 2018.03.30
 #version: 1.0.30
 #version notes (latest): Compatible w/ python2
 
@@ -80,10 +80,6 @@ def createGraphFromCsv(userSelectedCSV):
 
 def displayCsvOptions(userCSV):
 
-    def exitCsvOptions():
-        display_on = False
-        csvOperations()
-
     list_commands = """
     ############################################
     ####### CSV FILE OPTIONS ####################
@@ -96,6 +92,22 @@ def displayCsvOptions(userCSV):
     \t (Q)uit - Quit this screen \n
     """ % (userCSV)
 
+    terminal_commands = """
+    ############################################
+    ####### SUPERFREQ Terminal Interface #######
+    ####### Version: 1.2.15 #####################
+    ############################################\n
+    List of program commands:\n
+    \t 0. Help - Reprint (this) command prompt \n
+    \t 1. Scan Options - Choose different radio frequencies (e.g. wifi) to capture packets that will automatically be saved to a csv file(s) \n
+    \t 2. CSV Operations - Choose to read, remove or generate graphs from csv files \n        
+    \t 3. Database Operations - Import CSV's into the DB or just view all saved data \n
+    \t 4. Automated Test Summary - Provide quick network/system checks in an easy to read format \n
+    \t 5. Settings Page - Save user preferences & configurations for network data manipulation \n
+    \t (Q)uit - Quits the program \n
+    \n
+    """
+
     #User Loop
     display_on = True
 
@@ -103,9 +115,7 @@ def displayCsvOptions(userCSV):
 
     options = OrderedDict((('0', partial(readCsvFile, userCSV)),
                            ('1', partial(createGraphFromCsv, userCSV)),
-                           ('2', partial(removeCsvFile, userCSV)),
-                           ('Q', exitCsvOptions),
-                           ('q', exitCsvOptions)))
+                           ('2', partial(removeCsvFile, userCSV))))
                            
 
     #Mandatory First print out of commands
@@ -117,10 +127,13 @@ def displayCsvOptions(userCSV):
                     #Get user string
                     user_key_input = raw_input('Enter a number or (Q) to Quit: ').upper()
                     if user_key_input in options:
-                            action = options[user_key_input]
-                            action()
+                        action = options[user_key_input]
+                        action()
+                    elif (user_key_input == 'Q' or user_key_input =='q'):
+                        display_on = False
+                        print terminal_commands
                     else:
-                            print '\nUnknown User Input! Try Again!\n'
+                        print '\nUnknown User Input! Try Again!\n'
             except:
                     break
 

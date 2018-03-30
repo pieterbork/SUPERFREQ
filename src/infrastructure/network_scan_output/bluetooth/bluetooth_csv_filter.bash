@@ -3,7 +3,7 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : bluetooth_csv_filter.bash
 #purpose : Filter csv files to help generate graphs from the terminal application
-#date : 2018.03.29
+#date : 2018.03.30
 #version: 1.1.10
 
 CURRENTDIR=`pwd | sed 's/\(src\).*/\1/g'`
@@ -18,7 +18,7 @@ cd $FULLPATH
 # ls -1 -t | head -1
 
 #Copy the unfiltered.csv. VERIFIED!
-cp bluetooth_out.txt tmp_unfiltered.csv
+cp bt_out.txt tmp_unfiltered.csv
 
 #Find number of occurences for each line and save to a file that will be manipulated. VERIFIED!
 sort tmp_unfiltered.csv | uniq --count | sort -bgr > unique_lines.txt

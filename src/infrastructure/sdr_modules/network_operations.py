@@ -3,13 +3,13 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : network_operations.py
 #purpose : Let users choose the following frequencies they wish to capture packets from: wifi, zigbee, bluetooth, lte?
-#date : 2018.03.10
+#date : 2018.03.30
 #version: 1.1.09
 #version notes (latest): Compatible w/ python2
 
 import sys
 import time
-import csv_operations
+import system_module_operations
 from multiprocessing import Process
 from functools import partial
 from collections import OrderedDict
@@ -61,9 +61,13 @@ def zigbeeScan(frequency_options):
 #TO DO
 def lteScan(frequency_options):
 
+    print "To be added at a later date"
+
+    """
     frequency_options += '/lte/'
     scan_string = "LTE"
     scanOperations(frequency_options, scan_string)
+    """
 
 def scanOperations(function_path, scan_string):
 
@@ -103,6 +107,22 @@ def displayNetworkOptions(frequency_options):
     \t (Q)uit - Quit this screen \n
     """
 
+    terminal_commands = """
+    ############################################
+    ####### SUPERFREQ Terminal Interface #######
+    ####### Version: 1.2.15 #####################
+    ############################################\n
+    List of program commands:\n
+    \t 0. Help - Reprint (this) command prompt \n
+    \t 1. Scan Options - Choose different radio frequencies (e.g. wifi) to capture packets that will automatically be saved to a csv file(s) \n
+    \t 2. CSV Operations - Choose to read, remove or generate graphs from csv files \n        
+    \t 3. Database Operations - Import CSV's into the DB or just view all saved data \n
+    \t 4. Automated Test Summary - Provide quick network/system checks in an easy to read format \n
+    \t 5. Settings Page - Save user preferences & configurations for network data manipulation \n
+    \t (Q)uit - Quits the program \n
+    \n
+    """
+
     #User Loop
     display_on = True
 
@@ -127,6 +147,9 @@ def displayNetworkOptions(frequency_options):
                     if user_key_input in options:
                             action = options[user_key_input]
                             action()
+                    elif (user_key_input == 'Q' or user_key_input =='q'):
+                        display_on = False
+                        print terminal_commands
                     else:
                             print '\nUnknown User Input! Try Again!\n'
             except:
@@ -138,7 +161,7 @@ def displayNetworkOptions(frequency_options):
 def networkOptions():
 
     #Setup our "root" directory so anyone can call it
-    frequency_options = csv_operations.getSourceDir()
+    frequency_options = system_module_operations.getSourceDir()
     frequency_options += 'src/infrastructure/sdr_modules'
 
     print("\n\tChoose From the List of Available Frequencies... \n")
@@ -146,9 +169,6 @@ def networkOptions():
     #Call our ordered dictionary logic
     displayNetworkOptions(frequency_options)
 
-    
-
-    #csv_operations.runTerminalInfraDir()
     
 if __name__ == "__main__":
     networkOptions()

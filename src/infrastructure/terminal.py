@@ -4,7 +4,7 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : terminal.py
 #purpose : Foundation for terminal commands and possible GUI linkage
-#date : 2018.03.29
+#date : 2018.03.30
 #version: 1.2.15
 #version notes (latest): Compatible w/ python2
 
@@ -35,7 +35,7 @@ from app_unit_tests import unitTestSummary
 #SDR Module Calls
 from sdr_modules.network_operations import networkOptions
 from sdr_modules.csv_operations import csvOperations
-from sdr_modules.database_operations import databaseOperations
+from sdr_modules.database_operations import displayDatabaseOptions
 #from sdr_modules.app_unit_tests import unitTestSummary
 #from .UnitTests.app_unit_tests import unitTestSummary
 from sdr_modules.settings import settingsPage
@@ -45,7 +45,7 @@ from sdr_modules.settings import settingsPage
 
 #For multiprocessing docs: https://docs.python.org/3/library/multiprocessing.html
 
-##########      System Level Section (SOME PARTS NOT IMPLEMENTED)  ###########
+##########      System Level Section (LEGACY CODE FOR STANDALONE SCRIPT)  ###########
 
 def quitTerminal():
         #Perform a clean exit
@@ -85,11 +85,9 @@ def runTerminal():
         options = OrderedDict((('0', printHelp),
                                ('1', networkOptions),
                                ('2', csvOperations),
-                               ('3', databaseOperations),
+                               ('3', displayDatabaseOptions),
                                ('4', unitTestSummary),
-                               ('5', settingsPage),
-                               ('Q', quitTerminal),
-                               ('q', quitTerminal)))
+                               ('5', settingsPage)))
                                
 
         #Mandatory First print out of commands
@@ -103,6 +101,9 @@ def runTerminal():
                         if user_key_input in options:
                                 action = options[user_key_input]
                                 action()
+                        elif (user_key_input == 'Q' or user_key_input =='q'):
+                                display_on = False
+                                sys.exit()
                         else:
                                 print 'Unknown User Input! Try Again!'
                 except:

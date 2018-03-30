@@ -4,14 +4,17 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : database_operations.py
 #purpose : Allow user interaction with SQlite Database
-#date : 2018.03.29
-#version: 1.0.10
+#date : 2018.03.30
+#version: 1.0.15
 #version notes (latest): Compatible w/ python2
 
+import os 
 import sqlite3
 import csv
 import traceback
 import system_module_operations
+from functools import partial
+from collections import OrderedDict
 
 #Hacky for right now...setup path to the database (final DB and its path to be determined later)
 db_path = system_module_operations.getSourceDir()
@@ -48,95 +51,11 @@ def importBtCSV(csv_path):
 def importXbeeCSV(csv_path):
     return
 
-#This function may be phased out
+
 def exportCsv(csv_path):
+    
     #Export CSV contents out of a database
     #Note when storing boolean values in SQLite they follow these rules: 0 (false) and 1 (true)
-    try:
-        db=sqlite3.connect(db_path)
-        cursor = db.cursor()
-        cursor.execute('''SELECT * FROM Wifi''')
-
-        with open('export.csv', 'wb') as csv_out:
-            writer = csv.writer(csv_out)
-            writer.writerow([ i[0] for i in cursor.description ]) # heading row
-            writer.writerows(cursor.fetchall())
-
-        db.close()
-        print "Export from DB Done!"
-
-    except:
-        print "Error when exporting from Wifi Table in SUPERFREQ_Test.db"
-        return
-
-def displayTable():
-
-    #Note when storing boolean values in SQLite they follow these rules: 0 (false) and 1 (true)
-    try:
-        db=sqlite3.connect(create_table_in_db.db_path)
-        cursor = db.cursor()
-        cursor.execute('''SELECT * FROM TestsSummary''')
-
-        rows = cursor.fetchall()
-
-        for row in rows:
-            print(row)
-            db.close()
-
-    except:
-        print "Error when querying TestsSummary"
-    
-
-def displayDatabaseOptions(userCSV):
-    
-    def exitCsvOptions():
-        display_on = False
-        databaseOperations()
-
-    list_commands = """
-    ############################################
-    ####### DATABASE OPTIONS ####################
-    ############################################\n
-    File Selected: %s\n
-    Program commands:\n
-    \t 0. Export CSV from Database - Take the data held within the csv to create a graph. This graph will automatically pop up in a separate window \n
-    \t 1. Display Table - Show all content held within user chosen Table\n
-    \t (Q)uit - Quit this screen \n
-    """ % (userCSV)
-
-    #User Loop
-    display_on = True
-
-    #Available number options to execute commands
-
-    options = OrderedDict((('0', partial(exportCsv, userCSV)),
-                           ('1', displayTable),
-                           ('Q', exitCsvOptions),
-                           ('q', exitCsvOptions)))
-                           
-
-    #Mandatory First print out of commands
-    print list_commands
-
-    #Main Program Loop
-    while display_on:
-            try:
-                    #Get user string
-                    user_key_input = raw_input('Enter a number or (Q) to Quit: ').upper()
-                    if user_key_input in options:
-                            action = options[user_key_input]
-                            action()
-                    else:
-                            print '\nUnknown User Input! Try Again!\n'
-            except:
-                    break
-
-
-""" 3. Database Operations - Import, Export, and save CSV data between app sessions """
-
-
-def databaseOperations():
-
     """ LOCAL VARIABLES FOR DIRECTORY LISTING """
     #"Locate" our data directory from anywhere
     directory_list = system_module_operations.getSourceDir()
@@ -159,28 +78,125 @@ def databaseOperations():
     except:
         return
 
-    """ """
+    #See which directory the user choice
+    end_dir = os.path.basename(os.path.normpath(directory_list))
 
-
-    """ LET USER CHOOSE FILE TO GET ADDITIONAL OPTIONS """
-    #Call our file lister
-    file_user_chose = system_module_operations.getSelectedFile(directory_list)
-
-
-    """ DISPLAY OPTIONS ON USER SELECTED FILE """
-    try:
-        #Add file to full directory path
-        directory_list = ''.join((directory_list,'/', file_user_chose))
-    except:
-        return
+    #Create a string based off of end dir
+    if (end_dir == 'wifi'):
+        chosen_export_table_string = '''SELECT * FROM Wifi'''
+        export_file_directory = db_path + 'src/infrastructure/network_scan_output/wifi/wifi_table_export.csv'
+    elif (end_dir == 'bluetooth'):
+        chosen_export_table_string = '''SELECT * FROM Bluetooth'''
+        export_file_directory = db_path + 'src/infrastructure/network_scan_output/bluetooth/bluetooth_table_export.csv'
+    elif (end_dir == 'zigbee'):
+        chosen_export_table_string = '''SELECT * FROM Xbee'''
+        export_file_directory = db_path + 'src/infrastructure/network_scan_output/zigbee/zigbee_table_export.csv'
     
-    #See if user wants to output, create a graph or choose a different directory
-    displayDatabaseOptions(directory_list)
+    try:
+        db=sqlite3.connect(db_path)
+        cursor = db.cursor()
+        cursor.execute(chosen_export_table_string)
+
+        with open(export_file_directory, 'wb') as csv_out:
+            writer = csv.writer(csv_out)
+            writer.writerow([ i[0] for i in cursor.description ]) # heading row
+            writer.writerows(cursor.fetchall())
+
+        db.close()
+        print "Export from DB Done!"
+
+    except:
+        print "Error when exporting from Wifi Table in SUPERFREQ_Test.db"
+        return
+
+def displayTables(userSignalTable):
+
+    #Note when storing boolean values in SQLite they follow these rules: 0 (false) and 1 (true)
+    try:
+        db=sqlite3.connect(db_path)
+        cursor = db.cursor()
+        cursor.execute(userSignalTable)
+
+        rows = cursor.fetchall()
+
+        for row in rows:
+            print(row)
+            db.close()
+
+    except:
+        print "Error when querying TestsSummary: \n"
+        traceback.print_exc()
+
+
+""" 3. Database Operations - Import, Export, and save CSV data between app sessions """
+    
+
+def displayDatabaseOptions():
+
+
+    list_commands = """
+    ############################################
+    ####### DATABASE OPTIONS ####################
+    ############################################\n
+    File Selected: %s\n
+    Program commands:\n
+    \t 0. Export CSV from Database - Take the data held within the csv to create a graph. This graph will automatically pop up in a separate window \n
+    \t 1. Display Tests Table - Show all content held within Tests Table\n
+    \t 2. Display Wifi Table - Show all content held within Wifi Table\n
+    \t 3. Display Bluetooth Table - Show all content held within BlueTooth Table\n
+    \t 4. Display Xbee Table - Show all content held within Xbee Table\n
+    \t (Q)uit - Quit this screen \n
+    """
+
+    terminal_commands = """
+    ############################################
+    ####### SUPERFREQ Terminal Interface #######
+    ####### Version: 1.2.15 #####################
+    ############################################\n
+    List of program commands:\n
+    \t 0. Help - Reprint (this) command prompt \n
+    \t 1. Scan Options - Choose different radio frequencies (e.g. wifi) to capture packets that will automatically be saved to a csv file(s) \n
+    \t 2. CSV Operations - Choose to read, remove or generate graphs from csv files \n        
+    \t 3. Database Operations - Import CSV's into the DB or just view all saved data \n
+    \t 4. Automated Test Summary - Provide quick network/system checks in an easy to read format \n
+    \t 5. Settings Page - Save user preferences & configurations for network data manipulation \n
+    \t (Q)uit - Quits the program \n
+    \n
+    """
+
+    #User Loop
+    display_on = True
+
+    #Available number options to execute commands
+
+    options = OrderedDict((('0', exportCsv),
+                           ('1', partial(displayTables,'''SELECT * FROM TestsSummary''')),
+                           ('2', partial(displayTables,'''SELECT * FROM Wifi''')),
+                           ('3', partial(displayTables,'''SELECT * FROM Bluetooth''')),
+                           ('4', partial(displayTables,'''SELECT * FROM Xbee'''))))
+                           
+
+    #Mandatory First print out of commands
+    print list_commands
+
+    #Main Program Loop
+    while display_on:
+            try:
+                    #Get user string
+                    user_key_input = raw_input('Enter a number or (Q) to Quit: ').upper()
+                    if user_key_input in options:
+                            action = options[user_key_input]
+                            action()
+                    elif (user_key_input == 'Q' or user_key_input =='q'):
+                        display_on = False
+                        print terminal_commands
+                    else:
+                            print '\nUnknown User Input! Try Again!\n'
+            except:
+                    break
 
 
 ##
 
 if __name__ == "__main__":
-        #databaseOperations()
-    #Hard code test
-    importWifiCSV('/home/pi/Capstone/SUPERFREQ/src/infrastructure/network_scan_output/wifi/wifi_data_graph_ready.csv')
+    displayDatabaseOptions()
