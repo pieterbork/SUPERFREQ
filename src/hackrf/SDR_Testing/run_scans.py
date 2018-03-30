@@ -9,7 +9,7 @@ wifi_options = {"user_channels": []}
 zigbee_options = {"user_channels": []}
 bluetooth_options = {"user_channels": []}
 
-def scan_manager(wifi_options=wifi_options, zigbee_options=zigbee_options, bluetooth_options=bluetooth_options, scan_time=60, socketio=None, send_updates=False):
+def scan_manager(wifi_options=wifi_options, zigbee_options=zigbee_options, bluetooth_options=bluetooth_options, scan_time=60, socketio=None, send_updates=False, scan_name):
 	total_scan_time = 0
 	if (send_updates):		#allows time for pretty animations
 		sleep(4)
@@ -31,6 +31,7 @@ def scan_manager(wifi_options=wifi_options, zigbee_options=zigbee_options, bluet
 										send_updates=send_updates,
 										elapsed_time=total_scan_time)
 			total_scan_time += scan_time*len(zigbee_options['user_channels'])
+
 		if len(bluetooth_options['user_channels']) > 0:
 			print(bluetooth_options['user_channels'],scan_time,total_scan_time)
 			run_bt_scan(user_channels=bluetooth_options['user_channels'],
@@ -39,6 +40,7 @@ def scan_manager(wifi_options=wifi_options, zigbee_options=zigbee_options, bluet
 										send_updates=send_updates,
 										elapsed_time=total_scan_time)
 			total_scan_time += scan_time*len(bluetooth_options['user_channels'])
+
 		if (send_updates):
 			socketio.emit('progress', {'msg': total_scan_time})
 			socketio.emit('update', {'msg':"Done"})

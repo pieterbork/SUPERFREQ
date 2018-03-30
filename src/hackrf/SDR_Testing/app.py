@@ -5,6 +5,7 @@ from zigbee_rftap_nox import default_zigbee_freqs
 from bluetooth_scan import default_bt_freqs
 from run_scans import scan_manager
 import thread
+from time import time,strftime
 
 app = Flask(__name__)
 socketio = SocketIO(app, host="0.0.0.0")
@@ -12,6 +13,9 @@ socketio = SocketIO(app, host="0.0.0.0")
 @app.route('/scan', methods=["GET", "POST"])
 def scan():
 	if (request.method == "POST"):
+		user_wifi_channels = []
+		user_zigbee_channels = []
+		user_bt_channels = []
 		scan_time = 60
 		try:
 			scan_time = int(request.form['time'])
@@ -19,39 +23,56 @@ def scan():
 				scan_time = 0
 		except ValueError:
 			pass
+		name = strftime("%Y-%m-%d_%H:%M:%S")
+		if request.form['scan_name'] != "":
+			name = str(request.form['scan_name'])	#TODO: sanitize this
+
 		kwargs = {"socketio":socketio,
 							"send_updates": True,
-							"scan_time": scan_time}
-		user_wifi_channels = []
-		user_zigbee_channels = []
-		user_bt_channels = []
-		if request.form['all_wifi'] == "1":
-			user_wifi_channels = default_wifi_freqs.keys()
+							"scan_time": scan_time,
+							"scan_name": name}
+
+		wifi_preset = request.form['wifi_preset']
+		zigbee_preset = request.form['zigbee_preset']
+		bt_preset = request.form['bt_preset']
+
+		if (int(wifi_preset) or int(zigbee_preset) or int(bt_preset)):
+			if (int(wifi_preset)):
+				kwargs['wifi_options'] = {"user_channels":["1", "6", "11"]}
+			if (int(zigbee_preset)):
+				kwargs['zigbee_options'] = {"user_channels":["15", "20", "25", "26"]}
+			if (int(bt_preset)):
+				kwargs['bluetooth_options'] = {"user_channels":["37"]}
+
 		else:
-			form_wifi_freq_list = request.form.getlist('wifi_freq')
-			form_wifi_freq_list.pop(0)		#to get rid of the placeholder that prevents flask errors
-			for freq in form_wifi_freq_list:
-				user_wifi_channels.append(freq)
-		if request.form['all_zigbee'] == "1":
-			user_zigbee_channels = default_zigbee_freqs.keys()
-		else:
-			form_zigbee_freq_list = request.form.getlist('zigbee_freq')
-			form_zigbee_freq_list.pop(0)		#to get rid of the placeholder that prevents flask errors
-			for freq in form_zigbee_freq_list:
-				user_zigbee_channels.append(freq)
-		if request.form['all_bt'] == "1":
-			user_bt_channels = default_bt_freqs.keys()
-		else:
-			form_bt_freq_list = request.form.getlist('bt_freq')
-			form_bt_freq_list.pop(0)		#to get rid of the placeholder that prevents flask errors
-			for freq in form_bt_freq_list:
-				user_bt_channels.append(freq)
-		if len(user_wifi_channels) > 0:
-			kwargs['wifi_options'] = {"user_channels":user_wifi_channels}
-		if len(user_zigbee_channels) > 0:
-			kwargs['zigbee_options'] = {"user_channels":user_zigbee_channels}
-		if len(user_bt_channels) > 0:
-			kwargs['bluetooth_options'] = {"user_channels":user_bt_channels}
+			if request.form['all_wifi'] == "1":
+				user_wifi_channels = default_wifi_freqs.keys()
+			else:
+				form_wifi_freq_list = request.form.getlist('wifi_freq')
+				form_wifi_freq_list.pop(0)		#to get rid of the placeholder that prevents flask errors
+				for freq in form_wifi_freq_list:
+					user_wifi_channels.append(freq)
+			if request.form['all_zigbee'] == "1":
+				user_zigbee_channels = default_zigbee_freqs.keys()
+			else:
+				form_zigbee_freq_list = request.form.getlist('zigbee_freq')
+				form_zigbee_freq_list.pop(0)		#to get rid of the placeholder that prevents flask errors
+				for freq in form_zigbee_freq_list:
+					user_zigbee_channels.append(freq)
+			if request.form['all_bt'] == "1":
+				user_bt_channels = default_bt_freqs.keys()
+			else:
+				form_bt_freq_list = request.form.getlist('bt_freq')
+				form_bt_freq_list.pop(0)		#to get rid of the placeholder that prevents flask errors
+				for freq in form_bt_freq_list:
+					user_bt_channels.append(freq)
+			if len(user_wifi_channels) > 0:
+				kwargs['wifi_options'] = {"user_channels":user_wifi_channels}
+			if len(user_zigbee_channels) > 0:
+				kwargs['zigbee_options'] = {"user_channels":user_zigbee_channels}
+			if len(user_bt_channels) > 0:
+				kwargs['bluetooth_options'] = {"user_channels":user_bt_channels}
+
 		thread.start_new_thread(scan_manager, (), kwargs)
 		return render_template("run_scan.html", scan_time=kwargs['scan_time'])
 	elif (request.method == "GET"):
