@@ -184,7 +184,7 @@ def parse_zigbee_scan():
 			else:
 				out_str_li.append("sec_dst: XX:XX:XX:XX:XX:XX:XX:XX")
 		pkt_info.append(out_str_li)
-	with open("/tmp/zb_frames", "a") as f:
+	with open("/tmp/zb_out.txt", "a") as f:
 		for pkt in pkt_info:
 			if (len(pkt) > 0):
 				f.write(", ".join(pkt) + "\n")

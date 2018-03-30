@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	width: 100%;
 	background-color: #e0ebff;
+	overflow:	hidden;
 }
 
 a {
@@ -41,7 +42,7 @@ a {
 
 .options {
 	overflow: hidden;
-	max-height: 0px;
+	max-height: 600px;
 	-webkit-transition: max-height 0.5s ease-in-out;
 	-moz-transition: max-height 0.5s ease-in-out;
 	transition: max-height 0.5s ease-in-out;

@@ -3,7 +3,7 @@
 <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
 <div class="content">
 	<div class="options_container">
-		<h2><a href="javascript:void(0);" onclick="toggleOptions();" class="toggle_bar">Scan Options&nbsp;<span id="caret" class="fa fa-caret-down"></span></a></h2>
+		<h2><a href="javascript:void(0);" onclick="toggleOptions();" class="toggle_bar">Scan Options&nbsp;<span id="caret" class="fa fa-caret-up"></span></a></h2>
 		<div id="options" class="options">
 			<form action="/scan" method="post">
 				<div class="scan_button_container">
@@ -70,9 +70,17 @@
 							</div>
 						</td>
 						<td valign="top">
+							<div style="text-align:center;">
+								<input type="hidden" name="all_bt" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value" style="margin-left:-5px;">All</input>
+							</div>
 							<div class="flex-container">
 								<div class="flex-child">
-									<h4>Freq</h4>
+									<h4>2.4 GHz</h4>
+									<input type="hidden" name="bt_freq" value="">
+									<select name="bt_freq" multiple size="10">
+									{% for freq in default_bt_freqs %}
+										<option value="{{ freq }}">Channel {{ freq }}</option>
+									{% endfor %}
 								</div>
 							</div>
 						</td>
@@ -92,7 +100,7 @@
 		function toggleOptions() {
 			optionsDiv = document.getElementById("options");
 			caret = document.getElementById("caret");
-			if (optionsDiv.style.maxHeight == "0px" || !optionsDiv.style.maxHeight) {
+			if (optionsDiv.style.maxHeight == "0px") {
 				optionsDiv.style.maxHeight = "600px";
 				caret.classList.remove("fa-caret-down");
 				caret.classList.add("fa-caret-up");

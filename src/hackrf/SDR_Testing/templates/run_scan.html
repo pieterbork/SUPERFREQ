@@ -57,6 +57,9 @@
 		socket.on('zigbee_count', function(data) {
 			$('#zigbee_packet_count')[0].innerHTML = data.msg;
 		});
+		socket.on('bt_count', function(data) {
+			$('#bt_packet_count')[0].innerHTML = data.msg;
+		});
 		socket.on('progress', function(data) {
 			if (!isNaN(data.msg)) {
 				var percent = Math.round(Number(data.msg) / total_scan_time * 100);
