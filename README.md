@@ -3,33 +3,44 @@
 
 Below you will find a wide range of documentation
 
+## Major Supported Systems
+
+###### Linux Family: Debian(Raspbian)/Fedora/Arch
+
+###### Windows
+
+###### macOS
+
 ## HackRF Code Development
 
 The goal was to make building and deploying this application as easy as possible, and only using a pentoo installation to use gnuradio was getting to be a pain...so we decided to go with docker.
 
-Integration is still in progress, but here's the basics of getting set up.
 
-1. Install docker (easily available from most package managers)
+1. See Building the Docker Image [System_Here] Sections for Installing Docker on your respective system
 
-2. Obtain a copy of the gnuradio:latest docker image by either
+2. Download Docker Files: `git clone https://github.com/pieterbork/docker-superfreq.git`
    
-   a) Building gnuradio:latest using [this](https://github.com/pieterbork/docker-gnuradio) Dockerfile (This takes a decent amount of time).
+   a) Local Install: `sudo docker build -t superfreq:latest .`
+
+   b) The install location for the docker image can be found in variable (usually in /dev on Linux machines)
    
-   b) Pulling from a docker repository (currently only Pieter's computer).
+   c) To see the image run: `docker images --all`
+
+   d) For more information see: https://docs.docker.com/engine/reference/commandline/images/#filtering
    
-3. Build the [docker-superfreq image](https://github.com/pieterbork/docker-superfreq)
+3. Run the docker container: `sudo docker run --name sf -it --privileged -p 80:5000 -v /dev/bus/usb:/dev/bus/usb superfreq bash`
    
-Using the docker run commands given in the docker-superfreq documentation, you should end up with a bash shell inside of the superfreq docker container. 
+   a) If it already exists, remove it and run again: `sudo docker rm sf` 
 
-Let's test some things, and then we'll run some actual code!
+4. First, plug in the hackrf run `hackrf_info` - you should see information about your hackrf board.
 
-First, plug in the hackrf run `hackrf_info` - you should see information about your hackrf board.
+   a) Now you're ready to collect some data!
 
-If you see errors complaining about connecting to X servers, you probably aren't passing your display through which I explain in the docker-supfreq docs.
+Right now Wifi, Zigbee, and Bluetooth scanning are implemented with various libraries.
 
-Next, cd your way to `SUPERFREQ/src/hackrf/SDR_Testing/` and try running `python wifi_rx_rftap_nogrc.py`.
+There is an example app in the directory: SUPERFREQ/src/hackrf/SDR_Testing/
 
-If you see a gray box appear with no information and things printing out in your terminal - that's awesome!
+After navigating to this directory, just run `python app.py` and visit `127.0.0.1` in your browser.
 
 Check `/tmp/out_frames` and you may see some decoded Wifi metadata information. 
 
@@ -50,6 +61,10 @@ To develop for this project on Raspbian the following steps must be taken
    - Run `sudo apt-get install docker-ce`
 3. Check install
    - `sudo docker run hello-world`
+
+#Add Pieter's stuff here
+
+To find information on the docker-image
 
 Sources: https://docs.docker.com/install/linux/docker-ce/debian/#install-docker-ce-1
 

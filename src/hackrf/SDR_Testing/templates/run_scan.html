@@ -20,12 +20,25 @@
 			</span>
 		</div>
 	</div>
+	<div class="packet_count_container">
+		<p class="packet_count">WiFi Packets Recieved - <span id="wifi_packet_count">0</span></p>
+		<p class="packet_count">Zigbee Packets Recieved - <span id="zigbee_packet_count">0</span></p>
+		<p class="packet_count">Bluetooth Packets Recieved - <span id="bt_packet_count">0</span></p>
+	</div>
+	<div class="progress_bar_container">
+		<div class="progress_bar_outer">
+			<span id="progress_percent" class="progress_percent">0</span>
+			<div id="progress_bar" class="progress_bar_inner">
+			</div>
+		</div>
+	</div>
 	<div id="results_link_container" class="results_link_container">
 		<a href="/results" id="results_link" class="results_link"><h2>See Results<span class="fa fa-angle-double-right" style="margin-left: 20px;"></span></h2></a>
 	</div>
 </div>
 <script type="text/javascript" charset="utf-8">
 	var socket;
+	var total_scan_time = Number({{ scan_time }});
 	$(document).ready(function() {
 		socket = io.connect("http://" + document.domain + ":" + location.port);
 		socket.on('update', function(data) {
@@ -36,6 +49,24 @@
 				$('#status')[0].style.background = "#55bb55";
 			} else {
 				$('#scan_status')[0].innerHTML = data.msg;
+			}
+		});
+		socket.on('wifi_count', function(data) {
+			$('#wifi_packet_count')[0].innerHTML = data.msg;
+		});
+		socket.on('zigbee_count', function(data) {
+			$('#zigbee_packet_count')[0].innerHTML = data.msg;
+		});
+		socket.on('progress', function(data) {
+			if (!isNaN(data.msg)) {
+				var percent = Math.round(Number(data.msg) / total_scan_time * 100);
+				if (percent >= 0 && percent <= 100) {
+					$('#progress_percent')[0].innerHTML = percent;
+					if (percent >= 99) {
+						percent += 1;
+					}
+					$('#progress_bar')[0].style.width = String(percent) + "%";
+				}
 			}
 		});
 	});

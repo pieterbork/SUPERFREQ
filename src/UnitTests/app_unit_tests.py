@@ -4,8 +4,8 @@
 #author : Kade Cooper kaco0964@colorado.edu
 #name : app_unit_tests.py
 #purpose : Run automated tests for terminal and flask environments. REWORK in progress
-#date : 2018.03.24
-#version: 1.5.10
+#date : 2018.03.29
+#version: 1.5.12
 #version notes (latest): Compatible w/ python2
 
 import os
@@ -85,6 +85,8 @@ class TestNetworkDevices(unittest.TestCase):
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
             assert False
 
+    """ STRETCH GOAL WHICH REQUIRES SPECIAL HARDWARE AND COMMANDS NOT WIDELY AVAILABLE. MAYBE ONE DAY...
+
     def test_if_system_zigbee_on(self):
         #DB info
         rowid = int(6)
@@ -117,6 +119,8 @@ class TestNetworkDevices(unittest.TestCase):
         
         #TODO
         pass
+
+    """
 
     def test_internet_connectivity(self):
         #DB info
@@ -161,13 +165,6 @@ class TestSdrHardware(unittest.TestCase):
         test = 'hackrf_rx'
         pass
 
-    #Will include a script to save output
-    def test_sdr_tx(self):
-        #DB info
-        rowid = int(12)
-        test = 'hackrf_tx'
-        pass
-
 class TestInternalSystems(unittest.TestCase):
 
     def test_read_csv(self):
@@ -208,9 +205,9 @@ class TestInternalSystems(unittest.TestCase):
     def test_filter_csv(self):
         #DB info
         rowid = int(14)
+        #This only tests Wifi...the most common test to be performed
         test = 'filter_csv'
 
-        '''
         #Run Test and record within the database
         test_file = lib_for_unit_tests.csv_filter_path
         return_code = subprocess.call(test_file)
@@ -222,8 +219,7 @@ class TestInternalSystems(unittest.TestCase):
             boolean_value = int(0)
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
             assert False
-        '''
-        pass
+
 
     def test_generate_graph(self):
         #DB info
@@ -327,6 +323,8 @@ class TestInternalSystems(unittest.TestCase):
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
             assert False
 
+""" TESTS TO ADD FOR COMPLETE COVERAGE AT A LATER DATE
+
     def test_tkinter(self):
         #DB info
         rowid = int(21)
@@ -361,22 +359,6 @@ class TestInternalSystems(unittest.TestCase):
             boolean_value = int(0)
             lib_for_unit_tests.statusTest(rowid, test, boolean_value)
             assert False
-
-
-"""
-#Python library unittest will go here
-
-def sdrWifiTests():
-    wifi_return_code = subprocess.checkoutput("")
-    #If wifi_return_code is true than a wireless service has been turned off
-    if (wifi_return_code):
-        print("\t Wifi: {} \n".format(passedCheck))
-    else:
-        passedCheck="On"
-        print("\t Wifi: {} \n".format(passedCheck))
-
-def sdrBluetoothTests():
-    print("\t BlueTooth: {} \n".format(passedCheck))
 """
 
 """ 4. Automated Test Summary - Provide quick network/system checks in an easy to read format. Calls functions in sdr_module to increase file clarity """

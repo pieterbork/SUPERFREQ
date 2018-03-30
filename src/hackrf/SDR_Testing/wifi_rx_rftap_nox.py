@@ -163,9 +163,31 @@ def display_wifi_channel(ch):
 		return "error - {}".format(ch)
 	return "WiFi - {0} GHz Channel {1}".format(ghz, channel_num)
 
+def sleep_channel(channel_time, socketio, elapsed_time):
+	num_updates = int(channel_time)	* 2		#update every half second
+	leftover_time = channel_time - int(channel_time)
+	while (True):		#always run the update at least once
+		line_count = 0
+		try:
+			with open('/tmp/out_frames', 'r') as f:
+				for line in f:
+					line_count += 1
+		except IOError:
+			pass
+		socketio.emit('wifi_count', {'msg': line_count})
+		socketio.emit('progress', {'msg': elapsed_time})
+		if num_updates < 1:
+			break
+		else:
+			elapsed_time += 0.5
+			sleep(0.5)
+			num_updates -= 1
+	elapsed_time += leftover_time
+	sleep(leftover_time)
+	return elapsed_time
 
-def run_wifi_scan(socketio=None, user_channels=[], send_updates=False, scan_time=120):
-	print(socketio, user_channels, send_updates)
+
+def run_wifi_scan(socketio=None, user_channels=[], send_updates=False, scan_time=120, elapsed_time=0):
 	scan_channels = OrderedDict()
 	if(len(user_channels) < 1):
 		scan_channels = default_wifi_freqs
@@ -175,20 +197,18 @@ def run_wifi_scan(socketio=None, user_channels=[], send_updates=False, scan_time
 				scan_channels[ch] = default_wifi_freqs[ch]
 			except KeyError:
 				pass
+	channel_time = float(scan_time)/len(scan_channels)
 	if(len(scan_channels) > 0):
 		wifi_tb = wifi_rx_rftap_nox()
 		wifi_tb.start()
-		if send_updates:
-			sleep(4)
 		for ch in scan_channels:
 			if send_updates:
 				socketio.emit('update', {'msg':display_wifi_channel(ch)})
+				elapsed_time = sleep_channel(channel_time, socketio, elapsed_time)
 			else:
 				print("\n\nSetting radio to {}".format(display_wifi_channel(ch)))
+				sleep(channel_time)
 			wifi_tb.set_freq(scan_channels[ch])
-			sleep(float(scan_time)/len(scan_channels))
-		if send_updates:
-			socketio.emit('update', {'msg':"Done"})
 		wifi_tb.stop()
 		wifi_tb.wait()
 

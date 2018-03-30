@@ -3,8 +3,8 @@
 
 #author : Kade Cooper kaco0964@colorado.edu
 #name : lib_for_unit_test.py
-#purpose : Custom library used solely for unit tests
-#date : 2018.03.24
+#purpose : Custom library used solely for unit tests. Was meant to disable/enable functionality of app but there were concerns of how reliable various systems would be able to perform these tests. Further investigation is required!
+#date : 2018.03.29
 #version: 1.0.15
 #version notes (latest): Compatible w/ python2
 
@@ -34,14 +34,24 @@ root_path = cwd.split(separator, 1)[0]
 """ Below Constants are called in app_unit_tests to ensure working availability anywhere in the app. Used Joins as they are usually faster"""
 
 #Network File Constants
+
+#Standard tests
 wifi_onboard_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/wifi_status.bash'])
 wifi_external_devices_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/wifi_nearby_devices.bash'])
 bluetooth_onboard_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/bluetooth_status.bash'])
 bluetooth_external_devices_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/bluetooth_nearby_devices.bash'])
-#zigbee_onboard_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/'])
-#zigbee_external_devices_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/'])
-#lte_onboard_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/'])
-#lte_external_devices_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/'])
+
+""" STRETCH GOAL WHICH REQUIRES SPECIAL HARDWARE AND COMMANDS NOT WIDELY AVAILABLE. MAYBE ONE DAY...
+
+zigbee_onboard_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/'])
+zigbee_external_devices_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/'])
+
+#TO DO FUTURE Projects:
+lte_onboard_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/'])
+lte_external_devices_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/'])
+
+"""
+
 ww_internet_path = ''.join([root_path,'src/UnitTests/Network_Devices_UnitTests/internet_status.bash'])
 
 #Network File List of Paths
@@ -52,7 +62,7 @@ network_file_paths_list = [wifi_onboard_path, wifi_external_devices_path, blueto
 #SDR File Constants
 hackrf_usb_path = ''.join([root_path,'src/UnitTests/SDR_UnitTests/usb_status.bash'])
 #hackrf_rx_path = ''.join([root_path,'src/UnitTests/SDR_UnitTests/'])
-#hackrf_tx_path = ''.join([root_path,'src/UnitTests/SDR_UnitTests/'])
+
 
 #SDR File List of Paths
 sdr_file_paths_list = [hackrf_usb_path]
@@ -66,8 +76,8 @@ sdr_file_paths_list = [hackrf_usb_path]
 #####   CSV Operations  ####
 read_csv_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/csv_operations/read_csv.py'])
 copy_delete_csv_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/csv_operations/cp_rm.py'])
-csv_filter_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/csv_operations/csv_filter.bash'])
-generate_graph_path = ''.join(['src/UnitTests/Infrastructure_UnitTests/csv_operations/generate_graph.py'])
+csv_filter_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/csv_operations/wifi_csv_filter.bash'])
+generate_graph_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/csv_operations/generate_graph.py'])
 
 #CSV File List of Paths
 csv_internal_file_paths_list = [read_csv_path, copy_delete_csv_path, csv_filter_path, generate_graph_path]
@@ -89,12 +99,13 @@ db_internal_file_paths_list = [create_empty_db_path, create_table_in_db_path, qu
 
 ##### GUI Operations ####
 
-tkinter_run_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/tkinter_run.py'])
-flask_run_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/flask_run.py'])
+#Unneeded but can later be added in
+#tkinter_run_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/tkinter_run.py'])
+#flask_run_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/flask_run.py'])
 
 
 #GUI File List of Paths
-gui_file_paths_list = [tkinter_run_path, flask_run_path]
+#gui_file_paths_list = [tkinter_run_path, flask_run_path]
 
 
 """ """
@@ -104,7 +115,7 @@ def fileCheckListCaller():
     fileCheck(sdr_file_paths_list)
     fileCheck(csv_internal_file_paths_list)
     fileCheck(db_internal_file_paths_list)
-    fileCheck(gui_file_paths_list)
+    #fileCheck(gui_file_paths_list)
 
 #Check to ensure each file exists otherwise, we cannot test
 def fileCheck(file_paths_list):
@@ -133,12 +144,11 @@ def cleanUpTestDir():
 
     try:
         """ Define constants for files to be removed """
-        filter_csv_output_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/csv_operations/filtered.csv'])
         testdata_csv_output_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/csv_operations/test_data.png'])
         superfreqtest_db_path = ''.join([root_path,'src/UnitTests/Infrastructure_UnitTests/database_operations/SUPERFREQ_Test.db'])
 
         #Cleanup locally defined constants
-        files_to_remove = [filter_csv_output_path, testdata_csv_output_path, superfreqtest_db_path]
+        files_to_remove = [testdata_csv_output_path, superfreqtest_db_path]
 
         #Check if these file exist
         #fileCheck(files_to_remove)

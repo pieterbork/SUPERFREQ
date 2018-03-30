@@ -1,0 +1,9 @@
+.DS_Store
+.env
+.flaskenv
+*.pyc
+*.pyo
+*.egg
+*.egg-info/
+__pycache__/
+
