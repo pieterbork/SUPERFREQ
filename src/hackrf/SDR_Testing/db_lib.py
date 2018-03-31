@@ -12,8 +12,11 @@ db_path = '../../infrastructure/database/SUPERFREQ.db'
 def parse_wifi_records(job_id, fp=None):
 	records = []
 	fp = wifi_out if fp is None else fp
-	with open(fp) as fh:
-		lines = fh.readlines()
+	try:
+		with open(fp) as fh:
+			lines = fh.readlines()
+	except:
+		return []
 	#Indexes in each record for ssid, mac1, mac2, mac3, freq
 	items = [3,5,6,7,8]
 	for line in lines:
@@ -30,11 +33,14 @@ def parse_wifi_records(job_id, fp=None):
 	return [tuple(list(record) + [counts[record]]) for record in set(records)]
 
 #Reads bt_out file, parses records, returns list
-def parse_bt_records(job_id, fp):
+def parse_bt_records(job_id, fp=None):
 	records = []
 	fp = bt_out if fp is None else fp
-	with open(fp, 'r') as fh:
-		lines = fh.readlines()
+	try:
+		with open(fp, 'r') as fh:
+			lines = fh.readlines()
+	except:
+		return []
 	for line in lines:
 		parts = line.split()
 		if len(parts) != 11:
@@ -49,8 +55,11 @@ def parse_bt_records(job_id, fp):
 def parse_zb_records(job_id, fp=None):
 	records = []
 	fp = zb_out if fp is None else fp
-	with open(fp, 'r') as fh:
-		lines = fh.readlines()
+	try:
+		with open(fp, 'r') as fh:
+			lines = fh.readlines()
+	except:
+		return []
 	for line in lines:
 		parts = line.split()
 		if len(parts) != 12:

@@ -1,0 +1,7 @@
+<h1>Check out some results from previous jobs!</h1>
+{% for job in jobs %}
+{% set job_name = job[1].encode("utf-8") %}
+<div>
+	<a href="/results/{{job_name}}">{{ job_name }}</a>
+</div>
+{% endfor %}

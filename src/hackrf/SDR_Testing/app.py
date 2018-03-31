@@ -12,6 +12,12 @@ from random import randrange
 app = Flask(__name__)
 socketio = SocketIO(app, host="0.0.0.0")
 
+@app.route('/', methods=["GET"])
+def dash():
+	jobs = db_lib.get_records_from_table("Jobs")
+	
+	return render_template("dashboard.html", jobs=jobs)
+
 @app.route('/scan', methods=["GET", "POST"])
 def scan():
 	if (request.method == "POST"):
@@ -25,14 +31,14 @@ def scan():
 				scan_time = 0
 		except ValueError:
 			pass
-		name = strftime("%Y-%m-%d_%H:%M:%S")
+		job_name = strftime("%Y-%m-%d_%H:%M:%S")
 		if request.form['scan_name'] != "":
-			name = str(request.form['scan_name'])	#TODO: sanitize this
+			job_name = str(request.form['scan_name'])	#TODO: sanitize this
 
 		kwargs = {"socketio":socketio,
 							"send_updates": True,
 							"scan_time": scan_time,
-							"scan_name": name}
+							"scan_name": job_name}
 
 		wifi_preset = request.form['wifi_preset']
 		zigbee_preset = request.form['zigbee_preset']
@@ -76,15 +82,21 @@ def scan():
 				kwargs['bluetooth_options'] = {"user_channels":user_bt_channels}
 
 		thread.start_new_thread(scan_manager, (), kwargs)
-		return render_template("run_scan.html", scan_time=kwargs['scan_time'])
+		return render_template("run_scan.html", 
+					scan_time=kwargs['scan_time'],
+					job=job_name)
 	elif (request.method == "GET"):
-		return render_template("show_scan.html", default_wifi_freqs=default_wifi_freqs, default_zigbee_freqs=default_zigbee_freqs, default_bt_freqs=default_bt_freqs)
+		return render_template("show_scan.html", 
+					default_wifi_freqs=default_wifi_freqs, 
+					default_zigbee_freqs=default_zigbee_freqs, 
+					default_bt_freqs=default_bt_freqs)
 
-@app.route('/results')
-def results():
-	wifi_records = db_lib.get_records_from_table("Wifi")	
-	zigbee_records = db_lib.get_records_from_table("Zigbee")	
-	bt_records = db_lib.get_records_from_table("Bluetooth")	
+@app.route('/results/<job>')
+def results(job):
+	job_id = db_lib.get_job_id(job)
+	wifi_records = db_lib.get_records_from_table("Wifi", job_id)	
+	zigbee_records = db_lib.get_records_from_table("Zigbee", job_id)	
+	bt_records = db_lib.get_records_from_table("Bluetooth", job_id)	
 	channels = {}
 	for record in wifi_records:
 		try:
@@ -96,7 +108,16 @@ def results():
 	for i in range(0, len(channel_names)):
 		channel_colors.append("rgb({0}, {1}, {2})".format(randrange(0, 255), randrange(0, 255), randrange(0, 255)))
 
-	return render_template("results.html", records={"Wifi":sorted(wifi_records, key=lambda x: x[6], reverse=True), "Zigbee":sorted(zigbee_records, key=lambda x: x[7], reverse=True), "Bluetooth":sorted(bt_records, key=lambda x: x[3], reverse=True)}, channels=channel_names, channel_counts=channels.values(), channel_colors=channel_colors)
+	return render_template("results.html", 
+				records={
+					"Wifi":sorted(wifi_records, key=lambda x: x[6], reverse=True), 
+					"Zigbee":sorted(zigbee_records, key=lambda x: x[7], reverse=True), 
+					"Bluetooth":sorted(bt_records, key=lambda x: x[3], reverse=True)
+				}, 
+				channels=channel_names, 
+				channel_counts=channels.values(), 
+				channel_colors=channel_colors,
+				job=job)
 
 if __name__ == '__main__':
     app.run("0.0.0.0")	
