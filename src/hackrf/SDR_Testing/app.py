@@ -1,11 +1,13 @@
 from flask import Flask,render_template,request
 from flask_socketio import SocketIO,emit
-from wifi_rx_rftap_nox import default_wifi_freqs
+from wifi_rx_rftap_nox import default_wifi_freqs,default_wifi_freqs_rev
 from zigbee_rftap_nox import default_zigbee_freqs
 from bluetooth_scan import default_bt_freqs
 from run_scans import scan_manager
 import thread
 from time import time,strftime
+import db_lib
+from random import randrange
 
 app = Flask(__name__)
 socketio = SocketIO(app, host="0.0.0.0")
@@ -80,7 +82,21 @@ def scan():
 
 @app.route('/results')
 def results():
-	return render_template("results.html")
+	wifi_records = db_lib.get_records_from_table("Wifi")	
+	zigbee_records = db_lib.get_records_from_table("Zigbee")	
+	bt_records = db_lib.get_records_from_table("Bluetooth")	
+	channels = {}
+	for record in wifi_records:
+		try:
+			channels[default_wifi_freqs_rev[float(record[5])*1e9]] += 1
+		except KeyError:
+			channels[default_wifi_freqs_rev[float(record[5])*1e9]] = 1
+	channel_names = ["Channel " + key for key in channels.keys()]
+	channel_colors = []
+	for i in range(0, len(channel_names)):
+		channel_colors.append("rgb({0}, {1}, {2})".format(randrange(0, 255), randrange(0, 255), randrange(0, 255)))
+
+	return render_template("results.html", records={"Wifi":sorted(wifi_records, key=lambda x: x[6], reverse=True), "Zigbee":sorted(zigbee_records, key=lambda x: x[7], reverse=True), "Bluetooth":sorted(bt_records, key=lambda x: x[3], reverse=True)}, channels=channel_names, channel_counts=channels.values(), channel_colors=channel_colors)
 
 if __name__ == '__main__':
     app.run("0.0.0.0")	

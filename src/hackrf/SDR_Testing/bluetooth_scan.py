@@ -39,7 +39,6 @@ def sleep_channel(channel_time, socketio, elapsed_time, total_packets, fp):
 #List of channels, int for time - run_bt_scan([37], 10)
 def run_bt_scan(socketio=None, user_channels=[], send_updates=False, scan_time=120, elapsed_time=0, total_packets=0):
 	scan_channels = OrderedDict()
-	print(socketio, user_channels, send_updates, scan_time, elapsed_time, total_packets)
 	if(len(user_channels) < 1):
 		scan_channels = default_bt_freqs
 	else:
