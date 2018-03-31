@@ -1,36 +1,85 @@
 import sqlite3
 import six
 from collections import Counter
+from sqlalchemy import Column, Integer, String, ForeignKey
 
 bt_out = "/tmp/bt_out.txt"
 xbee_out = "/tmp/zb_out.txt"
 wifi_out = "/tmp/out_frames"
 
-bt_clean = "bt_clean.txt"
-xbee_clean = "xbee_clean.txt"
-wifi_clean = "wifi_clean.txt"
-
 db_path = '../../infrastructure/database/SUPERFREQ.db'
+
+class Job(Base):
+	__tablename__ = 'jobs'
+	
+	id = Column(Integer, primary_key=True)
+	name = Column(String)
+	
+	def __repr__(self):
+		return "<Job(id='{}', name='{}')>".format(self.id, self.name)
+
+class WifiRecord(Base):
+	__tablename__ = 'wifi'
+
+	job_id = Column(Integer, ForeignKey('jobs.id'))
+	ssid = Column(String)
+	mac1 = Column(String)
+	mac2 = Column(String)
+	mac3 = Column(String)
+	freq = Column(String)
+	count = Column(Integer)
+	
+	def __repr__(self):
+		return "<WifiRecord(job_id='{}', ssid='{}', mac1='{}', mac2='{}', mac3='{}', freq='{}', count='{}')>".format(self.job_id, self.ssid, self.mac1, self.mac2, self.mac3, self.freq, self.count)
+
+class BTRecord(Base):
+	__tablename__ = "bluetooth"
+	
+	job_id = Column(Integer, ForeignKey('jobs.id'))
+	channel = Column(Integer)
+	mac = Column(String)
+	count = Column(Integer)
+
+	def __repr__(self):
+		return "<BTRecord(job_id='{}', channel='{}', mac='{}', count='{}')>".format(self.job_id, self.channel, self.mac, self.count)
+
+class ZBRecord(Base):
+	__tablename__ = "zigbee"	
+	
+	job_id = Column(Integer, ForeignKey('jobs.id'))
+	src = Column(Integer)
+	dst = Column(Integer)
+	ext_src = Column(String)
+	ext_dst = Column(String)
+	sec_src = Column(String)
+	sec_dst = Column(String)
+	count = Column(Integer)
+
+	def __repr__(self):
+		return "<ZBRecord(job_id='{}', src='{}', dst='{}', ext_src='{}', ext_dst='{}', sec_src='{}', sec_dst='{}', count='{}')>".format(self.job_id, self.src, self.dst, self.ext_src, self.ext_dst, self.sec_src, self.sec_dst, self.count)
+	
 
 #Reads wifi_out file, parses records, returns list
 def parse_wifi_records(job_id):
 	records = []
 	#Indexes in each record for ssid, mac1, mac2, mac3, freq
 	items = [3,5,6,7,8]
+	fields = ["ssid", "mac1", "mac2", "mac3", "freq"]
 	with open(wifi_out) as fh:
 		lines = fh.readlines()
 		for line in lines:
-			record = [job_id]
+			record = {"job_id": job_id}
 			parts = line.split(",")
 			if len(parts) != 9:
 				continue
-			for idx,item in enumerate(parts):
-				if idx in items:
-					val = item.split(": ")[1].strip()
-					record.append(val)
-			records.append(tuple(record))
+			for key, value in parts:
+				key = key.strip().lower().replace(" ", "")
+				if key in fields:
+					record[key] = value
+			records.append(record)
 	counts = Counter(records)
-	return [tuple(list(record) + [counts[record]]) for record in set(records)]
+	print(counts)
+	return [record.update({"count": "1"}) for record in set(records)]
 
 #Reads bt_out file, parses records, returns list
 def parse_bt_records(job_id):
@@ -174,3 +223,6 @@ def delete_table(table):
 		cursor = conn.cursor()
 		sql = "DROP TABLE {}".format(table)
 		cursor.execute(sql)
+
+records = parse_wifi_records(1)
+print(records)
