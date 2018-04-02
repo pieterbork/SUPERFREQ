@@ -1,6 +1,6 @@
 from flask import Flask,render_template,request
 from flask_socketio import SocketIO,emit
-from wifi_rx_rftap_nox import default_wifi_freqs,default_wifi_freqs_rev
+from wifi_rx_rftap_nox import default_wifi_freqs,default_wifi_freqs_rev,all_wifi_freqs
 from zigbee_rftap_nox import default_zigbee_freqs
 from bluetooth_scan import default_bt_freqs
 from run_scans import scan_manager
@@ -8,9 +8,11 @@ import thread
 from time import time,strftime
 import db_lib
 from random import randrange
+import datetime
 
 app = Flask(__name__)
 socketio = SocketIO(app, host="0.0.0.0")
+
 
 @app.route('/', methods=["GET"])
 def dash():
@@ -89,10 +91,27 @@ def scan():
 					scan_time=kwargs['scan_time'],
 					job=job_name)
 	elif (request.method == "GET"):
+		defaults = {
+			"scan_name": datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
+			"scan_time": 60,
+			"Wifi2.4": [1, 6, 11],
+			"Wifi5": [],
+			"Bluetooth2.4": [37],
+			"Zigbee2.4": [15, 20, 25, 26]
+		}
+		default_other_freqs = {
+			"Zigbee": default_zigbee_freqs,
+			"Bluetooth": default_bt_freqs
+		}
+		protocols = [("Wifi", "2.4"), ("Wifi", "5"), ("Bluetooth", "2.4"), ("Zigbee", "2.4")]
 		return render_template("show_scan.html", 
 					default_wifi_freqs=default_wifi_freqs, 
 					default_zigbee_freqs=default_zigbee_freqs, 
-					default_bt_freqs=default_bt_freqs)
+					default_bt_freqs=default_bt_freqs,
+					all_wifi_freqs=all_wifi_freqs,
+					default_other_freqs=default_other_freqs,
+					defaults=defaults,
+					protocols=protocols)
 
 @app.route('/results/<job>')
 def results(job):

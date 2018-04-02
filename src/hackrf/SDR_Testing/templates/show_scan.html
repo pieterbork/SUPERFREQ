@@ -1,157 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="content">
-	<form action="/scan" method="post" name="scan_form">
-		<div class="scan_button_container">
-			<input type="submit" value="Scan" class="scan_button">
+<div class="container">
+	<h1>Create a new scan!</h1>
+	<form class="border rounded">
+		<div class="form-group row">
+			<label for="scan_name" class="col-sm-2 col-form-label" >Scan Name</label>
+			<input class="col-sm-6 form-control" type="text" id="scan_name" value="{{defaults["scan_name"]}}">
 		</div>
-		<div class="presets_container">
-			<h2><a href="javascript:void(0);" onclick="togglePresets();" class="toggle_bar">Scan Presets&nbsp;<span id="presets_caret" class="fa fa-caret-up"></span></a></h2>
-			<div id="presets" class="presets">
-					<div class="flex-container">
-						<div class="flex-child">
-							<input type="hidden" id="wifi_preset_box" name="wifi_preset" value="1"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value" style="margin-left:-5px;" checked>WiFi (Ch 1/6/11)</input>
-						</div>
-						<div class="flex-child">
-							<input type="hidden" id="zigbee_preset_box" name="zigbee_preset" value="1"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value" style="margin-left:-5px;" checked>Zigbee (Ch 15/20/25/26)</input>
-						</div>
-						<div class="flex-child">
-							<input type="hidden" id="bt_preset_box" name="bt_preset" value="1"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value" style="margin-left:-5px;" checked>Bluetooth (Ch 37)</input>
-						</div>
-					</div>
+		<div class="form-group row">
+			<label for="scan_time" class="col-sm-2 col-form-label">Scan Time</label>
+			<input class="col-sm-6 form-control" type="number" id="scan_time" value="{{defaults["scan_time"]}}">
+		</div>
+		<div class="row">
+			{% for proto,band in protocols %}
+			{% if "Wifi" in proto %}
+			{% set freqs = all_wifi_freqs[band] %}
+			{% else %}
+			{% set freqs = default_other_freqs[proto].items() %}
+			{% endif %}
+			<div class="form-group col-sm-2">
+				{{ defaults[proto] }}
+				<label for="{{proto|lower}}_select_{{band}}">{{proto+" "+band}}Ghz</label>
+				<select multiple class="form-control" id="{{proto|lower}}_select_{{band}}">
+				{% for freq in freqs %}
+				{% set is_default = freq[0]|int in defaults[proto+band] %}
+					{{is_default}}
+					<option value="{{freq[1]}}" 
+					{% if is_default %} selected="selected" {% endif %}>
+					{{freq[0]}}
+					</option>
+				{% endfor %}
+				</select>
 			</div>
+			{% endfor %}
 		</div>
-		<div class="options_container">
-			<h2><a href="javascript:void(0);" onclick="toggleOptions();" class="toggle_bar">Scan Options&nbsp;<span id="options_caret" class="fa fa-caret-down"></span></a></h2>
-			<div id="options" class="options">
-					<table width="100%">
-						<tr>
-							<th width="40%">WiFi</th>
-							<th width="30%">Zigbee</th>
-							<th width="30%">Bluetooth</th>
-						</tr>
-						<tr>
-							<td rowspan=2 valign="top">
-								<div style="text-align:center;">
-									<input type="hidden" name="all_wifi" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value" style="margin-left:-5px;">All</input>
-								</div>
-								<div class="flex-container">
-									<div class="flex-child">
-										<h4>2.4 GHz</h4>
-										<input type="hidden" name="wifi_freq" value="">
-										<select name="wifi_freq" multiple size="11">
-										{% for freq in default_wifi_freqs %}
-										{% if "_" in freq %}
-											{% set tmp = freq.split("_") %}
-											{% if tmp[1] == "24" %}
-												<option value="{{ freq }}">Channel {{ tmp[0] }}</option>
-											{% endif %}
-										{% elif freq|int < 11 %}
-											<option value="{{ freq }}">Channel {{ freq }}</option>
-										{% endif %}
-										{% endfor %}
-										</select>
-									</div>
-									<div class="flex-child">
-										<h4>5 GHz</h4>
-										<select name="wifi_freq" multiple size="15">
-										{% for freq in default_wifi_freqs %}
-										{% if "_" in freq %}
-											{% set tmp = freq.split("_") %}
-											{% if tmp[1] == "5" %}
-												<option value="{{ freq }}">Channel {{ tmp[0] }}</option>
-											{% endif %}
-										{% elif freq|int > 11 %}
-											<option value="{{ freq }}">Channel {{ freq }}</option>
-										{% endif %}
-										{% endfor %}
-										</select>
-									</div>
-								</div>
-							</td>
-							<td valign="top">
-								<div style="text-align:center;">
-									<input type="hidden" name="all_zigbee" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value" style="margin-left:-5px;">All</input>
-								</div>
-								<div class="flex-container">
-									<div class="flex-child">
-										<h4>2.4 GHz</h4>
-										<input type="hidden" name="zigbee_freq" value="">
-										<select name="zigbee_freq" multiple size="10">
-										{% for freq in default_zigbee_freqs %}
-											<option value="{{ freq }}">Channel {{ freq }}</option>
-										{% endfor %}
-									</div>
-								</div>
-							</td>
-							<td valign="top">
-								<div style="text-align:center;">
-									<input type="hidden" name="all_bt" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value" style="margin-left:-5px;">All</input>
-								</div>
-								<div class="flex-container">
-									<div class="flex-child">
-										<h4>2.4 GHz</h4>
-										<input type="hidden" name="bt_freq" value="">
-										<select name="bt_freq" multiple size="10">
-										{% for freq in default_bt_freqs %}
-											<option value="{{ freq }}">Channel {{ freq }}</option>
-										{% endfor %}
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td colspan=2 style="position:relative;">
-								<div class="time_container">
-									Scan Name: <input type="text" name="scan_name" placeholder="Create a Name" value=""><br><br>
-									Scan Time: <input type="number" name="time" value="60">
-								</div>
-							</td>
-						</tr>
-					</table>
-			</div>
-		</div>
+		<button class="btn btn-lg btn-primary">Run scan</button>
 	</form>
-	<script>
-		function toggleOptions() {
-			optionsDiv = document.getElementById("options");
-			caret = document.getElementById("options_caret");
-			if (optionsDiv.style.maxHeight == "0px" || !optionsDiv.style.maxHeight) {
-				optionsDiv.style.maxHeight = "600px";
-				caret.classList.remove("fa-caret-down");
-				caret.classList.add("fa-caret-up");
-			} else {
-				optionsDiv.style.maxHeight = "0px";
-				caret.classList.remove("fa-caret-up");
-				caret.classList.add("fa-caret-down");
-			}
-		};
-		function togglePresets() {
-			presetsDiv = document.getElementById("presets");
-			caret = document.getElementById("presets_caret");
-			if (presetsDiv.style.maxHeight == "0px") {
-				presetsDiv.style.maxHeight = "200px";
-				caret.classList.remove("fa-caret-down");
-				caret.classList.add("fa-caret-up");
-			} else {
-				presetsDiv.style.maxHeight = "0px";
-				caret.classList.remove("fa-caret-up");
-				caret.classList.add("fa-caret-down");
-			}
-		};
-		$('option').mousedown(function(e) {
-			e.preventDefault();
-			$(this).prop('selected', $(this).prop('selected')? false:true);
-			wifi = document.getElementById('wifi_preset_box');
-			wifi.value = 0;
-			wifi.nextSibling.checked = 0;
-			zigbee = document.getElementById('zigbee_preset_box');
-			zigbee.value = 0;
-			zigbee.nextSibling.checked = 0;
-			bt = document.getElementById('bt_preset_box');
-			bt.value = 0;
-			bt.nextSibling.checked = 0;
-		});
-	</script>
 </div>
 {% endblock %}
