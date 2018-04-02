@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container">
 	<h1>Create a new scan!</h1>
-	<form class="border rounded">
+	<form class="border rounded scan_form">
 		<div class="form-group row">
 			<label for="scan_name" class="col-sm-2 col-form-label" >Scan Name</label>
 			<input class="col-sm-6 form-control" type="text" id="scan_name" value="{{defaults["scan_name"]}}">
@@ -18,14 +18,14 @@
 			{% else %}
 			{% set freqs = default_other_freqs[proto].items() %}
 			{% endif %}
-			<div class="form-group col-sm-2">
+			<div class="form-group col-sm-2 scan_group">
 				{{ defaults[proto] }}
 				<label for="{{proto|lower}}_select_{{band}}">{{proto+" "+band}}Ghz</label>
-				<select multiple class="form-control" id="{{proto|lower}}_select_{{band}}">
+				<select size="11" multiple class="form-control" id="{{proto|lower}}_select_{{band}}">
 				{% for freq in freqs %}
 				{% set is_default = freq[0]|int in defaults[proto+band] %}
 					{{is_default}}
-					<option value="{{freq[1]}}" 
+					<option  value="{{freq[1]}}" 
 					{% if is_default %} selected="selected" {% endif %}>
 					{{freq[0]}}
 					</option>

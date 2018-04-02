@@ -4,6 +4,14 @@ body {
 	background-color: #e0ebff;
 }
 
+.scan_form {
+	padding: 20px;
+}
+
+.scan_group {
+	height: 100%;
+}
+
 a {
 	color: black;
 	text-decoration: none;
