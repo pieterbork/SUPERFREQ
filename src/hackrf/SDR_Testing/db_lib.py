@@ -162,7 +162,10 @@ def get_records_from_table(table, job_id=None):
 		sql = "SELECT * FROM {}".format(table)
 		if job_id:
 			sql += " WHERE job_id={}".format(job_id)
-		sql_records = cursor.execute(sql)
+		try:
+			sql_records = cursor.execute(sql)
+		except:
+			return []
 	records = [record for record in sql_records]
 
 	return records
