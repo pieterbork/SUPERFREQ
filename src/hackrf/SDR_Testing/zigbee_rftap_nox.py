@@ -222,13 +222,13 @@ def run_zigbee_scan(user_channels=[], socketio=None, send_updates=False, scan_ti
 		zb_tb = zigbee_rftap_nox()
 		zb_tb.start()
 		for ch in scan_channels:
+			zb_tb.set_freq(scan_channels[ch])
 			if send_updates:
 				socketio.emit('update', {'msg':"Zigbee - Ch {}".format(ch)})
 				elapsed_time = sleep_channel(channel_time, socketio, elapsed_time)
 			else:
 				print("\nSetting radio to Zigbee - Ch {}".format(ch))
 				sleep(channel_time)
-			zb_tb.set_freq(scan_channels[ch])
 			parse_zigbee_scan()
 		zb_tb.stop()
 		zb_tb.wait()

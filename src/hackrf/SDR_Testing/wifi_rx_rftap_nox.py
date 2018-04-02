@@ -205,13 +205,13 @@ def run_wifi_scan(socketio=None, user_channels=[], send_updates=False, scan_time
 		wifi_tb = wifi_rx_rftap_nox()
 		wifi_tb.start()
 		for ch in scan_channels:
+			wifi_tb.set_freq(scan_channels[ch])
 			if send_updates:
 				socketio.emit('update', {'msg':display_wifi_channel(ch)})
 				elapsed_time = sleep_channel(channel_time, socketio, elapsed_time)
 			else:
 				print("\n\nSetting radio to {}".format(display_wifi_channel(ch)))
 				sleep(channel_time)
-			wifi_tb.set_freq(scan_channels[ch])
 		wifi_tb.stop()
 		wifi_tb.wait()
 

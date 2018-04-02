@@ -44,15 +44,18 @@ def scan():
 		zigbee_preset = request.form['zigbee_preset']
 		bt_preset = request.form['bt_preset']
 
+		### Check if a preset scan option is chosen
 		if (int(wifi_preset) or int(zigbee_preset) or int(bt_preset)):
 			if (int(wifi_preset)):
-				kwargs['wifi_options'] = {"user_channels":["1", "6", "11"]}
+				kwargs['wifi_options'] = {"user_channels":["1", "6", "11_24"]}
 			if (int(zigbee_preset)):
 				kwargs['zigbee_options'] = {"user_channels":["15", "20", "25", "26"]}
 			if (int(bt_preset)):
 				kwargs['bluetooth_options'] = {"user_channels":["37"]}
 
+		### If no preset is chosen, scan using given options
 		else:
+			### Check for "all" options, otherwise configure options
 			if request.form['all_wifi'] == "1":
 				user_wifi_channels = default_wifi_freqs.keys()
 			else:
@@ -107,7 +110,7 @@ def results(job):
 	channel_colors = []
 	for i in range(0, len(channel_names)):
 		channel_colors.append("rgb({0}, {1}, {2})".format(randrange(0, 255), randrange(0, 255), randrange(0, 255)))
-
+	
 	return render_template("results.html", 
 				records={
 					"Wifi":sorted(wifi_records, key=lambda x: x[6], reverse=True), 

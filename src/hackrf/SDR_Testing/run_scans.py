@@ -5,6 +5,7 @@ from wifi_rx_rftap_nox import run_wifi_scan
 from zigbee_rftap_nox import run_zigbee_scan
 from bluetooth_scan import run_bt_scan
 from db_lib import *
+from os import remove
 
 wifi_options = {"user_channels": []}
 zigbee_options = {"user_channels": []}
@@ -27,6 +28,10 @@ def scan_manager(scan_name, wifi_options=wifi_options, zigbee_options=zigbee_opt
 		### Run the Scans, parsing data after each scan
 		scan_time = float(scan_time)/float(num_scans)
 		if len(wifi_options['user_channels']) > 0:
+			try:		#remove previous scans
+				remove("/tmp/out_frames")
+			except OSError:
+				pass
 			run_wifi_scan(user_channels=wifi_options['user_channels'],
 										scan_time=scan_time*len(wifi_options['user_channels']),
 										socketio=socketio,
@@ -37,6 +42,11 @@ def scan_manager(scan_name, wifi_options=wifi_options, zigbee_options=zigbee_opt
 			insert_wifi_records(records)
 
 		if len(zigbee_options['user_channels']) > 0:
+			try:		#remove previous scans
+				remove("/tmp/zigbee_out.txt")
+				remove("/tmp/zigbee.pcap")
+			except OSError:
+				pass
 			run_zigbee_scan(user_channels=zigbee_options['user_channels'],
 										scan_time=scan_time*len(zigbee_options['user_channels']),
 										socketio=socketio,
@@ -47,6 +57,10 @@ def scan_manager(scan_name, wifi_options=wifi_options, zigbee_options=zigbee_opt
 			insert_bt_records(records)
 
 		if len(bluetooth_options['user_channels']) > 0:
+			try:		#remove previous scans
+				remove("/tmp/bt_out.txt")
+			except OSError:
+				pass
 			run_bt_scan(user_channels=bluetooth_options['user_channels'],
 										scan_time=scan_time*len(bluetooth_options['user_channels']),
 										socketio=socketio,
