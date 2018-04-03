@@ -103,7 +103,10 @@ def scan():
 			"Zigbee": default_zigbee_freqs,
 			"Bluetooth": default_bt_freqs
 		}
-		protocols = [("Wifi", "2.4"), ("Wifi", "5"), ("Bluetooth", "2.4"), ("Zigbee", "2.4")]
+		protocols = [("Wifi", "2.4", "wifi_select_24"), 
+								 ("Wifi", "5", "wifi_select_5"), 
+								 ("Bluetooth", "2.4", "bluetooth_select_24"), 
+								 ("Zigbee", "2.4", "zigbee_select_24")]
 		return render_template("show_scan.html", 
 					default_wifi_freqs=default_wifi_freqs, 
 					default_zigbee_freqs=default_zigbee_freqs, 

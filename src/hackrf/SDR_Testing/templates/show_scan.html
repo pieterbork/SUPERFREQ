@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
+<script>
+	function allList(id) {
+		var new_id = "#" + id.replace('.', '\\\\.') + " option";
+		$(new_id).prop("selected", true);
+	}
+	function clearList(id) {
+		var new_id = "#" + id.replace('.', '\\\\.') + " option:selected";
+		$(new_id).prop("selected", false);
+	}
+</script>
 <div class="container">
 	<h1>Create a new scan!</h1>
 	<form class="border rounded scan_form">
@@ -12,7 +22,7 @@
 			<input class="col-sm-6 form-control" type="number" id="scan_time" value="{{defaults["scan_time"]}}">
 		</div>
 		<div class="row">
-			{% for proto,band in protocols %}
+			{% for proto,band,class_name in protocols %}
 			{% if "Wifi" in proto %}
 			{% set freqs = all_wifi_freqs[band] %}
 			{% else %}
@@ -20,17 +30,16 @@
 			{% endif %}
 			<div class="form-group col-sm-2 scan_group">
 				{{ defaults[proto] }}
-				<label for="{{proto|lower}}_select_{{band}}">{{proto+" "+band}}Ghz</label>
-				<select size="11" multiple class="form-control" id="{{proto|lower}}_select_{{band}}">
+				<label for="{{ class_name }}">{{proto+" "+band}}Ghz</label>
+				<select size="11" multiple class="form-control" id="{{ class_name }}">
 				{% for freq in freqs %}
 				{% set is_default = freq[0]|int in defaults[proto+band] %}
 					{{is_default}}
-					<option  value="{{freq[1]}}" 
-					{% if is_default %} selected="selected" {% endif %}>
-					{{freq[0]}}
-					</option>
+					<option  value="{{freq[1]}}"{% if is_default %} selected="selected" {% endif %}>{{freq[0]}}</option>
 				{% endfor %}
 				</select>
+				<button type="button" onclick="allList('{{ class_name }}');">All</button>
+				<button type="button" onclick="clearList('{{ class_name }}');">Clear</button>
 			</div>
 			{% endfor %}
 		</div>
