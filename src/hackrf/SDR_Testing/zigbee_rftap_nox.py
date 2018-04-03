@@ -32,7 +32,7 @@ from time import sleep
 
 zb_file = "/tmp/zigbee.pcap"
 
-default_zigbee_freqs = OrderedDict([("11", 2.405e9), ("12", 2.410e9), ("13", 2.415e9), ("14", 2.420e9), ("15", 2.425e9), ("16", 2.430e9), ("17", 2.435e9), ("18", 2.440e9), ("19", 2.445e9), ("20", 2.450e9), ("21", 2.455e9), ("22", 2.460e9), ("23", 2.465e9), ("24", 2.470e9), ("25", 2.475e9), ("26", 2.480e9)])
+default_zigbee_freqs = [2.405e9, 2.410e9, 2.415e9, 2.420e9, 2.425e9, 2.430e9, 2.435e9, 2.440e9, 2.445e9, 2.450e9, 2.455e9, 2.460e9, 2.465e9, 2.470e9, 2.475e9, 2.480e9]
 
 ZB_Layers = [ \
     Dot15d4, \
@@ -208,21 +208,19 @@ def sleep_channel(channel_time, socketio, elapsed_time):
 	
 
 def run_zigbee_scan(user_channels=[], socketio=None, send_updates=False, scan_time=30, elapsed_time=0):
-	scan_channels = OrderedDict()
+	scan_channels = []
 	if (len(user_channels) < 1):
 		scan_channels = default_zigbee_freqs
 	else:
 		for ch in user_channels:
-			try:
-				scan_channels[ch] = default_zigbee_freqs[ch]
-			except:
-				pass
+			if float(ch) in default_zigbee_freqs:
+				scan_channels.append(float(ch))
 	if(len(scan_channels) > 0):
 		channel_time = float(scan_time)/len(scan_channels)
 		zb_tb = zigbee_rftap_nox()
 		zb_tb.start()
 		for ch in scan_channels:
-			zb_tb.set_freq(scan_channels[ch])
+			zb_tb.set_freq(ch)
 			if send_updates:
 				socketio.emit('update', {'msg':"Zigbee - Ch {}".format(ch)})
 				elapsed_time = sleep_channel(channel_time, socketio, elapsed_time)

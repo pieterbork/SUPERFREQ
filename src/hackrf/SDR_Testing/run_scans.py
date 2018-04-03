@@ -28,7 +28,6 @@ def scan_manager(scan_name, wifi_24_options=wifi_24_options, wifi_5_options=wifi
 
 		### Run the Scans, parsing data after each scan
 		scan_time = float(scan_time)/float(num_scans)
-		print(scan_time)
 		if len(wifi_24_options['user_channels']) > 0:
 			try:		#remove previous scans
 				remove("/tmp/out_frames")

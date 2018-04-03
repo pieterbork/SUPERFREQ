@@ -171,14 +171,12 @@ def sleep_channel(channel_time, socketio, elapsed_time):
 
 def run_wifi_scan(socketio=None, user_channels=[], send_updates=False, scan_time=120, elapsed_time=0):
 	scan_channels = []
-	print(user_channels)
 	if(len(user_channels) < 1):
 		scan_channels = default_wifi_freqs
 	else:
 		for ch in user_channels:
 			if float(ch) in default_wifi_freqs:
 				scan_channels.append(float(ch))
-	print(scan_channels)
 	if(len(scan_channels) > 0):
 		channel_time = float(scan_time)/len(scan_channels)
 		wifi_tb = wifi_rx_rftap_nox()
