@@ -24,8 +24,10 @@ function getChecked() {
 function allList(id) {
 	var new_id = "#" + id.replace('.', '\\\\.') + " option";
 	$(new_id).prop("selected", true);
+	getChecked()
 }
 function clearList(id) {
 	var new_id = "#" + id.replace('.', '\\\\.') + " option:selected";
 	$(new_id).prop("selected", false);
+	getChecked()
 }
