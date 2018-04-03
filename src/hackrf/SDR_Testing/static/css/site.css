@@ -27,24 +27,19 @@ a {
 	text-align: center;
 }
 
-.scan_button_container {
-	position: absolute;
-	top: 0;
-	left: 50%;
-}
-
 .scan_button {
+	position: absolute;
 	height: 80px;
 	width: 80px;
+	left: 50%;
+	top: 100px;
 	border: 1px black;
 	border-radius: 40px;
 	box-shadow: 0 0 10px 0 black;
 	border: 0;
 	font-size: x-large;
-	position: relative;
-	top: -40px;
-	left: -40px;
-	margin-top: 90px;
+	margin-top: -40px;
+	margin-left: -40px;
 }
 
 .scan_button::-moz-focus-inner {
@@ -194,11 +189,11 @@ a {
 
 @keyframes scan-button-ani {
 	from {
-		top: 50px;
+		top: 100px;
 		height: 80px;
 		width: 80px;
-		margin-top: -41px;
-		margin-left: -41px;
+		margin-top: -40px;
+		margin-left: -40px;
 		opacity: 1;
 		color: black;
 		background-color: #e8e8e7;
@@ -208,8 +203,8 @@ a {
 		opacity: 1;
 		height: 80px;
 		width: 80px;
-		margin-top: -41px;
-		margin-left: -41px;
+		margin-top: -40px;
+		margin-left: -40px;
 		color: black;
 		background-color: #e8e8e7;
 	}
@@ -232,9 +227,10 @@ a {
 	bottom: -200px;
 	left: 50%;
 	height: 70px;
-	width: 134px;
+	width: 300px;
 	margin-top: -35px;
-	margin-left: -67px;
+	margin-left: -151px;
+	text-align: center;
 	transition: all 2s ease 0s;
 }
 

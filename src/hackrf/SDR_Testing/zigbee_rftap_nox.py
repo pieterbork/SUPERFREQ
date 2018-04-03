@@ -33,6 +33,7 @@ from time import sleep
 zb_file = "/tmp/zigbee.pcap"
 
 default_zigbee_freqs = [2.405e9, 2.410e9, 2.415e9, 2.420e9, 2.425e9, 2.430e9, 2.435e9, 2.440e9, 2.445e9, 2.450e9, 2.455e9, 2.460e9, 2.465e9, 2.470e9, 2.475e9, 2.480e9]
+channel_map = {2.405e9: "11", 2.410e9: "12", 2.415e9: "13", 2.420e9: "14", 2.425e9: "15", 2.430e9: "16", 2.435e9: "17", 2.440e9: "18", 2.445e9: "19", 2.450e9: "20", 2.455e9: "21", 2.460e9: "22", 2.465e9: "23", 2.470e9: "24", 2.475e9: "28", 2.480e9: "26"}
 
 ZB_Layers = [ \
     Dot15d4, \
@@ -193,7 +194,10 @@ def sleep_channel(channel_time, socketio, elapsed_time):
 	num_updates = int(channel_time)	* 2		#update every half second
 	leftover_time = channel_time - int(channel_time)
 	while (True):		#always run the update at least once
-		num_packs = len(rdpcap(zb_file))
+		try:
+			num_packs = len(rdpcap(zb_file))
+		except:
+			num_packs = 0
 		socketio.emit('zigbee_count', {'msg': num_packs})
 		socketio.emit('progress', {'msg': elapsed_time})
 		if num_updates < 1:
@@ -222,7 +226,7 @@ def run_zigbee_scan(user_channels=[], socketio=None, send_updates=False, scan_ti
 		for ch in scan_channels:
 			zb_tb.set_freq(ch)
 			if send_updates:
-				socketio.emit('update', {'msg':"Zigbee - Ch {}".format(ch)})
+				socketio.emit('update', {'msg':"Zigbee<br>Ch {}".format(channel_map[ch])})
 				elapsed_time = sleep_channel(channel_time, socketio, elapsed_time)
 			else:
 				print("\nSetting radio to Zigbee - Ch {}".format(ch))

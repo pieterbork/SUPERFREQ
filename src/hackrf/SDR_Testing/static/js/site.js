@@ -11,15 +11,21 @@ $(function() {
 		e.preventDefault()
 		$(this).prop('selected', $(this).prop('selected')? false:true)
 	})
-	var submit = false
-	$("#scan_button").click(function(e) {
-		$("#scan_form_container").fadeTo("slow", 0)
-		setTimeout(function() {
-			$("#scan_form").submit()
-		}, 550)
-		$("#scan_form_container").fadeTo("slow", 1)
+	$(document).keypress(function(e) {
+		console.log("Keypress")
+		if (e.which == 13) {
+			submitScan()
+		}
 	})
 })
+
+function submitScan() {
+	$("#scan_form_container").fadeTo("slow", 0)
+	setTimeout(function() {
+		$("#scan_form").submit()
+	}, 550)
+	$("#scan_form_container").fadeTo("slow", 1)
+}
 
 function getChecked() {
 	var selects = $('.scan_group > select')

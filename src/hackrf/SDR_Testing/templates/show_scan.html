@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<div id="scan_button" class="scan_button_container">
-	<input type="submit" value="Scan" class="scan_button">
-</div>
+<input type="submit" onclick="submitScan();" value="Scan" class="scan_button">
 <div id="scan_form_container" class="container scan_form_container">
 	<h1>Create a new scan!</h1>
 	<div class="row">
@@ -33,8 +31,8 @@
 						<option  value="{{freq[1]}}"{% if is_default %} selected="selected" {% endif %}>{{freq[0]}}</option>
 					{% endfor %}
 					</select>
-					<button type="button" class="list_all_btn" onclick="allList('{{ class_name }}');">All</button>
-					<button type="button" class="list_clr_btn" onclick="clearList('{{ class_name }}');">Clear</button>
+					<button type="button" class="list_all_btn btn btn-sm" onclick="allList('{{ class_name }}');">All</button>
+					<button type="button" class="list_clr_btn btn btn-sm" onclick="clearList('{{ class_name }}');">Clear</button>
 				</div>
 				{% endfor %}
 			</div>
