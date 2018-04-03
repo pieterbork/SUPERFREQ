@@ -89,10 +89,18 @@ a {
 	max-width: 1000px;
 }
 
-.status_container {
+.status {
+	background: #aaa;
+	border: 2px solid black;
+	border-radius: 75px;
+	height: 150px;
+	width: 150px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	margin-top: -77px;
+	margin-left: -77px;
+	box-shadow: 0 0 10px 0 black;
 	animation-name: status-container-appear;
 	animation-duration: 3s;
 	animation-timing-function: ease-in;
@@ -110,38 +118,25 @@ a {
 	}
 }
 
-.status {
-	margin: auto;
-	background: #aaa;
-	border: 2px solid black;
-	border-radius: 75px;
-	height: 150px;
-	width: 150px;
-	position: relative;
-	top: -77px;
-	left: -77px;
-	box-shadow: 0 0 10px 0 black;
-}
-
 .status_text {
 	display: block;
-	margin-top: 40%;
 	color: #f3f3f3;
 	font-size: large;
 	font-weight: bold;
-}
-
-.outer_ring_container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-//	transition: opacity 2s ease 0s;
+	overflow: hidden;
+	border-radius: 75px;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	padding-top: 55px;
 }
 
 .ring_container {
-	position: relative;
-	top: -260px;
-	left: -260px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -252px;
+	margin-left: -252px;
 }
 
 .ring {
@@ -175,24 +170,6 @@ a {
 	-webkit-animation-delay: 5s;
 }
 
-.scan_button_copy_container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	animation-name: scan-button-slide-down;
-	animation-duration: 1.75s;
-	animation-timing-function: ease-in-out;
-}
-
-@keyframes scan-button-slide-down {
-	from {
-		top: 90px;
-	}
-	to {
-		top: 50%;
-	}
-}
-
 .scan_button_copy {
 	height: 150px;
 	width: 150px;
@@ -201,41 +178,46 @@ a {
 	box-shadow: 0 0 10px 0 black;
 	border: 0;
 	font-size: x-large;
-	position: relative;
-	top: -75px;
-	left: -75px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -76px;
+	margin-left: -76px;
 	z-index: 10;
 	opacity: 0;
 	color: #aaa;
 	background-color: #aaa;
-	animation-name: scan-button-dissappear;
+	animation-name: scan-button-ani;
 	animation-duration: 3s;
-	animation-timing-function: cubic-bezier(.86,.22,1,1);
+	animation-timing-function: ease-in-out;
 }
 
-@keyframes scan-button-dissappear {
+@keyframes scan-button-ani {
 	from {
+		top: 50px;
 		height: 80px;
 		width: 80px;
-		top: -40px;
-		left: -40px;
+		margin-top: -41px;
+		margin-left: -41px;
 		opacity: 1;
 		color: black;
 		background-color: #e8e8e7;
 	}
-	40% {
+	60% {
+		top: 50%;
+		opacity: 1;
 		height: 80px;
 		width: 80px;
-		top: -40px;
-		left: -40px;
+		margin-top: -41px;
+		margin-left: -41px;
 		color: black;
 		background-color: #e8e8e7;
 	}
-	80% {
+	90% {
 		height: 150px;
 		width: 150px;
-		top: -75px;
-		left: -75px;
+		margin-top: -76px;
+		margin-left: -76px;
 		opacity: 1;
 		color: #aaa;
 		background-color: #aaa;
@@ -246,17 +228,13 @@ a {
 }
 
 .results_link {
-	height: 70px;
-	width: 134px;
-	position: relative;
-	top: -35px;
-	left: -67px;
-}
-
-.results_link_container {
 	position: absolute;
 	bottom: -200px;
 	left: 50%;
+	height: 70px;
+	width: 134px;
+	margin-top: -35px;
+	margin-left: -67px;
 	transition: all 2s ease 0s;
 }
 
@@ -325,15 +303,11 @@ option::-moz-focus-inner {
 	border: 0;
 }
 
-.progress_bar_container {
+.progress_bar_outer {
 	position: absolute;
 	left: 50%;
-}
-
-.progress_bar_outer {
-	position: relative;
 	width: 600px;
-	left: -300px;
+	margin-left: -300px;
 	background: lightgrey;
 	border: 1px solid black;
 	border-radius: 5px;
@@ -370,10 +344,9 @@ option::-moz-focus-inner {
 	display: block;
 	position: absolute;
 	left: 48%;
-	padding-top: 7px;
+	padding-top: 4px;
 	color: white;
 	font-weight: bold;
-	height: 12px;
 	overflow: hidden;
 }
 
