@@ -1,11 +1,15 @@
 body {
 	margin: 0;
 	width: 100%;
-	background-color: #e0ebff;
+	background-color: #ccc;
+	position: absolute;
+	top: 50px;
 }
 
 .scan_form {
 	padding: 20px;
+	background: whitesmoke;
+	border: 1px solid #aaa;
 }
 
 .scan_group {
@@ -376,3 +380,29 @@ option::-moz-focus-inner {
 .progress_percent::after {
 	content: " %";
 }
+
+.list_all_btn {
+	margin: 5px;
+}
+
+.list_clr_btn {
+	margin: 5px;
+	float: right;
+}
+
+.scan_form_container {
+	position: relative;
+	top: 200px;
+}
+
+.navbar {
+	height: 50px;
+	box-shadow: 0 0 5px 2px #343a40;
+}
+
+.navbar > h3 {
+	color: #555555;
+	margin: 5px;
+	font-weight: bold;
+}
+

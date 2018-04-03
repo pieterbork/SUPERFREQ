@@ -1,16 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
+<div id="scan_button" class="scan_button_container">
+	<input type="submit" value="Scan" class="scan_button">
+</div>
+<div id="scan_form_container" class="container scan_form_container">
 	<h1>Create a new scan!</h1>
 	<div class="row">
-		<form class="border rounded scan_form col-md-8" action="/scan" method="post">
+		<form class="rounded scan_form col-md-8" id="scan_form" action="/scan" method="post">
 			<div class="form-group row">
 				<label for="scan_name" class="col-sm-3 col-form-label" >Scan Name</label>
-				<input class="col-sm-6 form-control" type="text" id="scan_name" value="{{defaults["scan_name"]}}">
+				<input class="col-sm-6 form-control" name="scan_name" type="text" id="scan_name" value="{{defaults["scan_name"]}}">
 			</div>
 			<div class="form-group row">
 				<label for="scan_time" class="col-sm-3 col-form-label">Scan Time</label>
-				<input class="col-sm-6 form-control" type="number" id="scan_time" value="{{defaults["scan_time"]}}">
+				<input class="col-sm-6 form-control" name="scan_time" type="number" id="scan_time" value="{{defaults["scan_time"]}}">
 			</div>
 			<div class="row">
 				{% for proto,band,class_name in protocols %}
@@ -21,20 +24,20 @@
 				{% endif %}
 				<div class="form-group col-sm-3 scan_group">
 					{{ defaults[proto] }}
+					<input type="hidden" name="{{ class_name }}" value="">
 					<label for="{{ class_name }}">{{proto+" "+band}}Ghz</label>
-					<select size="11" multiple class="form-control" id="{{ class_name }}">
+					<select size="11" name="{{ class_name }}" multiple class="form-control" id="{{ class_name }}">
 					{% for freq in freqs %}
 					{% set is_default = freq[0]|int in defaults[proto+band] %}
 						{{is_default}}
 						<option  value="{{freq[1]}}"{% if is_default %} selected="selected" {% endif %}>{{freq[0]}}</option>
 					{% endfor %}
 					</select>
-					<button type="button" onclick="allList('{{ class_name }}');">All</button>
-					<button type="button" onclick="clearList('{{ class_name }}');">Clear</button>
+					<button type="button" class="list_all_btn" onclick="allList('{{ class_name }}');">All</button>
+					<button type="button" class="list_clr_btn" onclick="clearList('{{ class_name }}');">Clear</button>
 				</div>
 				{% endfor %}
 			</div>
-			<button type="submit" class="btn btn-lg btn-primary">Run scan</button>
 		</form>
 		<div class="currently_checked col-md-4"></div>
 	</div>

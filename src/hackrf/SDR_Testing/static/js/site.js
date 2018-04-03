@@ -7,6 +7,18 @@ $(function() {
 		var input = $(this).val().toLowerCase()
 		if(input.indexOf("carlos") >= 0) window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 	})
+	$('option').mousedown(function(e) {	//Changes the default action of clicking options to ctrl-click 
+		e.preventDefault()
+		$(this).prop('selected', $(this).prop('selected')? false:true)
+	})
+	var submit = false
+	$("#scan_button").click(function(e) {
+		$("#scan_form_container").fadeTo("slow", 0)
+		setTimeout(function() {
+			$("#scan_form").submit()
+		}, 550)
+		$("#scan_form_container").fadeTo("slow", 1)
+	})
 })
 
 function getChecked() {
@@ -23,17 +35,22 @@ function getChecked() {
 			checked.push($(this).text())
 			total_checked += 1
 		})
-		var item = '<h4>' + id + '</h4><div>' + checked +'</div>'
-		if(checked.length > 0) curr = curr+item
+		if(checked.length > 0) {
+			curr = curr + '<h4>' + id + '</h4><div>' + checked +'</div>'
+		} else {
+			curr = curr + '<h4>' + id + '</h4><div>None</div>'
+		}
 	})
 	var scantime = $('#scan_time').val()
 	if(total_checked > 0 && scantime >0) {
 		curr += '<div>Total # of channels: ' + total_checked + '</div>' 
 		var time_per_chan = Math.round((scantime/total_checked))
-		curr += '<div>Scan time per channel: ' + time_per_chan + ' seconds</div>'
+		curr += '<div>Scan time per channel: ' 
+		if(scantime/total_checked < 0.75) curr += '< '
+		curr += time_per_chan + ' second'
+		if(!(time_per_chan == 1)) curr += 's'
+		curr += '</div>'
 	}
-
-	if(!any_checked) curr = ""
 
 	$('.currently_checked').html(curr)
 }

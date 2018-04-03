@@ -217,8 +217,8 @@ def run_zigbee_scan(user_channels=[], socketio=None, send_updates=False, scan_ti
 				scan_channels[ch] = default_zigbee_freqs[ch]
 			except:
 				pass
-	channel_time = float(scan_time)/len(scan_channels)
 	if(len(scan_channels) > 0):
+		channel_time = float(scan_time)/len(scan_channels)
 		zb_tb = zigbee_rftap_nox()
 		zb_tb.start()
 		for ch in scan_channels:

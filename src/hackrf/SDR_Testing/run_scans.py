@@ -7,15 +7,16 @@ from bluetooth_scan import run_bt_scan
 from db_lib import *
 from os import remove
 
-wifi_options = {"user_channels": []}
+wifi_24_options = {"user_channels": []}
+wifi_5_options = {"user_channels": []}
 zigbee_options = {"user_channels": []}
 bluetooth_options = {"user_channels": []}
 
-def scan_manager(scan_name, wifi_options=wifi_options, zigbee_options=zigbee_options, bluetooth_options=bluetooth_options, scan_time=60, socketio=None, send_updates=False):
+def scan_manager(scan_name, wifi_24_options=wifi_24_options, wifi_5_options=wifi_5_options, zigbee_options=zigbee_options, bluetooth_options=bluetooth_options, scan_time=60, socketio=None, send_updates=False):
 	total_scan_time = 0
 	if (send_updates):		#allows time for pretty animations
 		sleep(4)
-	num_scans = len(wifi_options['user_channels']) + len(zigbee_options['user_channels']) + len(bluetooth_options['user_channels'])
+	num_scans = len(wifi_24_options['user_channels']) + len(wifi_5_options['user_channels']) + len(zigbee_options['user_channels']) + len(bluetooth_options['user_channels']) 
 	if num_scans > 0:
 		### Set up the database
 		create_wifi_table()
@@ -27,17 +28,32 @@ def scan_manager(scan_name, wifi_options=wifi_options, zigbee_options=zigbee_opt
 
 		### Run the Scans, parsing data after each scan
 		scan_time = float(scan_time)/float(num_scans)
-		if len(wifi_options['user_channels']) > 0:
+		print(scan_time)
+		if len(wifi_24_options['user_channels']) > 0:
 			try:		#remove previous scans
 				remove("/tmp/out_frames")
 			except OSError:
 				pass
-			run_wifi_scan(user_channels=wifi_options['user_channels'],
-										scan_time=scan_time*len(wifi_options['user_channels']),
+			run_wifi_scan(user_channels=wifi_24_options['user_channels'],
+										scan_time=scan_time*len(wifi_24_options['user_channels']),
 										socketio=socketio,
 										send_updates=send_updates,
 										elapsed_time=total_scan_time)
-			total_scan_time += scan_time*len(wifi_options['user_channels'])
+			total_scan_time += scan_time*len(wifi_24_options['user_channels'])
+			records = parse_wifi_records(job_id)
+			insert_wifi_records(records)
+
+		if len(wifi_5_options['user_channels']) > 0:
+			try:		#remove previous scans
+				remove("/tmp/out_frames")
+			except OSError:
+				pass
+			run_wifi_scan(user_channels=wifi_5_options['user_channels'],
+										scan_time=scan_time*len(wifi_5_options['user_channels']),
+										socketio=socketio,
+										send_updates=send_updates,
+										elapsed_time=total_scan_time)
+			total_scan_time += scan_time*len(wifi_5_options['user_channels'])
 			records = parse_wifi_records(job_id)
 			insert_wifi_records(records)
 
