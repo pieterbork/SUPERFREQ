@@ -5,10 +5,10 @@
 	var chart = new Chart(ctx, {
 		type: 'pie',
 		data: {
-			labels: {{ channels|safe }},
+			labels: {{ charts['ssids_per_channel']['channel_names']|safe }},
 			datasets: [{
-				data: {{ channel_counts|safe }},
-				backgroundColor: {{ channel_colors|safe }},
+				data: {{ charts['ssids_per_channel']['counts']|safe }},
+				backgroundColor: {{ charts['ssids_per_channel']['colors']|safe }},
 			}]
 		},
 		options: {
