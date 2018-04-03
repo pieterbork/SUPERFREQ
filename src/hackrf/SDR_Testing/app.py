@@ -28,7 +28,7 @@ def scan():
 		user_bt_channels = []
 		scan_time = 60
 		try:
-			scan_time = int(request.form['time'])
+			scan_time = int(request.form['scan_time'])
 			if scan_time < 0:
 				scan_time = 0
 		except ValueError:
@@ -104,12 +104,10 @@ def scan():
 			"Bluetooth": default_bt_freqs
 		}
 		protocols = [("Wifi", "2.4", "wifi_select_24"), 
-								 ("Wifi", "5", "wifi_select_5"), 
-								 ("Bluetooth", "2.4", "bluetooth_select_24"), 
-								 ("Zigbee", "2.4", "zigbee_select_24")]
+					 ("Wifi", "5", "wifi_select_5"), 
+					 ("Bluetooth", "2.4", "bluetooth_select_24"), 
+					 ("Zigbee", "2.4", "zigbee_select_24")]
 		return render_template("show_scan.html", 
-					default_wifi_freqs=default_wifi_freqs, 
-					default_zigbee_freqs=default_zigbee_freqs, 
 					default_bt_freqs=default_bt_freqs,
 					all_wifi_freqs=all_wifi_freqs,
 					default_other_freqs=default_other_freqs,
@@ -135,9 +133,13 @@ def results(job):
 	
 	return render_template("results.html", 
 				records={
-					"Wifi":sorted(wifi_records, key=lambda x: x[6], reverse=True), 
+					"Wifi":sorted(wifi_records, key=lambda x: x[6], reverse=True),
+					"Wifi_fields": ["SSID", "MAC 1", "MAC 2", "MAC 3", "Frequency", "Count"],
 					"Zigbee":sorted(zigbee_records, key=lambda x: x[7], reverse=True), 
-					"Bluetooth":sorted(bt_records, key=lambda x: x[3], reverse=True)
+					"Zigbee_fields": ["Source", "Destination", "Ext Source", "Ext Dest", "Sec Source", "Sec Dest", "Count"],
+					"Bluetooth":sorted(bt_records, key=lambda x: x[3], reverse=True),
+					"Bluetooth_fields": ["Channel", "MAC", "Count"],
+					"protocols": ["Wifi", "Zigbee", "Bluetooth"]
 				}, 
 				channels=channel_names, 
 				channel_counts=channels.values(), 

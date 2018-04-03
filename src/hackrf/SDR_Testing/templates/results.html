@@ -2,15 +2,20 @@
 
 {% block content %}
 <div class="content">
+	{% if any(records[proto]) for proto in protocol %}
 	<h1>Results for {{ job }}</h1>
 	{% include "chart.html" %}
-	<br><br><br>
-	{% if records['Wifi'] %}
+	{% for proto in protocols %}
+	{% if records[proto] %}
 	<div class="records_table">
-		<h1>WiFi</h1>
+		<h1>{{proto}}</h1>
 		<table width="100%">
-		<tr><th>SSID</th><th>MAC 1</th><th>MAC 2</th><th>MAC 3</th><th>Frequency</th><th>Count</th></tr>
-		{% for record in records['Wifi'] %}
+		<tr>
+			{% for field in records[proto+"_fields"] %}
+			<th>{{field}}</th>
+			{% endfor %}
+		</tr>
+		{% for record in records[proto] %}
 			<tr>
 			{% for item in record[1:] %}
 				<td>{{ item }}</td>
@@ -20,38 +25,7 @@
 		</table>
 	</div>
 	{% endif %}
-	{% if records['Zigbee'] %}
-	<div class="records_table">
-		<h1>Zigbee</h1>
-		<table width="100%">
-		<tr><th>Source</th><th>Destination</th><th>Ext Source</th><th>Ext Dest</th><th>Sec Source</th><th>Sec Dest</th><th>Count</th></tr>
-		{% for record in records['Zigbee'] %}
-			<tr>
-			{% for item in record[1:] %}
-				<td>{{ item }}</td>
-			{% endfor %}
-			</tr>
-		{% endfor %}
-		</table>
-	</div>
-	{% endif %}
-	{% if records['Bluetooth'] %}
-	<div class="records_table">
-		<h1>Bluetooth</h1>
-		<table width="100%">
-		<tr><th>Channel</th><th>MAC</th><th>Count</th></tr>
-		{% for record in records['Bluetooth'] %}
-			<tr>
-			{% for item in record[1:] %}
-				<td>{{ item }}</td>
-			{% endfor %}
-			</tr>
-		{% endfor %}
-		</table>
-	</div>
-	{% endif %}
-
-	<br><br><br>
-	<a href="/"><h1>Home</h1></a>
+	{% endfor %}
+	<button class="btn btn-lg btn-primary" href="/scan">Run new scan</a>
 </div>
 {% endblock %}

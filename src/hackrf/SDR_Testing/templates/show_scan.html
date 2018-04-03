@@ -3,7 +3,7 @@
 <div class="container">
 	<h1>Create a new scan!</h1>
 	<div class="row">
-		<form class="border rounded scan_form col-md-8">
+		<form class="border rounded scan_form col-md-8" action="/scan" method="post">
 			<div class="form-group row">
 				<label for="scan_name" class="col-sm-3 col-form-label" >Scan Name</label>
 				<input class="col-sm-6 form-control" type="text" id="scan_name" value="{{defaults["scan_name"]}}">
@@ -34,7 +34,7 @@
 				</div>
 				{% endfor %}
 			</div>
-			<button class="btn btn-lg btn-primary">Run scan</button>
+			<button type="submit" class="btn btn-lg btn-primary">Run scan</button>
 		</form>
 		<div class="currently_checked col-md-4"></div>
 	</div>

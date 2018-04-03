@@ -1,3 +1,4 @@
+{% if jobs %}
 <h1>Check out some results from previous jobs!</h1>
 {% for job in jobs %}
 {% set job_name = job[1].encode("utf-8") %}
@@ -5,3 +6,9 @@
 	<a href="/results/{{job_name}}">{{ job_name }}</a>
 </div>
 {% endfor %}
+{% else %}
+<div class="container">
+	<h1>You haven't run any scans yet!</h1>
+	<a class="btn btn-lg btn-primary" href="/scan">Run a new scan</a>
+</div>
+{% endif %}
