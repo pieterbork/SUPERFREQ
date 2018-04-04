@@ -40,7 +40,7 @@ function getChecked() {
 			total_checked += 1
 		})
 		if(checked.length > 0) {
-			$(".checked_"+name).html(checked.join())
+			$(".checked_"+name).html(getRanges(checked))
 		} else {
 			$(".checked_"+name).html("None")
 		}
@@ -48,14 +48,14 @@ function getChecked() {
 	var time_per_chan = scantime/total_checked
 	var units = "s"
 	var prefix = ""
-	if(time_per_chan < 0.75) prefix = " < "
+	if(time_per_chan < 0.95) prefix = " < "
 	var tot_count = prefix + Math.round(time_per_chan) + units
 
 	$('.tot_count').html(total_checked)
 	$('.time_per_chan').html(tot_count)
 }
 
-/* Does nothing yet, but eventually when given [1,2,3,4,8,9] will return "1-4,8,9"*/
+/* When given [1,2,3,4,8,9] will return "1-4,8,9" */
 function getRanges(arr) {
 	var i = 0
 	var all_arrs = Array()
@@ -63,30 +63,26 @@ function getRanges(arr) {
 		var item = arr[i]
 		var curr_arr = Array()
 		curr_arr.push(item)
-		i++
-		if(i == arr.length) all_arrs.push(curr_arr)
-		for(var j=i; j<arr.length; j++) {
+		for(var j=i+1; j<arr.length; j++) {
 			var ele = arr[j]
-			i = j
 			if(item == ele-1) {
 				curr_arr.push(ele)
 				item = ele
+				i = j
 			}
 			else {
-				all_arrs.push(curr_arr)	
+				all_arrs.push(curr_arr)
 				break
 			}
-			if(j == arr.length-1) all_arrs.push(curr_arr)
 		}
+		if(i == arr.length-1) all_arrs.push(curr_arr)
+		i++
 	}
 	var out_arr = Array()
 	$.each(all_arrs, function() {
 		var len = this.length
-		if(len <= 2) {
-			var str = this.join()
-			if(!out_arr.indexOf(str)) out_arr.push(str)
-		}
-		else out_arr.push(arr[0] + "-" + arr[len-1])
+		if(len <= 2) out_arr.push(this.join())
+		else out_arr.push(this[0] + "-" + this[len-1])
 	})
 	return out_arr.join()
 }
