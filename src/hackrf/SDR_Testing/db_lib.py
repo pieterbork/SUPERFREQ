@@ -61,10 +61,10 @@ def parse_zb_records(job_id, fp=None):
 	except:
 		return []
 	for line in lines:
-		parts = line.split()
-		if len(parts) != 12:
+		parts = [part.strip(",") for part in line.split() if "src" not in part and "dst" not in part]
+		if len(parts) != 6:
 			continue
-		record = (job_id, parts[1], parts[3], parts[5], parts[7], parts[9], parts[11])
+		record = tuple([job_id] + parts)
 		records.append(record)
 	counts = Counter(records)
 	return [tuple(list(record) + [counts[record]]) for record in set(records)]
