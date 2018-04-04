@@ -13,9 +13,9 @@ def parse_wifi_channel(ch):
 	if "_" in ch:
 		ch_arr = ch.split("_")
 		if ch_arr[1] == "5":
-			return ch[0] + " (5 GHz)"
+			return ch_arr[0] + " (5 GHz)"
 		elif ch_arr[1] == "24":
-			return ch[0] + " (2.4 GHz)"
+			return ch_arr[0] + " (2.4 GHz)"
 		else:
 			return ch
 	else:
@@ -56,10 +56,15 @@ def build_chart_js(type, records):
 		return bar_chart
 
 def build_unique_ssids_table(records):
-	ssids = []
+	ssids = {}
 	for record in records:
-		if record[1] != "" and not(((record[1], parse_wifi_channel(default_wifi_freqs_rev[float(record[5])*1e9])) in ssids)):
-			ssids.append((record[1], parse_wifi_channel(default_wifi_freqs_rev[float(record[5])*1e9])))
+		if record[1] != "" and record[1] != "N/A" and not(((record[1], parse_wifi_channel(default_wifi_freqs_rev[float(record[5])*1e9])) in ssids)):
+			try:
+				ssids[str(record[1])].add(parse_wifi_channel(default_wifi_freqs_rev[float(record[5])*1e9]))
+			except:
+				ssids[str(record[1])] = set([parse_wifi_channel(default_wifi_freqs_rev[float(record[5])*1e9])])
+	for ssid in ssids:
+		ssids[ssid] = ", ".join(sorted(ssids[ssid], key=lambda x: int(x.split()[0])))
 	return ssids
 
 def build_top_talkers_table(records):
