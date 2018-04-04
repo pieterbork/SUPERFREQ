@@ -2,15 +2,22 @@
 
 {% block content %}
 <div class="content container">
-	<h1>Results for {{ job }}</h1>
+	<h1 class="results_title">Results for {{ job }}</h1>
 	<div class="row">
 	{% include "ssids_per_channel.html" %}
 	{% include "packets_per_channel.html" %}
+	<br>
+	<div class="spacer"></div>
+	<h2 class="results_section_title">Unique SSIDs ({{ records['Wifi_ssids']|length}})</h2>
+	<table class="table table-striped">
+	<tr><th>SSID</th><th>Channel</th></tr>
+	{% for ssid in records['Wifi_ssids'] %}<tr><td>{{ ssid[0] }}</td><td>{{ ssid[1] }}</td></tr>{% endfor %}
+	</table>
 	</div>
 	{% for proto in records['protocols'] %}
 		{% if records[proto]|length %}
 			<div class="records_table">
-				<h1>{{proto}}</h1>
+				<h1 class="results_title">{{proto}}</h1>
 				<table width="100%" class="table table-striped">
 				<tr>
 				{% for field in records[proto+"_fields"] %}

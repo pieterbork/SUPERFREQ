@@ -80,8 +80,8 @@ def scan():
 			"scan_time": 60,
 			"Wifi2.4": [1, 6, 11],
 			"Wifi5": [],
-			"Bluetooth2.4": [37],
-			"Zigbee2.4": [15, 20, 25, 26]
+			"Bluetooth": [37],
+			"Zigbee": [15, 20, 25, 26]
 		}
 		default_other_freqs = {
 			"Zigbee": default_zigbee_freqs,
@@ -105,16 +105,20 @@ def results(job):
 	zigbee_records = db_lib.get_records_from_table("Zigbee", job_id)	
 	bt_records = db_lib.get_records_from_table("Bluetooth", job_id)	
 	charts = {}
+	ssids = []
 
-	charts['ssids_per_channel'] = build_chart_js("pie", wifi_records)
-	charts['packets_per_channel'] = build_chart_js("bar", wifi_records)
+	for record in wifi_records:
+		if record[1] != "":
+			ssids.append((record[1], default_wifi_freqs_rev[float(record[5])*1e9]))
 
-
+	charts['ssids_per_channel'] = build_chart_js("ssids_per_channel", wifi_records)
+	charts['packets_per_channel'] = build_chart_js("packets_per_channel", wifi_records)
 	
 	return render_template("results.html", 
 				records={
 					"Wifi":sorted(wifi_records, key=lambda x: x[6], reverse=True),
 					"Wifi_fields": ["SSID", "MAC 1", "MAC 2", "MAC 3", "Frequency", "Count"],
+					"Wifi_ssids": ssids,
 					"Zigbee":sorted(zigbee_records, key=lambda x: x[7], reverse=True), 
 					"Zigbee_fields": ["Source", "Destination", "Ext Source", "Ext Dest", "Sec Source", "Sec Dest", "Count"],
 					"Bluetooth":sorted(bt_records, key=lambda x: x[3], reverse=True),

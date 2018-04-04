@@ -20,7 +20,6 @@
 				{% set freqs = default_other_freqs[proto].items() %}
 				{% endif %}
 				<div class="form-group col-sm-3 scan_group">
-					{{ defaults[proto] }}
 					<input type="hidden" name="{{ class_name }}" value="">
 					<label for="{{ class_name }}">{% if band|length %}{{proto+" "+band}}GHz{% else %}{{proto}}{% endif %}</label>
 					<select size="11" name="{{ class_name }}" multiple class="form-control" id="{{ class_name }}">
@@ -33,6 +32,7 @@
 					<button type="button" class="list_clr_btn btn btn-sm" onclick="clearList('{{ class_name }}');">Clear</button>
 				</div>
 				{% endfor %}
+				<input type="submit" class="btn bottom_button" value="Run Scan">
 			</div>
 		</form>
 		<div class="currently_checked card col-md-4">

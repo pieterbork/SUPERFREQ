@@ -420,3 +420,16 @@ option::-moz-focus-inner {
 .card-body {
 	padding: 10px;
 }
+
+.bottom_button {
+	margin: auto;
+	margin-top: 15px;
+}
+
+.results_title {
+	margin: 50px;
+}
+
+.spacer {
+	clear: both;
+}

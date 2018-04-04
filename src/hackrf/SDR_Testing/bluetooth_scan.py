@@ -41,14 +41,12 @@ def sleep_channel(channel_time, socketio, elapsed_time, total_packets, fp):
 #List of channels, int for time - run_bt_scan([37], 10)
 def run_bt_scan(socketio=None, user_channels=[], send_updates=False, scan_time=120, elapsed_time=0, total_packets=0):
 	scan_channels = []
-	print(user_channels)
 	if(len(user_channels) < 1):
 		scan_channels = default_bt_freqs
 	else:
 		for ch in user_channels:
 			if float(ch) in default_bt_freqs:
 				scan_channels.append(float(ch))
-	print(scan_channels)
 	if (len(scan_channels) > 0):
 		channel_time = float(scan_time)/len(scan_channels)
 		for ch in scan_channels:
