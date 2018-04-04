@@ -105,14 +105,15 @@ def results(job):
 	zigbee_records = db_lib.get_records_from_table("Zigbee", job_id)	
 	bt_records = db_lib.get_records_from_table("Bluetooth", job_id)	
 	charts = {}
-	ssids = []
 
-	for record in wifi_records:
-		if record[1] != "":
-			ssids.append((record[1], default_wifi_freqs_rev[float(record[5])*1e9]))
-
+	ssids = build_unique_ssids_table(wifi_records)
 	charts['ssids_per_channel'] = build_chart_js("ssids_per_channel", wifi_records)
 	charts['packets_per_channel'] = build_chart_js("packets_per_channel", wifi_records)
+	if len(charts['ssids_per_channel']['counts']) == len(charts['packets_per_channel']['counts']):
+		colors = generate_colors(len(charts['packets_per_channel']['counts']))
+		charts['ssids_per_channel']['colors'] = colors
+		charts['packets_per_channel']['colors'] = colors
+
 	
 	return render_template("results.html", 
 				records={

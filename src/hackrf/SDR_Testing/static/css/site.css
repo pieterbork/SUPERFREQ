@@ -432,4 +432,6 @@ option::-moz-focus-inner {
 
 .spacer {
 	clear: both;
+	margin: 20px;
+	width: 100%;
 }
