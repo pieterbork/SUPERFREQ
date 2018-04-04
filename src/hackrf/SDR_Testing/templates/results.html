@@ -9,16 +9,38 @@
 	<br>
 	<div class="spacer"></div>
 	<h2 class="results_section_title">Unique SSIDs ({{ records['Wifi_ssids']|length}})</h2>
-	<table class="table table-striped table-condensed">
+	<table class="table table-striped table-sm">
 	<tr><th>SSID</th><th>Channel</th></tr>
 	{% for ssid in records['Wifi_ssids'] %}<tr><td>{{ ssid[0] }}</td><td>{{ ssid[1] }}</td></tr>{% endfor %}
 	</table>
 	</div>
+	<div class="spacer"></div>
+	<h2 class="results_section_title">Top Talkers</h2>
+	<ul class="nav nav-tabs">
+	{% set active = " active" %}
+	{% for channel in records['top_talkers'] %}
+		<li class="nav-item"><a data-toggle="tab" class="nav-link{{ active }}" href="#{{ records['top_talkers'][channel][1] }}_tab">{{ channel }}</a></li>{% set active = "" %}
+	{% endfor %}
+	</ul>
+	<div class="tab-content">
+	{% for channel in records['top_talkers'] %}
+		<div id="{{ records['top_talkers'][channel][1] }}_tab" class="container tab-pane">
+		<br>
+		<table class="table table-striped table-sm">
+		<tr><th>MAC</th><th># Packets</th></tr>
+		{% for mac in records['top_talkers'][channel][0] %}
+		<tr><td>{{ mac }}</td><td>{{ records['top_talkers'][channel][0][mac] }}</td></tr>
+		{% endfor %}
+		</table>
+		</div>
+	{% endfor %}
+	</div>
+	<div class="spacer"></div>
 	{% for proto in records['protocols'] %}
 		{% if records[proto]|length %}
 			<div class="records_table">
 				<h1 class="results_title">{{proto}}</h1>
-				<table width="100%" class="table table-striped table-condensed">
+				<table width="100%" class="table table-striped table-sm">
 				<tr>
 				{% for field in records[proto+"_fields"] %}
 					<th>{{field}}</th>

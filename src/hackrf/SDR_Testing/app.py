@@ -106,6 +106,7 @@ def results(job):
 	bt_records = db_lib.get_records_from_table("Bluetooth", job_id)	
 	charts = {}
 
+	top_talkers = build_top_talkers_table(wifi_records)
 	ssids = build_unique_ssids_table(wifi_records)
 	charts['ssids_per_channel'] = build_chart_js("ssids_per_channel", wifi_records)
 	charts['packets_per_channel'] = build_chart_js("packets_per_channel", wifi_records)
@@ -120,6 +121,7 @@ def results(job):
 					"Wifi":sorted(wifi_records, key=lambda x: x[6], reverse=True),
 					"Wifi_fields": ["SSID", "MAC 1", "MAC 2", "MAC 3", "Frequency", "Count"],
 					"Wifi_ssids": ssids,
+					"top_talkers": top_talkers,
 					"Zigbee":sorted(zigbee_records, key=lambda x: x[7], reverse=True), 
 					"Zigbee_fields": ["Source", "Destination", "Ext Source", "Ext Dest", "Sec Source", "Sec Dest", "Count"],
 					"Bluetooth":sorted(bt_records, key=lambda x: x[3], reverse=True),

@@ -435,3 +435,8 @@ option::-moz-focus-inner {
 	margin: 20px;
 	width: 100%;
 }
+
+.tab-content {
+	border: 1px solid #dee2e6;
+	border-top: none;
+}

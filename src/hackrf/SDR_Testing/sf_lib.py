@@ -62,4 +62,21 @@ def build_unique_ssids_table(records):
 			ssids.append((record[1], parse_wifi_channel(default_wifi_freqs_rev[float(record[5])*1e9])))
 	return ssids
 
+def build_top_talkers_table(records):
+	top_talkers = {}
+	for record in records:
+		freq = default_wifi_freqs_rev[float(record[5])*1e9]
+		macs = [str(record[2]), str(record[3]), str(record[4])]
+		try:
+			talker_channel = top_talkers[parse_wifi_channel(freq)]
+		except KeyError:
+			top_talkers[parse_wifi_channel(freq)] = ({}, freq) 
+
+		for mac in macs:
+			if mac != "ff:ff:ff:ff:ff:ff" and not("XX" in mac):
+				try:
+					top_talkers[parse_wifi_channel(freq)][0][mac] += record[6]
+				except KeyError:
+					top_talkers[parse_wifi_channel(freq)][0][mac] = record[6]
+	return top_talkers
 
