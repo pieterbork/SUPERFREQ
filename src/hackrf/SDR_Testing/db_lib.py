@@ -6,7 +6,7 @@ bt_out = "/tmp/bt_out.txt"
 zb_out = "/tmp/zb_out.txt"
 wifi_out = "/tmp/out_frames"
 
-db_path = '../../infrastructure/database/SUPERFREQ.db'
+db_path = 'SUPERFREQ.db'
 
 #Reads wifi_out file, parses records, returns list
 def parse_wifi_records(job_id, fp=None):

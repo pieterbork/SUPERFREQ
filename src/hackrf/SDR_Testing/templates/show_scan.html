@@ -2,7 +2,6 @@
 {% block content %}
 <input type="submit" onclick="submitScan();" value="Scan" class="scan_button">
 <div id="scan_form_container" class="container scan_form_container">
-	<h1>Create a new scan!</h1>
 	<div class="row">
 		<form class="rounded scan_form col-md-8" id="scan_form" action="/scan" method="post">
 			<div class="form-group row">
@@ -27,7 +26,6 @@
 					<select size="11" name="{{ class_name }}" multiple class="form-control" id="{{ class_name }}">
 					{% for freq in freqs %}
 					{% set is_default = freq[0]|int in defaults[proto+band] %}
-						{{is_default}}
 						<option  value="{{freq[1]}}"{% if is_default %} selected="selected" {% endif %}>{{freq[0]}}</option>
 					{% endfor %}
 					</select>
@@ -37,7 +35,21 @@
 				{% endfor %}
 			</div>
 		</form>
-		<div class="currently_checked col-md-4"></div>
+		<div class="currently_checked card col-md-4">
+			<div class="card-header">
+				<h4>Currently Selected</h4>
+			</div>
+			<div class="card-body">
+				{% for proto,band,class_name in protocols %}
+				<h5>{{proto}} {{band}}Ghz</h5>
+				<div class="checked_section checked_{{class_name}}"></div>
+				{% endfor %}
+				<div class="checked_summary align-bottom">
+					<div>Total Checked: <span class="tot_count"></span></div>
+					<div>Time per channel: <span class="time_per_chan"></span></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 {% endblock %}

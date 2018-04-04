@@ -1,3 +1,4 @@
+/* base element styles */
 body {
 	margin: 0;
 	width: 100%;
@@ -5,6 +6,21 @@ body {
 	position: absolute;
 	top: 50px;
 }
+
+a {
+	color: black;
+	text-decoration: none;
+	outline: 0;
+}
+
+/* All custom class styles */
+
+.content {
+	width: 100%;
+	text-align: center;
+}
+
+	/* Styles for the scan creation form */
 
 .scan_form {
 	padding: 20px;
@@ -14,17 +30,6 @@ body {
 
 .scan_group {
 	height: 100%;
-}
-
-a {
-	color: black;
-	text-decoration: none;
-	outline: 0;
-}
-
-.content {
-	width: 100%;
-	text-align: center;
 }
 
 .scan_button {
@@ -64,6 +69,24 @@ a {
 	background-color: #f5f5f5;
 	max-width: 1000px;
 }
+
+.currently_checked {
+	margin-bottom: 17px;
+	border: 1px solid #aaa;
+	border-left:none;
+	padding: 0;
+}
+.currently_checked .card-body {
+	background-color: rgba(0,0,0,.03);
+}
+.checked_section {
+	border-top: 1px #f5f5f5 solid;
+}
+.checked_summary {
+	position: absolute;
+	bottom: 10;
+}
+	/* End style for scan creation form */
 
 .presets {
 	overflow: hidden;
@@ -374,4 +397,5 @@ option::-moz-focus-inner {
 	margin: 5px;
 	font-weight: bold;
 }
+
 

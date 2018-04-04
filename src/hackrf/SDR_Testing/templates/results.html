@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="content">
+<div class="content container">
 	<h1>Results for {{ job }}</h1>
+	<div class="row">
 	{% include "ssids_per_channel.html" %}
 	{% include "packets_per_channel.html" %}
+	</div>
 	{% for proto in records['protocols'] %}
 		{% if records[proto]|length %}
 			<div class="records_table">
