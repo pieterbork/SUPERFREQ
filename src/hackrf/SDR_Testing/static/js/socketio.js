@@ -1,4 +1,5 @@
 var socket;
+$("body").css("overflow", "hidden");
 $(document).ready(function() {
 	socket = io.connect("http://" + document.domain + ":" + location.port);
 	socket.on('update', function(data) {

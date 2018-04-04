@@ -22,7 +22,7 @@
 				<div class="form-group col-sm-3 scan_group">
 					{{ defaults[proto] }}
 					<input type="hidden" name="{{ class_name }}" value="">
-					<label for="{{ class_name }}">{{proto+" "+band}}Ghz</label>
+					<label for="{{ class_name }}">{% if band|length %}{{proto+" "+band}}GHz{% else %}{{proto}}{% endif %}</label>
 					<select size="11" name="{{ class_name }}" multiple class="form-control" id="{{ class_name }}">
 					{% for freq in freqs %}
 					{% set is_default = freq[0]|int in defaults[proto+band] %}
@@ -41,7 +41,7 @@
 			</div>
 			<div class="card-body">
 				{% for proto,band,class_name in protocols %}
-				<h5>{{proto}} {{band}}Ghz</h5>
+				<h5>{{proto}}{% if band|length %} {{band}}Ghz{% endif %}</h5>
 				<div class="checked_section checked_{{class_name}}"></div>
 				{% endfor %}
 				<div class="checked_summary align-bottom">

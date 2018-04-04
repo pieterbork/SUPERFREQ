@@ -7,6 +7,15 @@ body {
 	top: 50px;
 }
 
+h4 {
+	margin: 0;
+	padding: 0;
+}
+
+h5 {
+	margin-bottom: 0;
+}
+
 a {
 	color: black;
 	text-decoration: none;
@@ -81,6 +90,7 @@ a {
 }
 .checked_section {
 	border-top: 1px #f5f5f5 solid;
+	margin-bottom: 15px;
 }
 .checked_summary {
 	position: absolute;
@@ -398,4 +408,15 @@ option::-moz-focus-inner {
 	font-weight: bold;
 }
 
+.run_scan {
+	height: 94vh;
+	overflow: hidden;
+}
 
+.card-header {
+	padding-top: 5px;
+}
+
+.card-body {
+	padding: 10px;
+}
