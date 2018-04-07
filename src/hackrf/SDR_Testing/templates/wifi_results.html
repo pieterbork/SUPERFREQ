@@ -1,0 +1,30 @@
+<div class="row">
+	{% include "ssids_per_channel.html" %}
+	{% include "packets_per_channel.html" %}
+</div>
+<div class="spacer"></div>
+<h2 class="results_section_title">Unique SSIDs ({{ records['Wifi_ssids']|length}})</h2>
+<table class="table table-striped table-sm">
+<tr><th>SSID</th><th>Channel</th></tr>
+{% for ssid in records['Wifi_ssids'] %}<tr><td>{{ ssid }}</td><td>{{ records['Wifi_ssids'][ssid] }}</td></tr>{% endfor %}
+</table>
+<div class="spacer"></div>
+<h2 class="results_section_title">Top Talkers</h2>
+<ul id="top_talkers_tabs" class="nav nav-tabs">
+{% for channel_tuple in records['top_talkers'] %}
+	<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#{{ channel_tuple[0] }}_tab">{{ channel_tuple[1] }}</a></li>
+{% endfor %}
+</ul>
+<div class="tab-content">
+{% for channel_tuple in records['top_talkers'] %}
+	<div id="{{ channel_tuple[0] }}_tab" class="container tab-pane">
+	<br>
+	<table class="table table-striped table-sm">
+	<tr><th>MAC</th><th># Packets</th></tr>
+	{% for mac in channel_tuple[2] %}
+	<tr><td>{{ mac }}</td><td>{{ channel_tuple[2][mac] }}</td></tr>
+	{% endfor %}
+	</table>
+	</div>
+{% endfor %}
+</div>

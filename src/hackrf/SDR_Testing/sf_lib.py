@@ -82,6 +82,6 @@ def build_top_talkers_table(records):
 					top_talkers[freq][mac] += record[6]
 				else:
 					top_talkers[freq][mac] = record[6]
-	ordered_talkers_list = [(ch, parse_wifi_channel(ch), top_talkers[ch]) for ch in sorted(top_talkers.keys(), key=lambda x: int(x.split("_")[0]))]
+	ordered_talkers_list = [(ch, "Ch " + parse_wifi_channel(ch), top_talkers[ch]) for ch in sorted(top_talkers.keys(), key=lambda x: int(x.split("_")[0]))]
 	return ordered_talkers_list
 
