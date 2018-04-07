@@ -31,13 +31,16 @@ def build_chart_js(type, records):
 		pie_chart['colors'], pie_chart['channel_names'], pie_chart['counts'] = [], [], []
 		for record in records:
 			freq = default_wifi_freqs_rev[float(record[5])*1e9]
-			try:
-				collect_counts[freq] += 1
-			except KeyError:
-				collect_counts[freq] = 1
+			ssid = str(record[1])
+			if freq in collect_counts:
+				if ssid != "" and ssid != "N/A":
+					collect_counts[freq].add(ssid)
+			else:
+				if ssid != "" and ssid != "N/A":
+					collect_counts[freq] = set([ssid])
 		for key in sorted(collect_counts.keys(), key=lambda x: int(x.split("_")[0])):
 			pie_chart['channel_names'].append("Channel " + parse_wifi_channel(key))
-			pie_chart['counts'].append(collect_counts[key])
+			pie_chart['counts'].append(len(collect_counts[key]))
 		pie_chart['colors'] = generate_colors(len(pie_chart['counts']))
 		return pie_chart
 	elif (type == "packets_per_channel"):

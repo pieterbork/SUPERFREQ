@@ -1,5 +1,5 @@
 <script src="{{url_for('static', filename='js/Chart.min.js')}}"></script>
-<div style="width:500px; height:500px;"><canvas id="packets_per_channel" style="width:400px; height:400px;"></canvas></div>
+<div class="chart_div"><canvas id="packets_per_channel" style="width:400px; height:400px;"></canvas></div>
 <script>
 	var ctx = document.getElementById('packets_per_channel').getContext('2d');
 	var chart = new Chart(ctx, {
