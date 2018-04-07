@@ -18,19 +18,19 @@
 	<h2 class="results_section_title">Top Talkers</h2>
 	<ul class="nav nav-tabs">
 	{% set active = " active" %}
-	{% for channel in records['top_talkers'] %}
-		<li class="nav-item"><a data-toggle="tab" class="nav-link{{ active }}" href="#{{ records['top_talkers'][channel][1] }}_tab">{{ channel }}</a></li>{% set active = "" %}
+	{% for channel_tuple in records['top_talkers'] %}
+		<li class="nav-item"><a data-toggle="tab" class="nav-link{{ active }}" href="#{{ channel_tuple[0] }}_tab">{{ channel_tuple[1] }}</a></li>{% set active = "" %}
 	{% endfor %}
 	</ul>
 	<div class="tab-content">
 	{% set active_tab = " active" %}
-	{% for channel in records['top_talkers'] %}
-		<div id="{{ records['top_talkers'][channel][1] }}_tab" class="container tab-pane{{ active_tab }}">{% set active_tab = "" %}
+	{% for channel_tuple in records['top_talkers'] %}
+		<div id="{{ channel_tuple[0] }}_tab" class="container tab-pane{{ active_tab }}">{% set active_tab = "" %}
 		<br>
 		<table class="table table-striped table-sm">
 		<tr><th>MAC</th><th># Packets</th></tr>
-		{% for mac in records['top_talkers'][channel][0] %}
-		<tr><td>{{ mac }}</td><td>{{ records['top_talkers'][channel][0][mac] }}</td></tr>
+		{% for mac in channel_tuple[2] %}
+		<tr><td>{{ mac }}</td><td>{{ channel_tuple[2][mac] }}</td></tr>
 		{% endfor %}
 		</table>
 		</div>

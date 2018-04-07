@@ -28,21 +28,22 @@ def build_chart_js(type, records):
 	if (type == "ssids_per_channel"):
 		pie_chart = {}
 		collect_counts = {}
-		pie_chart['colors'] = []
+		pie_chart['colors'], pie_chart['channel_names'], pie_chart['counts'] = [], [], []
 		for record in records:
 			freq = default_wifi_freqs_rev[float(record[5])*1e9]
 			try:
 				collect_counts[freq] += 1
 			except KeyError:
 				collect_counts[freq] = 1
-		pie_chart['channel_names'] = ["Channel " + parse_wifi_channel(key) for key in collect_counts.keys()]
-		pie_chart['counts'] = collect_counts.values()
+		for key in sorted(collect_counts.keys(), key=lambda x: int(x.split("_")[0])):
+			pie_chart['channel_names'].append("Channel " + parse_wifi_channel(key))
+			pie_chart['counts'].append(collect_counts[key])
 		pie_chart['colors'] = generate_colors(len(pie_chart['counts']))
 		return pie_chart
 	elif (type == "packets_per_channel"):
 		bar_chart = {}
 		collect_counts = {}
-		bar_chart['colors'] = []
+		bar_chart['colors'], bar_chart['channel_names'], bar_chart['counts'] = [], [], []
 		for record in records:
 			freq = default_wifi_freqs_rev[float(record[5])*1e9]
 			count = int(record[6])
@@ -50,8 +51,9 @@ def build_chart_js(type, records):
 				collect_counts[freq] += count
 			except KeyError:
 				collect_counts[freq] = count
-		bar_chart['channel_names'] = ["Channel " + parse_wifi_channel(key) for key in collect_counts.keys()]
-		bar_chart['counts'] = collect_counts.values()
+		for key in sorted(collect_counts.keys(), key=lambda x: int(x.split("_")[0])):
+			bar_chart['channel_names'].append("Channel " + parse_wifi_channel(key))
+			bar_chart['counts'].append(collect_counts[key])
 		bar_chart['colors'] = generate_colors(len(bar_chart['counts']))
 		return bar_chart
 
@@ -72,16 +74,14 @@ def build_top_talkers_table(records):
 	for record in records:
 		freq = default_wifi_freqs_rev[float(record[5])*1e9]
 		macs = [str(record[2]), str(record[3]), str(record[4])]
-		try:
-			talker_channel = top_talkers[parse_wifi_channel(freq)]
-		except KeyError:
-			top_talkers[parse_wifi_channel(freq)] = ({}, freq) 
-
+		if not(freq in top_talkers):
+			top_talkers[freq] = {}
 		for mac in macs:
 			if mac != "ff:ff:ff:ff:ff:ff" and not("XX" in mac):
-				try:
-					top_talkers[parse_wifi_channel(freq)][0][mac] += record[6]
-				except KeyError:
-					top_talkers[parse_wifi_channel(freq)][0][mac] = record[6]
-	return top_talkers
+				if mac in top_talkers[freq]:
+					top_talkers[freq][mac] += record[6]
+				else:
+					top_talkers[freq][mac] = record[6]
+	ordered_talkers_list = [(ch, parse_wifi_channel(ch), top_talkers[ch]) for ch in sorted(top_talkers.keys(), key=lambda x: int(x.split("_")[0]))]
+	return ordered_talkers_list
 
