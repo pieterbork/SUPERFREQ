@@ -68,8 +68,8 @@ def scan_manager(scan_name, wifi_24_options=wifi_24_options, wifi_5_options=wifi
 										send_updates=send_updates,
 										elapsed_time=total_scan_time)
 			total_scan_time += scan_time*len(zigbee_options['user_channels'])
-			records = parse_bt_records(job_id)
-			insert_bt_records(records)
+			records = parse_zb_records(job_id)
+			insert_zb_records(records)
 
 		if len(bluetooth_options['user_channels']) > 0:
 			try:		#remove previous scans
@@ -82,8 +82,8 @@ def scan_manager(scan_name, wifi_24_options=wifi_24_options, wifi_5_options=wifi
 										send_updates=send_updates,
 										elapsed_time=total_scan_time)
 			total_scan_time += scan_time*len(bluetooth_options['user_channels'])
-			records = parse_zb_records(job_id)
-			insert_zb_records(records)
+			records = parse_bt_records(job_id)
+			insert_bt_records(records)
 
 		if (send_updates):
 			socketio.emit('progress', {'msg': total_scan_time})

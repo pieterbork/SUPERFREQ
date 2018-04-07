@@ -194,10 +194,8 @@ def sleep_channel(channel_time, socketio, elapsed_time):
 	num_updates = int(channel_time)	* 2		#update every half second
 	leftover_time = channel_time - int(channel_time)
 	while (True):		#always run the update at least once
-		try:
-			num_packs = len(rdpcap(zb_file))
-		except:
-			num_packs = 0
+		num_packs = len(rdpcap(zb_file))
+		print("Packets - " + str(num_packs))
 		socketio.emit('zigbee_count', {'msg': num_packs})
 		socketio.emit('progress', {'msg': elapsed_time})
 		if num_updates < 1:
