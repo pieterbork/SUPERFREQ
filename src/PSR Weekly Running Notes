@@ -169,3 +169,27 @@ PSR Week 9
       Testing possibility for the last two remaining test cases to automate sending and receiving packets from the HackRF
 
 PSR Week 10
+
+	SKIPPED BECAUSE OF SPRING BREAK
+
+PSR Week 11
+
+	SPRING BREAK 
+
+PSR Week 12
+
+    Accomplishments (Week of Apr 02):
+      Docker image runs Flask app and scans
+      Scans output database information into tables and graphs (graphs are for Wifi only)
+      Finished work on IEEE Paper
+
+
+    Plans this week (Week of Apr 09):
+      Add tabs on scan page to show graphs for Zigbee and Bluetooth
+      Possibly integrate Unit Tests to enable or disable specific Flask functionality
+      Fix remaining bugs in program
+      Dedicate time to work on upcoming Spring Final Review Presentation
+
+
+    Problems & Issues:
+      Worked through team miscommunication
