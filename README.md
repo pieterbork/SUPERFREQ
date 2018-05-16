@@ -1,3 +1,5 @@
+## This repository is deprecated, development continues at [rfscan](https://github.com/pieterbork/rfscan)
+
 # SUPERFREQ
 2017/2018 CU Boulder Team SUPERFREQ Repository
 
